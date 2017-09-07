@@ -4,6 +4,8 @@
         // MUSIC VISUALIZER. SHOULD CONNECT TO PLAYER
         createVisualizer(window, 'nav.nav-extended');
 
+        $(".button-collapse").sideNav();
+
         $('ul.tabs').tabs();
 
         var timelineBlocks = $('.cd-timeline-block'),
@@ -307,8 +309,10 @@ function createVisualizer(self, elementQuerySelector) {
 		document.addEventListener('mousewheel', onMouseWheel, false );
 		document.addEventListener('DOMMouseScroll', onMouseWheel, false);
 
-		playButton = document.querySelector('.play');
-		playButton.addEventListener('click', onClick, false);
+		// playButton = document.querySelector('.play');
+    playButton = $('.play');
+    playButton.on('click', onClick);
+		// playButton.addEventListener('click', onClick, false);
 
 		enableLeap();
 		render();
