@@ -603,7 +603,7 @@ function createVisualizer(self, elementQuerySelector) {
 		// See: https://github.com/mrdoob/three.js/issues/687
 		THREE.ImageUtils.crossOrigin = '';
 
-		var texture = THREE.ImageUtils.loadTexture('http://francescotrillini.it/assets/particle.png');
+		// var texture = THREE.ImageUtils.loadTexture('http://francescotrillini.it/assets/particle.png');
 
 		var attributes = {
 
@@ -614,7 +614,7 @@ function createVisualizer(self, elementQuerySelector) {
 		uniforms = {
 
 			color: { type: 'c', value: new THREE.Color(0x454545) },
-			texture: { type: 't', value: texture },
+			// texture: { type: 't', value: texture },
 			bass: {type: 'f', value: 0.0 },
 			opacity: { type: 'f', value: 0.0 },
 
