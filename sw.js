@@ -15,7 +15,26 @@ self.addEventListener('install', function(e) {
       '/dat.gui.min.js',
       '/leap.min.js',
       '/materialize.min.js',
-      '/main.js'
+      '/main.js',
+      '/assets/86_trans.png',
+      '/assets/amdocs.jpg',
+      '/assets/google.png',
+      '/assets/redkix.png',
+      '/assets/leon01.jpg',
+      '/assets/leon02.jpg',
+      '/assets/leon03.jpg',
+      '/assets/leon04.jpg',
+      '/assets/leon05.jpg',
+      '/assets/neuman.png',
+      '/assets/pepsi_max.jpg',
+      '/assets/tel-aviv-university.svg',
+      '/assets/video_adi.jpg',
+      '/assets/video_ariel.webp',
+      '/assets/video_brief_job.jpg',
+      '/assets/video_brief_psy.jpg',
+      '/assets/video_family.webp',
+      '/assets/video_shlem.webp',
+      '/assets/video_terr.webp'
     ]);
   })
   );
