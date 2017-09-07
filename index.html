@@ -14,13 +14,46 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link rel="stylesheet" href="style.css">
+
+  <script type = "x-shader/x-vertex" id = "vertex">
+
+		attribute float size;
+		uniform float bass;
+
+		void main() {
+
+			  vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+
+				gl_PointSize = size * bass * (100.0 / length(mvPosition.xyz));
+
+				gl_Position = projectionMatrix * mvPosition;
+
+		}
+
+</script>
+
+<script type = "x-shader/x-fragment" id = "fragment">
+
+		uniform vec3 color;
+		uniform sampler2D texture;
+		uniform float opacity;
+
+		void main() {
+
+				vec4 outColor = texture2D(texture, gl_PointCoord);
+
+				gl_FragColor = outColor * vec4(color, opacity);
+
+		}
+
+</script>
 </head>
 <body>
   <nav class="nav-extended">
     <div class="nav-wrapper">
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
+            <li><a class="play">play</a></li>
             <li><a href="badges.html">Components</a></li>
             <li><a href="collapsible.html">JavaScript</a></li>
         </ul>
@@ -385,6 +418,11 @@
 </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16395/tween.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
+  <script src="https://js.leapmotion.com/0.2.1/leap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script src="main.js"></script>
 
