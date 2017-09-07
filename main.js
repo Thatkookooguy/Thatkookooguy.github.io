@@ -17,9 +17,9 @@ if('serviceWorker' in navigator) {
         var timelineBlocks = $('.cd-timeline-block'),
             offset = 0.8;
 
-        $('.cd-timeline-img img').each(function() {
-            resizeToMax(this);
-        });
+        // $('.cd-timeline-img img').each(function() {
+        //     resizeToMax(this);
+        // });
 
         //hide timeline blocks which are outside the viewport
         hideBlocks(timelineBlocks, offset);
