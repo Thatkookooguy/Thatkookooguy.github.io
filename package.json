@@ -1,0 +1,25 @@
+{
+  "name": "thatkookooguy.github.io.git",
+  "version": "1.0.0",
+  "description": "my portfolio",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thatkookooguy/Thatkookooguy.github.io.git"
+  },
+  "author": "neilkalman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thatkookooguy/Thatkookooguy.github.io/issues"
+  },
+  "homepage": "https://github.com/Thatkookooguy/Thatkookooguy.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.3.0",
+    "imagemin": "^5.3.1",
+    "imagemin-webp": "^4.0.0"
+  }
+}
