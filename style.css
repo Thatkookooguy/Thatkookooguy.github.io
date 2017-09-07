@@ -1,3 +1,67 @@
+.bbplayer.floating {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  box-shadow: 0 2px 7px rgba(100,100,100,0.5);
+  border-radius: 0;
+}
+
+.bbplayer .bb-play::after {
+  content: "play_arrow";
+}
+
+.bbplayer .bb-play.bb-playing::after {
+  content: "pause";
+}
+
+.bbplayer .bb-rewind::after {
+  content: "skip_previous";
+}
+
+.bbplayer .bb-forward::after {
+  content: "skip_next";
+}
+
+.bb-trackTime, .bb-trackLength, .bb-trackTitle {
+  vertical-align: baseline;
+}
+
+.bb-trackTime::after {
+    content: ":";
+    padding: 0 5px;
+}
+
+.player-mi {
+  display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-image: none;
+}
+
+.player-mi::after {
+    direction: ltr;
+    display: inline-block;
+    font-family: 'Material Icons';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
 nav.nav-extended {
   position: relative;
   background: radial-gradient(#ffcc99, #ff9933);

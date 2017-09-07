@@ -2,7 +2,10 @@
     $(function() {
 
         // MUSIC VISUALIZER. SHOULD CONNECT TO PLAYER
-        createVisualizer(window, 'nav.nav-extended');
+        setTimeout(function() {
+          var onTrackChange = createVisualizer(window, 'nav.nav-extended');
+        $('.bbplayer').data().test.onLoadTrack = onTrackChange;
+      }, 5000);
 
         $(".button-collapse").sideNav();
 
@@ -510,11 +513,11 @@ function createVisualizer(self, elementQuerySelector) {
 
 		context = new (window.AudioContext || window.webkitAudioContext)();
 
-		source = document.createElement('audio');
+		source = document.getElementsByTagName('audio')[0];
 
-		for(var fallback = 0; fallback < (source.canPlayType('audio/mpeg') === '' ? 1 : 2); fallback++)
-
-			new Audio(fallback);
+		// for(var fallback = 0; fallback < (source.canPlayType('audio/mpeg') === '' ? 1 : 2); fallback++)
+    //
+		// 	new Audio(fallback);
 
 	}
 
@@ -804,4 +807,16 @@ function createVisualizer(self, elementQuerySelector) {
 
 	}
 
-};
+  return function restartViz(_source) {
+    source = _source;
+    $(elementQuerySelector).css({
+      'background': 'transparent'
+    });
+
+		connectSource();
+
+		if(source !== undefined) {
+		}
+  };
+
+}

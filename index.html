@@ -13,6 +13,7 @@
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="bbplayer.css">
   <link rel="stylesheet" href="style.css">
 
   <script type = "x-shader/x-vertex" id = "vertex">
@@ -50,6 +51,25 @@
 </head>
 <body>
   <nav class="nav-extended">
+    <div class="bbplayer floating">
+      <span class="player-mi bb-rewind"></span>
+      <span class="player-mi bb-play"></span>
+      <span class="player-mi bb-forward"></span>
+      <span class="bb-trackTime"></span>
+      <span class="bb-trackLength"></span>
+      <span class="bb-trackTitle"></span>
+      <audio>
+        <source src="assets/reo/machine_heart/reo_time01.mp3"/>
+        <source src="assets/reo/machine_heart/reo_time02.mp3"/>
+        <source src="assets/reo/machine_heart/reo_time03.mp3"/>
+        <source src="assets/reo/machine_heart/reo_time04.mp3"/>
+        <source src="assets/reo/machine_heart/reo_time05.mp3"/>
+        <source src="assets/reo/machine_heart/reo_time06.mp3"/>
+        <source src="assets/reo/machine_heart/reo_time07.mp3"/>
+        <source src="assets/reo/machine_heart/reo_time08.mp3"/>
+        <source src="assets/reo/machine_heart/reo_time09.mp3"/>
+      </audio>
+    </div>
     <div class="nav-wrapper">
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -424,6 +444,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
   <script src="https://js.leapmotion.com/0.2.1/leap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="bbplayer.js"></script>
   <script src="main.js"></script>
 
   </body>
