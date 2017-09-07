@@ -11,11 +11,382 @@
   <meta property="og:site_name" content="achievibit" />
   <title>Thatkookooguy</title>
 
-  <!-- <link rel="stylesheet" href="material-icons.css"> -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  hello!
-  <!-- <script src="lodash.min.js"></script> -->
+  <nav class="nav-extended">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">JavaScript</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">JavaScript</a></li>
+        </ul>
+    </div>
+    <div class="intro center">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/154887/86_trans.png" class="circle" height="150">
+        <h3>Neil Kalman</h3>
+        <h6>Software Engineer || FrontEnd Developer</h6>
+    </div>
+    <div class="nav-content">
+        <ul class="tabs tabs-transparent tabs-fixed-width">
+            <li class="tab"><a href="#test1">about me</a></li>
+            <li class="tab"><a class="active" href="#test2">resume</a></li>
+            <li class="tab"><a href="#test3">music</a></li>
+            <li class="tab"><a href="#test4">actor</a></li>
+        </ul>
+    </div>
+</nav>
+<div id="test1" class="col s12">Test 1</div>
+<div id="test2" class="col s12">
+    <section id="cd-timeline" class="cd-container">
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-header">
+                <h4>Work Experience</h4>
+            </div>
+        </div>
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img redkix">
+                <img class="circle" src="https://redkix.com/wp-content/uploads/2017/01/favicon.png">
+            </div> <!-- cd-timeline-img -->
+
+            <div class="cd-timeline-content">
+                <h2>REDKIX</h2>
+                <a href="https://redkix.com/" target="_blank">https://redkix.com/</a>
+                <h6>SENIOR SOFTWARE ENGINEER</h6>
+
+                <p>
+                <ul class="browser-default">
+                    <li>
+                        Programming an email web client for Redkix
+                        <blockquote>
+                            Worked on data handling and UI manipulation typically required by email clients. Including <strong>real-time</strong>, <strong>inline embedding of assets</strong>, <strong>manipulating images</strong> (crop, resize, etc.), <strong>text manipulation</strong> and <strong>integrating with a WYSIWYG</strong> (markdown, emojis, URLs, mentions), and more.
+                        </blockquote>
+                    </li>
+                    <li>Creating the native fork of Redkix for OS X & Windows, including certifications and installers</li>
+                    <li>Developing complex UI components and animations</li>
+                </ul>
+                </p>
+            <a href="#0" class="cd-read-more">Read more</a>
+            <span class="cd-date">Dec 2015 – Apr 2017</span>
+        </div> <!-- cd-timeline-content -->
+        </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+        <div class="cd-timeline-img google">
+            <img class="circle" src="https://www.greenmellenmedia.com/wp-content/uploads/Google_-G-_Logo.svg_.png">
+        </div> <!-- cd-timeline-img -->
+
+        <div class="cd-timeline-content">
+            <h2>NISHA PRO, AT GOOGLE</h2>
+            <h6>SOFTWARE ENGINEER</h6>
+            <p>
+                Worked in the Live Results team, creating cards for Google Search.
+            <ul class="browser-default">
+                <li>Used Agile practices and Test Driven Development techniques to provide reliable, working software early and often</li>
+                <li>Server side and client side data manipulation</li>
+                <li>Worked on adapting Google search UI components to load and run faster on poor internet connections, minimizing the Google Search page size.<li>
+            </ul>
+            </p>
+        <a href="#0" class="cd-read-more">Read more</a>
+        <span class="cd-date">Feb 2015 – Oct 2015</span>
+    </div> <!-- cd-timeline-content -->
+</div> <!-- cd-timeline-block -->
+
+<div class="cd-timeline-block">
+    <div class="cd-timeline-img amdocs">
+        <img class="circle" src="https://www.vanillaplus.com/wp-content/uploads/2017/02/Amdocs-logo-1.jpg" id="amdocs">
+    </div> <!-- cd-timeline-img -->
+
+    <div class="cd-timeline-content">
+        <h2>AMDOCS</h2>
+        <h6>FRONT-END DEVELOPER</h6>
+        <p>
+        <ul class="browser-default">
+            <li>Working on web components that were used by other Amdocs products</li>
+            <li>Creating responsive designs</li>
+            <li>Writing code that is customizable and theme-able.<li>
+            <li>Complex CSS animations</li>
+        </ul>
+        </p>
+    <a href="#0" class="cd-read-more">Read more</a>
+    <span class="cd-date">Jan 2014 – Feb 2015</span>
+</div> <!-- cd-timeline-content -->
+</div> <!-- cd-timeline-block -->
+<div class="cd-timeline-block">
+    <div class="cd-timeline-header">
+        <h4>Education</h4>
+    </div>
+</div>
+<div class="cd-timeline-block">
+    <div class="cd-timeline-img cd-location">
+        <img class="circle" src="https://cdn.worldvectorlogo.com/logos/tel-aviv-university.svg" id="university">
+    </div> <!-- cd-timeline-img -->
+
+    <div class="cd-timeline-content">
+        <h2>TEL AVIV UNIVERSITY</h2>
+        <p><strong>B.Sc. in Computer Science and Life Science</strong>,
+            Combined program with an emphasis on Bioinformatics (double
+            major).</p>
+        <a href="#0" class="cd-read-more">Read more</a>
+        <span class="cd-date">2009-2013</span>
+    </div> <!-- cd-timeline-content -->
+</div> <!-- cd-timeline-block -->
+</section> <!-- cd-timeline -->
+
+</div>
+<div id="test3" class="col s12">Test 3</div>
+<div id="test4" class="col s12">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 cards-container">
+                <!-- CARD -->
+                <div class="card blue-grey darken-1">
+                    <div class="card-image">
+                        <img src="http://media.reshet.tv/image/upload/t_grid-item,f_auto,q_auto/v1503592067/vlcsnap-6295-08-24-13h11m27s357_gtggos.png">
+                        <span class="card-title rtl"><div class="reshet">
+                            <p>טלוויזיה מהעתיד</p>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="card-content white-text">
+                        <span class="card-title rtl">הלה-פמיליה של טלוויזיה מהעתיד</span>
+                        <p>Aug 2017</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="http://reshet.tv/item/entertainment/futuretv/season-01/clips/wpc7c-416540/">watch on RESHSET</a>
+                    </div>
+                </div>
+                <!-- END CARD -->
+                <!-- CARD -->
+                <div class="card blue-grey darken-1">
+                    <div class="card-image">
+                        <img src="http://media.reshet.tv/image/upload/t_grid-item,f_auto,q_auto/v1503592064/vlcsnap-8408-06-19-14h03m00s554_aqut3s.png">
+                        <span class="card-title rtl"><div class="reshet">
+                            <p>טלוויזיה מהעתיד</p>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="card-content white-text">
+                        <span class="card-title rtl">גיבור היום</span>
+                        <p>Aug 2017</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="http://reshet.tv/item/entertainment/futuretv/season-01/clips/dg5s0-416535/">watch on RESHSET</a>
+                    </div>
+                </div>
+                <!-- END CARD -->
+                <!-- CARD -->
+                <div class="card blue-grey darken-1">
+                    <div class="card-image">
+                        <img src="http://media.reshet.tv/image/upload/t_grid-item,f_auto,q_auto/v1502986169/vlcsnap-5200-09-22-09h52m03s011_udi4qa.png">
+                        <span class="card-title rtl"><div class="reshet">
+                            <p>טלוויזיה מהעתיד</p>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="card-content white-text">
+                        <span class="card-title rtl">שלום כבוד האומן אריאל</span>
+                        <p>Aug 2017</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="http://reshet.tv/item/entertainment/futuretv/season-01/clips/vaocl-410159/">watch on RESHSET</a>
+                    </div>
+                </div>
+                <!-- END CARD -->
+                <!-- CARD -->
+                <div class="card blue-grey darken-1">
+                    <div class="card-image">
+                        <img src="http://media.reshet.tv/image/upload/t_grid-item,f_auto,q_auto/v1501675144/vlcsnap-1975-04-30-14h45m20s304_dncwkl.png">
+                        <span class="card-title rtl"><div class="reshet">
+                            <p>טלוויזיה מהעתיד</p>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="card-content white-text">
+                        <span class="card-title rtl">שלמייזל - פרק 4</span>
+                        <p>Aug 2017</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="http://reshet.tv/item/entertainment/futuretv/season-01/clips/nrupz-396361/">watch on RESHSET</a>
+                    </div>
+                </div>
+                <!-- END CARD -->
+                <!-- CARD -->
+                <div class="card blue-grey darken-1">
+                    <div class="card-image">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/154887/neuman.png">
+                    </div>
+                    <div class="card-content white-text">
+                        <span class="card-title">
+                            Ikea Catalog 2017 Ad - Israel
+                        </span>
+                        <p>Published on Sep 2016</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://youtu.be/LaOF0bVax74">watch on Youtube</a>
+                    </div>
+                </div>
+                <!-- END CARD -->
+                <!-- CARD -->
+                <div class="card blue-grey darken-1">
+                    <div class="card-image">
+                        <img src="http://img.youtube.com/vi/5qaK7ihiSIY/maxresdefault.jpg">
+                    </div>
+                    <div class="card-content white-text">
+                        <span class="card-title">
+                            Pepsi Max Presents: This Falafel Is Making Me Thirsty!
+                        </span>
+                        <p>Published on Jun 2015</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://youtu.be/5qaK7ihiSIY">watch on Youtube</a>
+                    </div>
+                </div>
+                <!-- END CARD -->
+                <!-- CARD -->
+                <div class="card blue-grey darken-1">
+                    <div class="card-image">
+                        <img src="http://media.reshet.tv/image/upload/t_grid-item,f_auto,q_auto/v1501675144/vlcsnap-1975-04-30-14h45m20s304_dncwkl.png">
+                    </div>
+                    <div class="card-content white-text">
+                        <span class="card-title">
+                            Adi Ulmansky - A.D.I
+                        </span>
+                        <p>Published on Nov 2012</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://youtu.be/thmSzqGkMT8">watch on Youtube</a>
+                    </div>
+                </div>
+                <!-- END CARD -->
+                <!-- CARD -->
+                <div class="card blue-grey darken-1">
+                    <div class="card-image">
+                        <img src="http://img.mako.co.il/2013/02/18/eretz10_bekitzur_shrink_i.jpg">
+                    </div>
+                    <div class="card-content white-text">
+                        <span class="card-title rtl">
+                            בקיצור, הלכתי לפסיכולוג
+                        </span>
+                        <p>Published on Feb 2013</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="http://www.mako.co.il/tv-erez-nehederet/season10-briefs/video/Video-2cd8f30038eec31006.htm">watch on Mako</a>
+                    </div>
+                </div>
+                <!-- END CARD -->
+                <!-- CARD -->
+                <div class="card blue-grey darken-1">
+                    <div class="card-image">
+                        <img src="http://img.mako.co.il/2013/01/07/vlcsnap-2013-01-07-18h11m45s63_i.jpg">
+                    </div>
+                    <div class="card-content white-text">
+                        <span class="card-title rtl">
+                            בקיצור, היה לי ראיון עבודה
+                        </span>
+                        <p>Published on Jan 2013</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="http://www.mako.co.il/tv-erez-nehederet/season10-briefs/video/Video-61d469e07b51c31006.htm">watch on Mako</a>
+                    </div>
+                </div>
+                <!-- END CARD -->
+                <!-- CARD -->
+                <div class="card blue-grey darken-1">
+                    <div class="card-image">
+                        <img src="http://img.youtube.com/vi/EeNuzr1HSxM/maxresdefault.jpg">
+                    </div>
+                    <div class="card-content white-text">
+                        <span class="card-title rtl ep1">
+                            ניל ויואב מראיינים!
+                        </span>
+                        <p>Published on Jul 2015</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://youtu.be/EeNuzr1HSxM">watch on Youtube</a>
+                    </div>
+                </div>
+                <!-- END CARD -->
+                <!-- CARD -->
+                <div class="card blue-grey darken-1">
+                    <div class="card-image">
+                        <img src="http://img.youtube.com/vi/d1nGJEX8_ak/maxresdefault.jpg">
+                    </div>
+                    <div class="card-content white-text">
+                        <span class="card-title rtl ep2">
+                            ניל ויואב מראיינים!
+                        </span>
+                        <p>Published on Aug 2015</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://youtu.be/d1nGJEX8_ak">watch on Youtube</a>
+                    </div>
+                </div>
+                <!-- END CARD -->
+                <!-- CARD -->
+                <div class="card blue-grey darken-1">
+                    <div class="card-image">
+                        <img src="http://img.youtube.com/vi/2NRHKwAQ01M/maxresdefault.jpg">
+                    </div>
+                    <div class="card-content white-text">
+                        <span class="card-title rtl ep3">
+                            ניל ויואב מראיינים!
+                        </span>
+                        <p>Published on Oct 2015</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://youtu.be/2NRHKwAQ01M">watch on Youtube</a>
+                    </div>
+                </div>
+                <!-- END CARD -->
+                <!-- CARD -->
+                <div class="card blue-grey darken-1">
+                    <div class="card-image">
+                        <img src="http://img.youtube.com/vi/9q9thgtz8nk/maxresdefault.jpg">
+                    </div>
+                    <div class="card-content white-text">
+                        <span class="card-title rtl ep4">
+                            ניל ויואב מראיינים!
+                        </span>
+                        <p>Published on Nov 2015</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://youtu.be/9q9thgtz8nk">watch on Youtube</a>
+                    </div>
+                </div>
+                <!-- END CARD -->
+                <!-- CARD -->
+                <div class="card blue-grey darken-1">
+                    <div class="card-image">
+                        <img src="http://img.youtube.com/vi/CEQkkJShKkI/0.jpg">
+                    </div>
+                    <div class="card-content white-text">
+                        <span class="card-title rtl ep5">
+                            ניל ויואב מראיינים!
+                        </span>
+                        <p>Published on Feb 2016</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://youtu.be/CEQkkJShKkI">watch on Youtube</a>
+                    </div>
+                </div>
+                <!-- END CARD -->
+            </div>
+        </div>
+    </div>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="main.js"></script>
 
   </body>
 </html>
