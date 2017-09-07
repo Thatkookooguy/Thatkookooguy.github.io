@@ -409,6 +409,10 @@ function createVisualizer(self, elementQuerySelector) {
     //
 		// document.querySelector('body').removeChild(triggeredEvent);
 
+    $(elementQuerySelector).css({
+      'background': 'transparent'
+    });
+
 		connectSource();
 
 		if(source !== undefined) {

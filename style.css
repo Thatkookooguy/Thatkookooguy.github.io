@@ -1,6 +1,8 @@
 nav.nav-extended {
   position: relative;
-  background-color: transparent;
+  background: radial-gradient(#ffcc99, #ff9933);
+  transition: opacity 1s;
+  opacity: 1;
 }
 
 .col.s12.cards-container {
