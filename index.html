@@ -17,6 +17,9 @@
 
   <link rel="stylesheet" href="materialIcons.css">
   <link rel="stylesheet" href="materialize.min.css">
+  <link rel="stylesheet" href="bbplayer.css">
+  <link rel="stylesheet" href="octicons.min.css">
+  <link rel="stylesheet" href="github-activity-0.1.5.min.css">
   <link rel="stylesheet" href="style.css">
 
   <script type = "x-shader/x-vertex" id = "vertex">
@@ -54,9 +57,28 @@
 </head>
 <body>
   <nav class="nav-extended">
+    <div class="bbplayer floating">
+      <span class="player-mi bb-rewind"></span>
+      <span class="player-mi bb-play"></span>
+      <span class="player-mi bb-forward"></span>
+      <span class="bb-trackTime"></span>
+      <span class="bb-trackLength"></span>
+      <span class="bb-trackTitle"></span>
+      <audio>
+        <source src="assets/reo/machine_heart/reo_time01.mp3"/>
+        <source src="assets/reo/machine_heart/reo_time02.mp3"/>
+        <source src="assets/reo/machine_heart/reo_time03.mp3"/>
+        <source src="assets/reo/machine_heart/reo_time04.mp3"/>
+        <source src="assets/reo/machine_heart/reo_time05.mp3"/>
+        <source src="assets/reo/machine_heart/reo_time06.mp3"/>
+        <source src="assets/reo/machine_heart/reo_time07.mp3"/>
+        <source src="assets/reo/machine_heart/reo_time08.mp3"/>
+        <source src="assets/reo/machine_heart/reo_time09.mp3"/>
+      </audio>
+    </div>
     <div class="nav-wrapper">
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <ul id="nav-mobile" class="right ">
             <li><a class="play">play</a></li>
             <li><a href="badges.html">Components</a></li>
             <li><a href="collapsible.html">JavaScript</a></li>
@@ -85,7 +107,66 @@
         </ul>
     </div>
 </nav>
-<div id="test1" class="col s12">Test 1</div>
+<div id="test1" class="col s12">
+  <div class="container section">
+    <div class="row">
+      <div class="col s7">
+        <div class="content">
+          <div class="row about-title">
+            <span class="about-symbol"><i class="material-icons">tag_faces</i></span>
+            <span class="about-topic">About Me</span>
+            <span class="about-line"></span>
+          </div>
+          <h4>Hello there! I'm Neil :-)</h4>
+        </div>
+      </div>
+      <div class="col s5">
+        <div class="content">
+          <div class="row about-title">
+            <span class="about-symbol"><i class="octicon octicon-mark-github"></i></span>
+            <span class="about-topic">GitHub Recent Activity</span>
+            <span class="about-line"></span>
+          </div>
+          <div id="feed"></div>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <div class="content">
+          <div class="row about-title">
+            <span class="about-symbol"><i class="octicon octicon-repo"></i></span>
+            <span class="about-topic">Projects</span>
+            <span class="about-line"></span>
+          </div>
+          <div class="cards-container">
+            <div class="github-card" data-github="kibibit/achievibit" data-width="400" data-height="299" data-theme="medium"></div>
+            <div class="github-card" data-github="kibibit/achievibit-chrome-extension" data-width="400" data-height="299" data-theme="medium"></div>
+            <div class="github-card" data-github="kibibit/kibibit-code-editor" data-width="400" data-height="299" data-theme="medium"></div>
+            <div class="github-card" data-github="thatkookooguy/monkey-js" data-width="400" data-height="299" data-theme="medium"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <div class="content">
+          <div class="row about-title">
+            <span class="about-symbol"><i class="octicon octicon-repo"></i></span>
+            <span class="about-topic">Contributed to</span>
+            <span class="about-line"></span>
+          </div>
+          <div class="cards-container">
+            <div class="github-card" data-github="FredrikNoren/ungit" data-width="400" data-height="299" data-theme="medium"></div>
+            <div class="github-card" data-github="zhukov/webogram" data-width="400" data-height="299" data-theme="medium"></div>
+            <div class="github-card" data-github="gregjacobs/Autolinker.js" data-width="400" data-height="299" data-theme="medium"></div>
+            <div class="github-card" data-github="jiahaog/nativefier" data-width="400" data-height="299" data-theme="medium"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <div id="test2" class="col s12">
     <section id="cd-timeline" class="cd-container">
         <div class="cd-timeline-block">
@@ -195,7 +276,279 @@
 </section> <!-- cd-timeline -->
 
 </div>
-<div id="test3" class="col s12">Test 3</div>
+<div id="test3" class="col s12">
+  <div class="container">
+    <div class="row section" id="bands">
+      <div class="row about-title">
+        <span class="about-symbol"><i class="material-icons">speaker</i></span>
+        <span class="about-topic">Bands</span>
+        <span class="about-line"></span>
+      </div>
+    </div>
+      <div class="row section" id="albums">
+        <div class="row about-title">
+          <span class="about-symbol"><i class="material-icons">music_note</i></span>
+          <span class="about-topic">Listen</span>
+          <span class="about-line"></span>
+        </div>
+          <div class="col s12 music-cards-container">
+            <div class="card music blue-grey darken-1 z-depth-3">
+              <div class="card-image z-depth-3">
+                  <div class="vinyl-container ">
+                      <div class="vinyl"></div>
+                      <div class="shadow"></div>
+                  </div>
+                  <img src="https://f4.bcbits.com/img/a0459707748_2.jpg">
+                  <span class="card-title">Pancho - Pancho</span>
+                  <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>
+              </div>
+              <div class="collection">
+                  <a class="waves-effect waves-dark-orange btn-flat">
+                      <i class="material-icons">play_circle_outline</i>
+                      01. Power Of Weakness
+
+                  </a>
+                  <a class="waves-effect waves-dark-orange btn-flat">
+                      <i class="material-icons">play_circle_outline</i>
+                      02. Shwarma de Pulpo
+                  </a>
+                  <a class="waves-effect waves-dark-orange btn-flat">
+                      <i class="material-icons">play_circle_outline</i>
+                      03. Cincuenta
+                  </a>
+                  <a class="waves-effect waves-dark-orange btn-flat">
+                      <i class="material-icons">play_circle_outline</i>
+                      04. Con Limón
+                  </a>
+                  <a class="waves-effect waves-dark-orange btn-flat">
+                      <i class="material-icons">play_circle_outline</i>
+                      05. Timmy
+                  </a>
+                  <a class="waves-effect waves-dark-orange btn-flat">
+                      <i class="material-icons">play_circle_outline</i>
+                      06. Piekielny
+                  </a>
+                  <a class="waves-effect waves-dark-orange btn-flat">
+                      <i class="material-icons">play_circle_outline</i>
+                      07. Ballyhoo
+                  </a>
+                  <a class="waves-effect waves-dark-orange btn-flat">
+                      <i class="material-icons">play_circle_outline</i>
+                      08. Scentless Apprentice
+                  </a>
+                  <a class="waves-effect waves-dark-orange btn-flat">
+                      <i class="material-icons">play_circle_outline</i>
+                      09. Panchito
+                  </a>
+                  <a class="waves-effect waves-dark-orange btn-flat">
+                      <i class="material-icons">play_circle_outline</i>
+                      10. Sex On A Pyramid
+                  </a>
+              </div>
+              <div class="card-action">
+                  <a href="#">Listen on Bandcamp</a>
+              </div>
+          </div>
+          <div class="card music blue-grey darken-1 z-depth-3">
+            <div class="card-image z-depth-3">
+                <div class="vinyl-container ">
+                    <div class="vinyl"></div>
+                    <div class="shadow"></div>
+                </div>
+                <img src="https://f4.bcbits.com/img/a1782656632_2.jpg">
+                <span class="card-title">Funny​/​Not Funny</span>
+                <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>
+            </div>
+            <div class="collection">
+                <a class="waves-effect waves-dark-orange btn-flat">
+                    <i class="material-icons">play_circle_outline</i>
+                    01. Funny
+
+                </a>
+                <a class="waves-effect waves-dark-orange btn-flat">
+                    <i class="material-icons">play_circle_outline</i>
+                    02. Hostage
+                </a>
+                <a class="waves-effect waves-dark-orange btn-flat">
+                    <i class="material-icons">play_circle_outline</i>
+                    03. It's Carlos
+                </a>
+                <a class="waves-effect waves-dark-orange btn-flat">
+                    <i class="material-icons">play_circle_outline</i>
+                    04. Foie Gras
+                </a>
+                <a class="waves-effect waves-dark-orange btn-flat">
+                    <i class="material-icons">play_circle_outline</i>
+                    05. Boiler Room
+                </a>
+                <a class="waves-effect waves-dark-orange btn-flat">
+                    <i class="material-icons">play_circle_outline</i>
+                    06. Trains and Rooftops
+                </a>
+                <a class="waves-effect waves-dark-orange btn-flat">
+                    <i class="material-icons">play_circle_outline</i>
+                    07. Broken Blood Freezer
+                </a>
+                <a class="waves-effect waves-dark-orange btn-flat">
+                    <i class="material-icons">play_circle_outline</i>
+                    08. Pix Mate
+                </a>
+                <a class="waves-effect waves-dark-orange btn-flat">
+                    <i class="material-icons">play_circle_outline</i>
+                    09. Five Million Dollars
+                </a>
+                <a class="waves-effect waves-dark-orange btn-flat">
+                    <i class="material-icons">play_circle_outline</i>
+                    10. Sunday Pizza
+                </a>
+                <a class="waves-effect waves-dark-orange btn-flat">
+                    <i class="material-icons">play_circle_outline</i>
+                    11. Short Sugar Canes
+                </a>
+                <a class="waves-effect waves-dark-orange btn-flat">
+                    <i class="material-icons">play_circle_outline</i>
+                    12. Not Funny
+                </a>
+                <a class="waves-effect waves-dark-orange btn-flat">
+                    <i class="material-icons">play_circle_outline</i>
+                    13. Summer Overture / Lux Aeterna
+                </a>
+                <a class="waves-effect waves-dark-orange btn-flat">
+                    <i class="material-icons">play_circle_outline</i>
+                    14. Ultra Sexy (Bonus)
+                </a>
+            </div>
+            <div class="card-action">
+                <a href="#">Listen on Bandcamp</a>
+            </div>
+        </div>
+        <div class="card music blue-grey darken-1 z-depth-3">
+          <div class="card-image z-depth-3">
+              <div class="vinyl-container ">
+                  <div class="vinyl"></div>
+                  <div class="shadow"></div>
+              </div>
+              <img src="http://f4.bcbits.com/img/a1249434988_2.jpg">
+              <span class="card-title">Igor Krutogolov's Karate Band - How To Be A Crocodile</span>
+              <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>
+          </div>
+          <div class="collection">
+              <a class="waves-effect waves-dark-orange btn-flat">
+                  <i class="material-icons">play_circle_outline</i>
+                  01. Skeleton Dance
+
+              </a>
+              <a class="waves-effect waves-dark-orange btn-flat">
+                  <i class="material-icons">play_circle_outline</i>
+                  02. Last Supper Souffle
+              </a>
+              <a class="waves-effect waves-dark-orange btn-flat">
+                  <i class="material-icons">play_circle_outline</i>
+                  03. Seven
+              </a>
+              <a class="waves-effect waves-dark-orange btn-flat">
+                  <i class="material-icons">play_circle_outline</i>
+                  04. Beyond The Hill
+              </a>
+              <a class="waves-effect waves-dark-orange btn-flat">
+                  <i class="material-icons">play_circle_outline</i>
+                  05. Mad Medow
+              </a>
+              <a class="waves-effect waves-dark-orange btn-flat">
+                  <i class="material-icons">play_circle_outline</i>
+                  06. Drink N' Drive
+              </a>
+              <a class="waves-effect waves-dark-orange btn-flat">
+                  <i class="material-icons">play_circle_outline</i>
+                  07. Swamp King
+              </a>
+              <a class="waves-effect waves-dark-orange btn-flat">
+                  <i class="material-icons">play_circle_outline</i>
+                  08. Black Lip Oyster
+              </a>
+              <a class="waves-effect waves-dark-orange btn-flat">
+                  <i class="material-icons">play_circle_outline</i>
+                  09. Zhuravli i Korbli
+              </a>
+          </div>
+          <div class="card-action">
+              <a href="#">Listen on Bandcamp</a>
+          </div>
+      </div>
+          <div class="card music blue-grey darken-1 z-depth-3">
+            <div class="card-image z-depth-3">
+                <div class="vinyl-container ">
+                    <div class="vinyl"></div>
+                    <div class="shadow"></div>
+                </div>
+                <img src="http://f4.bcbits.com/img/a1492628332_2.jpg">
+                <span class="card-title">Igor Krutogolov's Toy Orchestra - Roots Over Roots</span>
+                <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>
+            </div>
+            <div class="collection">
+                <a class="waves-effect waves-dark-orange btn-flat">
+                    <i class="material-icons">play_circle_outline</i>
+                    01. Roots Over Roots
+
+                </a>
+            </div>
+            <div class="card-action">
+                <a href="#">Listen on Bandcamp</a>
+            </div>
+        </div>
+        <div class="card music blue-grey darken-1 z-depth-3">
+          <div class="card-image z-depth-3">
+              <div class="vinyl-container ">
+                  <div class="vinyl"></div>
+                  <div class="shadow"></div>
+              </div>
+              <img src="https://f4.bcbits.com/img/a3017239561_2.jpg">
+              <span class="card-title">Aperco - The Battle</span>
+              <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>
+          </div>
+          <div class="collection">
+              <a class="waves-effect waves-dark-orange btn-flat">
+                  <i class="material-icons">play_circle_outline</i>
+                  03. Another Day To Live
+
+              </a>
+          </div>
+          <div class="card-action">
+              <a href="#">Listen on Bandcamp</a>
+          </div>
+      </div>
+      <div class="card music blue-grey darken-1 z-depth-3">
+        <div class="card-image z-depth-3">
+            <div class="vinyl-container ">
+                <div class="vinyl"></div>
+                <div class="shadow"></div>
+            </div>
+            <img src="https://f4.bcbits.com/img/a1918411978_2.jpg">
+            <span class="card-title">Bilgo & Co - Rewind My Life</span>
+            <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>
+        </div>
+        <div class="collection">
+            <a class="waves-effect waves-dark-orange btn-flat">
+                <i class="material-icons">play_circle_outline</i>
+                01. Rewind My Life
+
+            </a>
+        </div>
+        <div class="card-action">
+            <a href="#">Listen on Bandcamp</a>
+        </div>
+    </div>
+        </div>
+      </div>
+      <div class="row section" id="music-videos">
+        <div class="row about-title">
+          <span class="about-symbol"><i class="material-icons">remove_red_eye</i></span>
+          <span class="about-topic">Watch</span>
+          <span class="about-line"></span>
+        </div>
+      </div>
+  </div>
+</div>
 <div id="test4" class="col s12">
     <div class="container">
         <div class="row">
@@ -484,6 +837,10 @@
   <script src="dat.gui.min.js"></script>
   <script src="leap.min.js"></script>
   <script src="materialize.min.js"></script>
+  <script src="bbplayer.js"></script>
+  <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+  <script type="text/javascript" src="mustache.min.js"></script>
+  <script type="text/javascript" src="github-activity-0.1.5.min.js"></script>
   <script src="main.js"></script>
 
   </body>
