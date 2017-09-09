@@ -18,6 +18,9 @@
     font-size: 16px;
 }
 
+.cd-timeline-block h2 {
+  font-size: 2rem;
+}
 .card.music .collection {
     border: none;
     margin-top: 1rem;
