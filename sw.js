@@ -77,7 +77,18 @@ self.addEventListener('install', function(e) {
       '/fonts/octicons/octicons.svg',
       '/fonts/octicons/octicons.ttf',
       '/fonts/octicons/octicons.woff',
-
+      '/assets/aperco-battle.jpg',
+      '/assets/aperco-battle.webp',
+      '/assets/bilgo-rewind.jpg',
+      '/assets/bilgo-rewind.webp',
+      '/assets/carmel-funny.jpg',
+      '/assets/carmel-funny.webp',
+      '/assets/pancho-pancho.jpg',
+      '/assets/pancho-pancho.webp',
+      '/assets/toy-croc.jpg',
+      '/assets/toy-croc.webp',
+      '/assets/toy-roots.jpg',
+      '/assets/toy-roots.webp'
     ]);
   })
   );
