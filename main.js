@@ -7,8 +7,20 @@ if('serviceWorker' in navigator) {
 (function() {
     $(function() {
 
+      GitHubActivity.feed({
+      	username: "Thatkookooguy",
+      	selector: "#feed",
+      	limit: 5 // optional
+      });
+
         // MUSIC VISUALIZER. SHOULD CONNECT TO PLAYER
-        createVisualizer(window, 'nav.nav-extended');
+        //createVisualizer(window, 'nav.nav-extended');
+
+        // MUSIC VISUALIZER. SHOULD CONNECT TO PLAYER
+        // setTimeout(function() {
+        //   var onTrackChange = createVisualizer(window, 'nav.nav-extended', '.bbplayer');
+        //   // $('.bbplayer').data().test.onLoadTrack = onTrackChange;
+        // }, 5000);
 
         $(".button-collapse").sideNav();
 
@@ -30,6 +42,46 @@ if('serviceWorker' in navigator) {
                 ? setTimeout(function(){ showBlocks(timelineBlocks, offset); }, 100)
             : window.requestAnimationFrame(function(){ showBlocks(timelineBlocks, offset); });
         });
+
+        $('.btn-flat').on('click', onItemClick);
+        $('.album-play').on('click', function() {
+          var $this = $(this);
+            if ($this.find('i').text() === 'pause') {
+                resetPlaylist();
+            } else {
+                onItemClick(0, $this.closest('.card.music'));
+            }
+        });
+
+      function onItemClick(index, albumElement) {
+          var allBtns = $('.card.music .btn-flat');
+          var $this = albumElement ? $($(albumElement).find('.btn-flat')[0]) : Number.isInteger(index) ? $(allBtns[index]) : $(this);
+          var wasActive = $this.hasClass('active');
+
+          // reset all buttons
+          resetPlaylist();
+
+          // activate if needed
+          if (!wasActive) {
+              $this.closest(".card.music").addClass('play');
+              $this.addClass('active');
+              $this.find('i').text('pause_circle_filled');
+              $this.closest(".card").find('.album-play i').text('pause');
+              $this.append([].join(''));
+          }
+
+      }
+
+      function resetPlaylist() {
+          var allBtns = $('.btn-flat');
+
+          // reset all buttons
+          $('.card.music').removeClass('play');
+          allBtns.removeClass('active');
+          allBtns.find('i').text('play_circle_outline');
+          $('.album-play i').text('play_arrow');
+          $('.card.music .play-bars').remove();
+      }
 
         function resizeToMax(element){
             element = $(element);
@@ -80,7 +132,7 @@ if('serviceWorker' in navigator) {
  * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-function createVisualizer(self, elementQuerySelector) {
+function createVisualizer(self, elementQuerySelector, playerSelector) {
 
 	var container, scene, camera, renderer, stats, cubes = [], mouse = { x: 0, y: 0 }, group, material = 0, particles, uniforms, mouseDown = start = play = false, lastTransition = Date.now();
 
@@ -152,13 +204,14 @@ function createVisualizer(self, elementQuerySelector) {
 	};
 
 	init();
+  connectSource();
 
     /*
 	 * Init.
 	 */
 
 	function init() {
-
+    // check WebGL browser support
 		if(!window.WebGLRenderingContext) {
 
 			console.error("Sorry, your browser doesn't support WebGL.");
@@ -167,6 +220,7 @@ function createVisualizer(self, elementQuerySelector) {
 
 		}
 
+    // use audio from existing player
 		initAudio();
 
 		var settings = new Settings();
@@ -184,7 +238,7 @@ function createVisualizer(self, elementQuerySelector) {
 		container.style.bottom = 0;
 		container.style.left = 0;
 		container.style.right = 0;
-		container.style.zIndex = -1;
+		container.style.zIndex = -1; // blow everything
 		container.style.overflow = 'hidden';
 
 		container.style.background = '-webkit-radial-gradient(#ffcc99, #ff9933)';
@@ -193,6 +247,7 @@ function createVisualizer(self, elementQuerySelector) {
 		container.style.background = '-o-radial-gradient(#ffcc99, #ff9933)';
 		container.style.background = 'radial-gradient(#ffcc99, #ff9933)';
 
+    // add element in the right location (inside given element)
 		element.appendChild(container);
 
 		// Setup
@@ -210,8 +265,10 @@ function createVisualizer(self, elementQuerySelector) {
 
 		group = new THREE.Object3D();
 
+    // create 80 particles
+    // FOR START
 		for(var cube = 0, len = 80; cube < len; cube++) {
-
+      // CREATE ALL MATERIAL TYPES
 			var redMaterial = new THREE.MeshPhongMaterial({
 
 				color: colors.lightRed[cube % colors.lightRed.length],
@@ -281,7 +338,8 @@ function createVisualizer(self, elementQuerySelector) {
 			group.add(mesh);
 
 		}
-
+    // IF end
+    // now we have a group of particles we can add to the scene
 		scene.add(group);
 
 		// Init particles and mesh
@@ -303,109 +361,27 @@ function createVisualizer(self, elementQuerySelector) {
 		container.appendChild(stats.domElement);
 
 		// Hide stats
-		settings.enableStats();
+		// settings.enableStats();
 
 		// Listeners
-		container.addEventListener('mousedown', onMouseDown, false);
-		container.addEventListener('touchstart', onTouchStart, false);
-
-		document.addEventListener('drop', onDrop, false);
-		document.addEventListener('dragover', onDragOver, false);
-
-		document.addEventListener('mousewheel', onMouseWheel, false );
-		document.addEventListener('DOMMouseScroll', onMouseWheel, false);
+		// container.addEventListener('mousedown', onMouseDown, false);
+		// container.addEventListener('touchstart', onTouchStart, false);
+    //
+		// document.addEventListener('drop', onDrop, false);
+		// document.addEventListener('dragover', onDragOver, false);
+    //
+		// document.addEventListener('mousewheel', onMouseWheel, false );
+		// document.addEventListener('DOMMouseScroll', onMouseWheel, false);
 
 		// playButton = document.querySelector('.play');
-    playButton = $('.play');
-    playButton.on('click', onClick);
+    // playButton = $('.play');
+    // playButton.on('click', onClick);
 		// playButton.addEventListener('click', onClick, false);
 
-		enableLeap();
+		// enableLeap();
 		render();
 
 		window.onresize = onResize;
-
-	}
-
-	/*
-	 * Mouse down event.
-	 */
-
-	function onMouseDown(event) {
-
-		event.preventDefault();
-
-		if(play)
-
-			changeMaterial();
-
-	}
-
-	/*
-	 * Touch start event.
-	 */
-
-	function onTouchStart(event) {
-
-		event.preventDefault();
-
-		if(play)
-
-			changeMaterial();
-
-	}
-
-	/*
-	 * On drag over event.
- 	 */
-
-	function onDragOver(event) {
-
-		event.stopPropagation();
-		event.preventDefault();
-
-		return false;
-
-	}
-
-	/*
-	 * On drop event.
- 	 */
-
-	function onDrop(event) {
-
-		event.stopPropagation();
-		event.preventDefault();
-
-		// Read data as URL
-		loadAudio(createObjectURL(event.dataTransfer.files[0]));
-
-	}
-
-	/*
-	 * On mouse wheel event.
-	 */
-
-	function onMouseWheel(event) {
-
-		if(cameraZ < min || cameraZ > max)
-
-			cameraZ = THREE.Math.clamp(cameraZ, min, max);
-
-		// WebKit
-		if(play && event.wheelDeltaY)
-
-			cameraZ -=event.wheelDeltaY * 2;
-
-		// Opera / Explorer 9
-		else if(play && event.wheelDelta)
-
-			cameraZ -= event.wheelDelta * 2;
-
-		// Firefox
-		else if(play && event.detail)
-
-			cameraZ -= event.detail * 2;
 
 	}
 
@@ -434,54 +410,6 @@ function createVisualizer(self, elementQuerySelector) {
 			source.play();
 
 		}
-
-	}
-
-	/*
-	 * Enable leap device if detected.
-	 */
-
-	function enableLeap() {
-
-		var controller = new Leap.Controller({ enableGestures: true });
-
-		controller.on('frame', function(data) {
-
-			if(cameraZ < min || cameraZ > max)
-
-				cameraZ = THREE.Math.clamp(cameraZ, min, max);
-
-			// Palm position
-			if(data.hands.length > 0) {
-
-				var hand = data.hands[0];
-
-				cameraZ += ~~(-hand.palmPosition[2]);
-
-		    }
-
-			for(var i = 0; i < data.gestures.length; i++) {
-
-				var gesture = data.gestures[i];
-
-		        var type = gesture.type;
-
-				switch(type) {
-
-		          	case 'screenTap':
-
-						!play ? onClick(null) : changeMaterial();
-
-				  		break;
-
-		        }
-
-		    }
-
-		});
-
-		// Connect controller
-		controller.connect();
 
 	}
 
@@ -516,60 +444,9 @@ function createVisualizer(self, elementQuerySelector) {
 
 		context = new (window.AudioContext || window.webkitAudioContext)();
 
-		source = document.createElement('audio');
+		source = $(playerSelector + ' audio')[0];
 
-		for(var fallback = 0; fallback < (source.canPlayType('audio/mpeg') === '' ? 1 : 2); fallback++)
 
-			new Audio(fallback);
-
-	}
-
-	/*
-	 * Create an audio object from an AJAX stream.
-     */
-
-	function Audio(fallback) {
-
-		var request = new XMLHttpRequest();
-
-		request.open('GET', URL + codec[fallback], true);
-		request.responseType = 'blob';
-
-		request.onload = function(event) {
-
-			if(this.readyState === 4 && this.status === 200) {
-
-				stream = document.createElement('source');
-
-				stream.src = createObjectURL(this.response);
-				stream.type = mimeType[fallback];
-
-				source.appendChild(stream);
-
-			}
-
-		};
-
-		request.send();
-
-	}
-
-	/*
-	 * Load audio from a source (drag & drop).
-	 */
-
-	function loadAudio(data) {
-
-		var streams = source.childNodes.length;
-
-		while(streams--)
-
-			// Manually disconnect the source
-			source.removeChild(source.childNodes[streams]);
-
-        stream.src = data;
-
-		source.appendChild(stream);
 
 	}
 
