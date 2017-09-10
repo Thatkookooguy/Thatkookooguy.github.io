@@ -17,7 +17,6 @@
 
   <link rel="stylesheet" href="materialIcons.css">
   <link rel="stylesheet" href="materialize.min.css">
-  <link rel="stylesheet" href="bbplayer.css">
   <link rel="stylesheet" href="octicons.min.css">
   <link rel="stylesheet" href="github-activity-0.1.5.min.css">
   <link rel="stylesheet" href="style.css">
@@ -58,23 +57,21 @@
 <body>
   <nav class="nav-extended">
     <div class="bbplayer floating">
-      <span class="player-mi bb-rewind"></span>
+      <!-- <span class="player-mi bb-rewind"></span>
       <span class="player-mi bb-play"></span>
       <span class="player-mi bb-forward"></span>
       <span class="bb-trackTime"></span>
       <span class="bb-trackLength"></span>
-      <span class="bb-trackTitle"></span>
-      <audio>
-        <source src="assets/reo/machine_heart/reo_time01.mp3"/>
-        <source src="assets/reo/machine_heart/reo_time02.mp3"/>
-        <source src="assets/reo/machine_heart/reo_time03.mp3"/>
-        <source src="assets/reo/machine_heart/reo_time04.mp3"/>
-        <source src="assets/reo/machine_heart/reo_time05.mp3"/>
-        <source src="assets/reo/machine_heart/reo_time06.mp3"/>
-        <source src="assets/reo/machine_heart/reo_time07.mp3"/>
-        <source src="assets/reo/machine_heart/reo_time08.mp3"/>
-        <source src="assets/reo/machine_heart/reo_time09.mp3"/>
-      </audio>
+      <span class="bb-trackTitle"></span> -->
+      <span class="amplitude-prev player-mi"></span>
+      <span class="button amplitude-play-pause player-mi" amplitude-main-play-pause="true"></span>
+      <span class="amplitude-next player-mi"></span>
+      <span class="name-container">
+        <span class="amplitude-name move1" amplitude-song-info="name" amplitude-main-song-info="true"></span>
+        <span class="amplitude-name move2" amplitude-song-info="name" amplitude-main-song-info="true"></span>
+      </span>
+      <span class="amplitude-current-time" amplitude-main-current-time="true"></span>
+      <span class="amplitude-duration-time" amplitude-main-duration-time="true"></span>
     </div>
     <div class="nav-wrapper">
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -303,44 +300,44 @@
                   <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>
               </div>
               <div class="collection">
-                  <a class="waves-effect waves-dark-orange btn-flat">
+                  <a class="waves-effect waves-dark-orange btn-flat" song-index="0">
                       <i class="material-icons">play_circle_outline</i>
                       01. Power Of Weakness
 
                   </a>
-                  <a class="waves-effect waves-dark-orange btn-flat">
+                  <a class="waves-effect waves-dark-orange btn-flat" song-index="1">
                       <i class="material-icons">play_circle_outline</i>
                       02. Shwarma de Pulpo
                   </a>
-                  <a class="waves-effect waves-dark-orange btn-flat">
+                  <a class="waves-effect waves-dark-orange btn-flat" song-index="2">
                       <i class="material-icons">play_circle_outline</i>
                       03. Cincuenta
                   </a>
-                  <a class="waves-effect waves-dark-orange btn-flat">
+                  <a class="waves-effect waves-dark-orange btn-flat" song-index="3">
                       <i class="material-icons">play_circle_outline</i>
                       04. Con Limón
                   </a>
-                  <a class="waves-effect waves-dark-orange btn-flat">
+                  <a class="waves-effect waves-dark-orange btn-flat" song-index="4">
                       <i class="material-icons">play_circle_outline</i>
                       05. Timmy
                   </a>
-                  <a class="waves-effect waves-dark-orange btn-flat">
+                  <a class="waves-effect waves-dark-orange btn-flat" song-index="5">
                       <i class="material-icons">play_circle_outline</i>
                       06. Piekielny
                   </a>
-                  <a class="waves-effect waves-dark-orange btn-flat">
+                  <a class="waves-effect waves-dark-orange btn-flat" song-index="6">
                       <i class="material-icons">play_circle_outline</i>
                       07. Ballyhoo
                   </a>
-                  <a class="waves-effect waves-dark-orange btn-flat">
+                  <a class="waves-effect waves-dark-orange btn-flat" song-index="7">
                       <i class="material-icons">play_circle_outline</i>
                       08. Scentless Apprentice
                   </a>
-                  <a class="waves-effect waves-dark-orange btn-flat">
+                  <a class="waves-effect waves-dark-orange btn-flat" song-index="8">
                       <i class="material-icons">play_circle_outline</i>
                       09. Panchito
                   </a>
-                  <a class="waves-effect waves-dark-orange btn-flat">
+                  <a class="waves-effect waves-dark-orange btn-flat" song-index="9">
                       <i class="material-icons">play_circle_outline</i>
                       10. Sex On A Pyramid
                   </a>
@@ -360,60 +357,60 @@
                 <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>
             </div>
             <div class="collection">
-                <a class="waves-effect waves-dark-orange btn-flat">
+                <a class="waves-effect waves-dark-orange btn-flat" song-index="10">
                     <i class="material-icons">play_circle_outline</i>
                     01. Funny
 
                 </a>
-                <a class="waves-effect waves-dark-orange btn-flat">
+                <a class="waves-effect waves-dark-orange btn-flat" song-index="11">
                     <i class="material-icons">play_circle_outline</i>
                     02. Hostage
                 </a>
-                <a class="waves-effect waves-dark-orange btn-flat">
+                <a class="waves-effect waves-dark-orange btn-flat" song-index="12">
                     <i class="material-icons">play_circle_outline</i>
                     03. It's Carlos
                 </a>
-                <a class="waves-effect waves-dark-orange btn-flat">
+                <a class="waves-effect waves-dark-orange btn-flat" song-index="13">
                     <i class="material-icons">play_circle_outline</i>
                     04. Foie Gras
                 </a>
-                <a class="waves-effect waves-dark-orange btn-flat">
+                <a class="waves-effect waves-dark-orange btn-flat" song-index="14">
                     <i class="material-icons">play_circle_outline</i>
                     05. Boiler Room
                 </a>
-                <a class="waves-effect waves-dark-orange btn-flat">
+                <a class="waves-effect waves-dark-orange btn-flat" song-index="15">
                     <i class="material-icons">play_circle_outline</i>
                     06. Trains and Rooftops
                 </a>
-                <a class="waves-effect waves-dark-orange btn-flat">
+                <a class="waves-effect waves-dark-orange btn-flat" song-index="16">
                     <i class="material-icons">play_circle_outline</i>
                     07. Broken Blood Freezer
                 </a>
-                <a class="waves-effect waves-dark-orange btn-flat">
+                <a class="waves-effect waves-dark-orange btn-flat" song-index="17">
                     <i class="material-icons">play_circle_outline</i>
                     08. Pix Mate
                 </a>
-                <a class="waves-effect waves-dark-orange btn-flat">
+                <a class="waves-effect waves-dark-orange btn-flat" song-index="18">
                     <i class="material-icons">play_circle_outline</i>
                     09. Five Million Dollars
                 </a>
-                <a class="waves-effect waves-dark-orange btn-flat">
+                <a class="waves-effect waves-dark-orange btn-flat" song-index="19">
                     <i class="material-icons">play_circle_outline</i>
                     10. Sunday Pizza
                 </a>
-                <a class="waves-effect waves-dark-orange btn-flat">
+                <a class="waves-effect waves-dark-orange btn-flat" song-index="20">
                     <i class="material-icons">play_circle_outline</i>
                     11. Short Sugar Canes
                 </a>
-                <a class="waves-effect waves-dark-orange btn-flat">
+                <a class="waves-effect waves-dark-orange btn-flat" song-index="21">
                     <i class="material-icons">play_circle_outline</i>
                     12. Not Funny
                 </a>
-                <a class="waves-effect waves-dark-orange btn-flat">
+                <a class="waves-effect waves-dark-orange btn-flat" song-index="22">
                     <i class="material-icons">play_circle_outline</i>
                     13. Summer Overture / Lux Aeterna
                 </a>
-                <a class="waves-effect waves-dark-orange btn-flat">
+                <a class="waves-effect waves-dark-orange btn-flat" song-index="23">
                     <i class="material-icons">play_circle_outline</i>
                     14. Ultra Sexy (Bonus)
                 </a>
@@ -433,40 +430,39 @@
               <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>
           </div>
           <div class="collection">
-              <a class="waves-effect waves-dark-orange btn-flat">
+              <a class="waves-effect waves-dark-orange btn-flat" song-index="24">
                   <i class="material-icons">play_circle_outline</i>
                   01. Skeleton Dance
-
               </a>
-              <a class="waves-effect waves-dark-orange btn-flat">
+              <a class="waves-effect waves-dark-orange btn-flat" song-index="25">
                   <i class="material-icons">play_circle_outline</i>
                   02. Last Supper Souffle
               </a>
-              <a class="waves-effect waves-dark-orange btn-flat">
+              <a class="waves-effect waves-dark-orange btn-flat" song-index="26">
                   <i class="material-icons">play_circle_outline</i>
                   03. Seven
               </a>
-              <a class="waves-effect waves-dark-orange btn-flat">
+              <a class="waves-effect waves-dark-orange btn-flat" song-index="27">
                   <i class="material-icons">play_circle_outline</i>
                   04. Beyond The Hill
               </a>
-              <a class="waves-effect waves-dark-orange btn-flat">
+              <a class="waves-effect waves-dark-orange btn-flat" song-index="28">
                   <i class="material-icons">play_circle_outline</i>
                   05. Mad Medow
               </a>
-              <a class="waves-effect waves-dark-orange btn-flat">
+              <a class="waves-effect waves-dark-orange btn-flat" song-index="29">
                   <i class="material-icons">play_circle_outline</i>
                   06. Drink N' Drive
               </a>
-              <a class="waves-effect waves-dark-orange btn-flat">
+              <a class="waves-effect waves-dark-orange btn-flat" song-index="30">
                   <i class="material-icons">play_circle_outline</i>
                   07. Swamp King
               </a>
-              <a class="waves-effect waves-dark-orange btn-flat">
+              <a class="waves-effect waves-dark-orange btn-flat" song-index="31">
                   <i class="material-icons">play_circle_outline</i>
                   08. Black Lip Oyster
               </a>
-              <a class="waves-effect waves-dark-orange btn-flat">
+              <a class="waves-effect waves-dark-orange btn-flat" song-index="32">
                   <i class="material-icons">play_circle_outline</i>
                   09. Zhuravli i Korbli
               </a>
@@ -507,7 +503,7 @@
               <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>
           </div>
           <div class="collection">
-              <a class="waves-effect waves-dark-orange btn-flat">
+              <a class="waves-effect waves-dark-orange btn-flat" song-index="33">
                   <i class="material-icons">play_circle_outline</i>
                   03. Another Day To Live
 
@@ -528,7 +524,7 @@
             <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>
         </div>
         <div class="collection">
-            <a class="waves-effect waves-dark-orange btn-flat">
+            <a class="waves-effect waves-dark-orange btn-flat" song-index="34">
                 <i class="material-icons">play_circle_outline</i>
                 01. Rewind My Life
 
@@ -837,7 +833,7 @@
   <script src="dat.gui.min.js"></script>
   <script src="leap.min.js"></script>
   <script src="materialize.min.js"></script>
-  <script src="bbplayer.js"></script>
+  <script src="amplitude.min.js"></script>
   <script src="widget.js"></script>
   <script type="text/javascript" src="mustache.min.js"></script>
   <script type="text/javascript" src="github-activity-0.1.5.min.js"></script>

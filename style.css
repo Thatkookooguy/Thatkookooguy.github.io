@@ -229,7 +229,7 @@
 .bbplayer.floating {
   position: absolute;
   top: 10px;
-  left: 10px;
+  right: 10px;
   z-index: 10;
   display: flex;
   justify-content: center;
@@ -239,31 +239,83 @@
   border: none;
   box-shadow: 0 2px 7px rgba(100,100,100,0.5);
   border-radius: 0;
+  padding: 7px;
+  width: 430px;
+  height: 50px;
+  max-width: 80vw;
 }
 
-.bbplayer .bb-play::after {
-  content: "play_arrow";
-}
-
-.bbplayer .bb-play.bb-playing::after {
+.bbplayer .button.amplitude-play-pause.amplitude-playing::after {
   content: "pause";
 }
 
-.bbplayer .bb-rewind::after {
+.bbplayer .button.amplitude-play-pause.amplitude-paused::after {
+  content: "play_arrow";
+}
+
+.bbplayer .amplitude-prev::after {
   content: "skip_previous";
 }
 
-.bbplayer .bb-forward::after {
+.bbplayer .amplitude-next::after {
   content: "skip_next";
 }
 
-.bb-trackTime, .bb-trackLength, .bb-trackTitle {
+.amplitude-current-time, .amplitude-duration-time, .amplitude-duration-name {
   vertical-align: baseline;
 }
 
-.bb-trackTime::after {
+.amplitude-current-time::after {
     content: ":";
     padding: 0 5px;
+}
+
+.bbplayer .name-container {
+    overflow: hidden;
+    position: relative;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.bbplayer .name-container .amplitude-name.move2 {
+    animation: left-one 10s linear infinite;
+}
+
+.bbplayer .name-container .amplitude-name.move1 {
+    animation: left-two 10s linear infinite;
+}
+
+@keyframes left-one {
+  0%  {
+    transform:translateX(0);
+  }
+  100%{
+    transform:translateX(-100%);
+  }
+}
+@keyframes left-two {
+  0% {
+    transform:translateX(100%);
+  }
+  100%{
+    transform:translateX(0);
+  }
+}
+
+.bbplayer .name-container .amplitude-name {
+    position: absolute;
+    padding: 0 10px;
+    white-space: nowrap;
+    margin: 0 10px;
+    min-width: 100%;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 0px #000000;
+    line-height: 35px;
+    filter: dropshadow(color=#000000, offx=1, offy=1);
 }
 
 .player-mi {
