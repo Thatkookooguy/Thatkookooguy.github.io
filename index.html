@@ -1,843 +1,836 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0"/>
-  <meta name="description" content="thatkookooguy@kibibit.io">
-  <meta property="og:title" content="Neil Kalman - thatkookooguy">
-  <meta property="og:image" content="https://s3-us-west-2.amazonaws.com/s.cdpn.io/154887/86_trans.png">
-  <meta property="og:description" content="thatkookooguy@kibibit.io">
-  <meta property="og:url" content="https://thatkookooguy.github.io"/>
-  <meta property="og:site_name" content="Neil Kalman - thatkookooguy" />
-  <meta name="theme-color" content="#000000"/>
-
-  <link rel="manifest" href="/manifest.json">
-
-  <title>Thatkookooguy</title>
-
-  <link rel="stylesheet" href="materialIcons.css">
-  <link rel="stylesheet" href="materialize.min.css">
-  <link rel="stylesheet" href="octicons.min.css">
-  <link rel="stylesheet" href="github-activity-0.1.5.min.css">
-  <link rel="stylesheet" href="style.css">
-
-  <script type = "x-shader/x-vertex" id = "vertex">
-
-		attribute float size;
-		uniform float bass;
-
-		void main() {
-
-			  vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
-
-				gl_PointSize = size * bass * (100.0 / length(mvPosition.xyz));
-
-				gl_Position = projectionMatrix * mvPosition;
-
-		}
-
-</script>
-
-<script type = "x-shader/x-fragment" id = "fragment">
-
-		uniform vec3 color;
-		uniform sampler2D texture;
-		uniform float opacity;
-
-		void main() {
-
-				vec4 outColor = texture2D(texture, gl_PointCoord);
-
-				gl_FragColor = outColor * vec4(color, opacity);
-
-		}
-
-</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0"
+    />
+    <meta name="description" content="thatkookooguy@kibibit.io">
+    <meta property="og:title" content="Neil Kalman - thatkookooguy">
+    <meta property="og:image" content="https://s3-us-west-2.amazonaws.com/s.cdpn.io/154887/86_trans.png">
+    <meta property="og:description" content="thatkookooguy@kibibit.io">
+    <meta property="og:url" content="https://thatkookooguy.github.io" />
+    <meta property="og:site_name" content="Neil Kalman - thatkookooguy" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="manifest" href="/manifest.json">
+    <title>Thatkookooguy</title>
+    <link rel="stylesheet" href="materialIcons.css">
+    <link rel="stylesheet" href="socicon.css">
+    <link rel="stylesheet" href="materialize.min.css">
+    <link rel="stylesheet" href="octicons.min.css">
+    <link rel="stylesheet" href="github-activity-0.1.5.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="x-shader/x-vertex" id="vertex"> attribute float size; uniform float bass; void main() { vec4 mvPosition = modelViewMatrix
+        * vec4(position, 1.0); gl_PointSize = size * bass * (100.0 / length(mvPosition.xyz));
+        gl_Position = projectionMatrix * mvPosition; } </script>
+    <script type="x-shader/x-fragment"
+      id="fragment"> uniform vec3 color; uniform sampler2D texture; uniform float opacity; void main()
+        { vec4 outColor = texture2D(texture, gl_PointCoord); gl_FragColor = outColor
+        * vec4(color, opacity); } </script>
 </head>
+
 <body>
-  <nav class="nav-extended">
-    <div class="bbplayer floating">
-      <!-- <span class="player-mi bb-rewind"></span>
-      <span class="player-mi bb-play"></span>
-      <span class="player-mi bb-forward"></span>
-      <span class="bb-trackTime"></span>
-      <span class="bb-trackLength"></span>
-      <span class="bb-trackTitle"></span> -->
-      <span class="amplitude-prev player-mi"></span>
-      <span class="button amplitude-play-pause player-mi" amplitude-main-play-pause="true"></span>
-      <span class="amplitude-next player-mi"></span>
-      <span class="name-container">
-        <span class="amplitude-name move1" amplitude-song-info="name" amplitude-main-song-info="true"></span>
-        <span class="amplitude-name move2" amplitude-song-info="name" amplitude-main-song-info="true"></span>
-      </span>
-      <span class="amplitude-current-time" amplitude-main-current-time="true"></span>
-      <span class="amplitude-duration-time" amplitude-main-duration-time="true"></span>
-    </div>
-    <div class="nav-wrapper">
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul id="nav-mobile" class="right ">
-            <li><a class="play">play</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-            <li><a class="play">play</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
-        </ul>
-    </div>
-    <div class="intro center">
-        <picture>
-            <source srcset="assets/86_trans.webp" type="image/webp">
-            <source srcset="assets/86_trans.png" type="image/png">
-            <img src="assets/86_trans.png" alt="Neil's avatar" class="circle" height="150">
-        </picture>
-        <h3>Neil Kalman</h3>
-        <h6>Software Engineer || FrontEnd Developer</h6>
-    </div>
-    <div class="nav-content">
-        <ul class="tabs tabs-transparent tabs-fixed-width">
-            <li class="tab"><a href="#test1">about me</a></li>
-            <li class="tab"><a class="active" href="#test2">resume</a></li>
-            <li class="tab"><a href="#test3">music</a></li>
-            <li class="tab"><a href="#test4">actor</a></li>
-        </ul>
-    </div>
-</nav>
-<div id="test1" class="col s12">
-  <div class="container section">
-    <div class="row">
-      <div class="col s12 m7 show-on-medium-and-up">
-        <div class="content">
-          <div class="row about-title">
-            <span class="about-symbol"><i class="material-icons">tag_faces</i></span>
-            <span class="about-topic">About Me</span>
-            <span class="about-line"></span>
-          </div>
-          <h4>Hello there! I'm Neil :-)</h4>
-        </div>
-      </div>
-      <div class="col s12 m5">
-        <div class="content">
-          <div class="row about-title">
-            <span class="about-symbol"><i class="octicon octicon-mark-github"></i></span>
-            <span class="about-topic">GitHub Recent Activity</span>
-            <span class="about-line"></span>
-          </div>
-          <div id="feed"></div>
-      </div>
-    </div>
-    </div>
-    <div class="row">
-      <div class="col s12">
-        <div class="content">
-          <div class="row about-title">
-            <span class="about-symbol"><i class="octicon octicon-repo"></i></span>
-            <span class="about-topic">Projects</span>
-            <span class="about-line"></span>
-          </div>
-          <div class="cards-container">
-            <div class="github-card" data-github="kibibit/achievibit" data-width="400" data-height="299" data-theme="medium"></div>
-            <div class="github-card" data-github="kibibit/achievibit-chrome-extension" data-width="400" data-height="299" data-theme="medium"></div>
-            <div class="github-card" data-github="kibibit/kibibit-code-editor" data-width="400" data-height="299" data-theme="medium"></div>
-            <div class="github-card" data-github="thatkookooguy/monkey-js" data-width="400" data-height="299" data-theme="medium"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col s12">
-        <div class="content">
-          <div class="row about-title">
-            <span class="about-symbol"><i class="octicon octicon-repo"></i></span>
-            <span class="about-topic">Contributed to</span>
-            <span class="about-line"></span>
-          </div>
-          <div class="cards-container">
-            <div class="github-card" data-github="FredrikNoren/ungit" data-width="400" data-height="299" data-theme="medium"></div>
-            <div class="github-card" data-github="zhukov/webogram" data-width="400" data-height="299" data-theme="medium"></div>
-            <div class="github-card" data-github="gregjacobs/Autolinker.js" data-width="400" data-height="299" data-theme="medium"></div>
-            <div class="github-card" data-github="jiahaog/nativefier" data-width="400" data-height="299" data-theme="medium"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div id="test2" class="col s12">
-    <section id="cd-timeline" class="cd-container">
-        <div class="cd-timeline-block">
-            <div class="cd-timeline-header">
-                <h4>Work Experience</h4>
-            </div>
-        </div>
-        <div class="cd-timeline-block">
-            <div class="cd-timeline-img redkix">
-                <picture>
-                    <source srcset="assets/redkix.webp" type="image/webp">
-                    <source srcset="assets/redkix.png" type="image/png">
-                    <img src="assets/redkix.png" alt="redkix" class="circle">
-                </picture>
-            </div> <!-- cd-timeline-img -->
-
-            <div class="cd-timeline-content">
-                <h2>REDKIX</h2>
-                <a href="https://redkix.com/" rel="noopener" target="_blank">https://redkix.com/</a>
-                <h6>SENIOR SOFTWARE ENGINEER</h6>
-
-                <p>
-                <ul class="browser-default">
-                    <li>
-                        Programming an email web client for Redkix
-                        <blockquote>
-                            Worked on data handling and UI manipulation typically required by email clients. Including <strong>real-time</strong>, <strong>inline embedding of assets</strong>, <strong>manipulating images</strong> (crop, resize, etc.), <strong>text manipulation</strong> and <strong>integrating with a WYSIWYG</strong> (markdown, emojis, URLs, mentions), and more.
-                        </blockquote>
-                    </li>
-                    <li>Creating the native fork of Redkix for OS X & Windows, including certifications and installers</li>
-                    <li>Developing complex UI components and animations</li>
-                </ul>
-                </p>
-            <a href="#0" class="cd-read-more">Read more</a>
-            <span class="cd-date">Dec 2015 – Apr 2017</span>
-        </div> <!-- cd-timeline-content -->
-        </div> <!-- cd-timeline-block -->
-
-    <div class="cd-timeline-block">
-        <div class="cd-timeline-img google">
-          <picture>
-              <source srcset="assets/google.webp" type="image/webp">
-              <source srcset="assets/google.png" type="image/png">
-              <img src="assets/google.png" alt="google" class="circle">
-          </picture>
-        </div> <!-- cd-timeline-img -->
-
-        <div class="cd-timeline-content">
-            <h2>NISHA PRO, AT GOOGLE</h2>
-            <h6>SOFTWARE ENGINEER</h6>
-            <p>
-                Worked in the Live Results team, creating cards for Google Search.
-            <ul class="browser-default">
-                <li>Used Agile practices and Test Driven Development techniques to provide reliable, working software early and often</li>
-                <li>Server side and client side data manipulation</li>
-                <li>Worked on adapting Google search UI components to load and run faster on poor internet connections, minimizing the Google Search page size.<li>
+    <nav class="nav-extended">
+        <div class="bbplayer floating">
+            <!-- <span class="player-mi bb-rewind"></span>
+<span class="player-mi bb-play"></span>
+<span class="player-mi bb-forward"></span>
+<span class="bb-trackTime"></span>
+<span class="bb-trackLength"></span>
+<span class="bb-trackTitle"></span> --><span class="amplitude-prev player-mi"></span> <span class="button amplitude-play-pause player-mi"
+              amplitude-main-play-pause="true"></span> <span class="amplitude-next player-mi"></span>            <span class="name-container">
+<span class="amplitude-name move1" amplitude-song-info="name" amplitude-main-song-info="true"></span>            <span class="amplitude-name move2" amplitude-song-info="name" amplitude-main-song-info="true"></span>            </span> <span class="amplitude-current-time" amplitude-main-current-time="true"></span>            <span class="amplitude-duration-time" amplitude-main-duration-time="true"></span>            </div>
+        <div class="nav-wrapper"> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right ">
+                <li><a class="play">play</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">JavaScript</a></li>
             </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a class="play">play</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">JavaScript</a></li>
+            </ul>
+        </div>
+        <div class="intro center">
+            <picture>
+                <source srcset="assets/86_trans.webp" type="image/webp">
+                <source srcset="assets/86_trans.png" type="image/png"> <img src="assets/86_trans.png" alt="Neil's avatar" class="circle"
+                  height="150"> </picture>
+            <h3>Neil Kalman</h3>
+            <h6>Software Engineer || FrontEnd Developer</h6> </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent tabs-fixed-width">
+                <li class="tab"><a href="#test1">about me</a></li>
+                <li class="tab"><a class="active" href="#test2">resume</a></li>
+                <li class="tab"><a href="#test3">music</a></li>
+                <li class="tab"><a href="#test4">actor</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="test1" class="col s12">
+        <div class="container section">
+            <div class="row">
+                <div class="col s12 m7">
+                    <div class="content">
+                        <div class="row about-title"> <span class="about-symbol"><i class="material-icons">tag_faces</i></span>                            <span class="about-topic">About Me</span> <span class="about-line"></span>                            </div>
+                        <h4>Hello there! I'm Neil :-)</h4> </div>
+                </div>
+                <div class="col s12 m5">
+                    <div class="content">
+                        <div class="row about-title"> <span class="about-symbol"><i class="octicon octicon-mark-github"></i></span>                            <span class="about-topic">GitHub Recent Activity</span>                            <span class="about-line"></span> </div>
+                        <div id="feed"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="content">
+                        <div class="row about-title"> <span class="about-symbol"><i class="octicon octicon-repo"></i></span>                            <span class="about-topic">Projects</span> <span class="about-line"></span>                            </div>
+                        <div class="cards-container">
+                            <div class="github-card" data-github="kibibit/achievibit"
+                              data-width="400" data-height="299" data-theme="medium"></div>
+                            <div class="github-card" data-github="kibibit/achievibit-chrome-extension"
+                              data-width="400" data-height="299" data-theme="medium"></div>
+                            <div class="github-card" data-github="kibibit/kibibit-code-editor"
+                              data-width="400" data-height="299" data-theme="medium"></div>
+                            <div class="github-card" data-github="thatkookooguy/monkey-js"
+                              data-width="400" data-height="299" data-theme="medium"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="content">
+                        <div class="row about-title"> <span class="about-symbol"><i class="octicon octicon-repo"></i></span>                            <span class="about-topic">Contributed to</span>
+                            <span
+                              class="about-line"></span>
+                        </div>
+                        <div class="cards-container">
+                            <div class="github-card" data-github="FredrikNoren/ungit"
+                              data-width="400" data-height="299" data-theme="medium"></div>
+                            <div class="github-card" data-github="zhukov/webogram"
+                              data-width="400" data-height="299" data-theme="medium"></div>
+                            <div class="github-card" data-github="gregjacobs/Autolinker.js"
+                              data-width="400" data-height="299" data-theme="medium"></div>
+                            <div class="github-card" data-github="jiahaog/nativefier"
+                              data-width="400" data-height="299" data-theme="medium"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="test2" class="col s12">
+        <section id="cd-timeline" class="cd-container">
+            <div class="cd-timeline-block">
+                <div class="cd-timeline-header">
+                    <h4>Work Experience</h4> </div>
+            </div>
+            <div class="cd-timeline-block">
+                <div class="cd-timeline-img redkix">
+                    <picture>
+                        <source srcset="assets/redkix.webp" type="image/webp">
+                        <source srcset="assets/redkix.png" type="image/png"> <img src="assets/redkix.png" alt="redkix" class="circle">                        </picture>
+                </div>
+                <!-- cd-timeline-img -->
+                <div class="cd-timeline-content">
+                    <h2>REDKIX</h2> <a href="https://redkix.com/" rel="noopener" target="_blank">https://redkix.com/</a>
+                    <h6>SENIOR SOFTWARE ENGINEER</h6>
+                    <p>
+                        <ul class="browser-default">
+                            <li> Programming an email web client for Redkix
+                                <blockquote>
+                                Worked on data handling and UI manipulation typically
+                                    required by email clients. Including <strong>real-time</strong>,
+                                    <strong>inline embedding of assets</strong>,
+                                    <strong>manipulating images</strong> (crop, resize,
+                                    etc.), <strong>text manipulation</strong> and
+                                    <strong>integrating with a WYSIWYG</strong> (markdown,
+                                    emojis, URLs, mentions), and more. </blockquote>
+                            </li>
+                            <li>Creating the native fork of Redkix for OS X & Windows,
+                                including certifications and installers</li>
+                            <li>Developing complex UI components and animations</li>
+                        </ul>
+                    </p> <a href="#0" class="cd-read-more">Read more</a> <span class="cd-date">Dec 2015 – Apr 2017</span>                    </div>
+                <!-- cd-timeline-content -->
+            </div>
+            <!-- cd-timeline-block -->
+            <div class="cd-timeline-block">
+                <div class="cd-timeline-img google">
+                    <picture>
+                        <source srcset="assets/google.webp" type="image/webp">
+                        <source srcset="assets/google.png" type="image/png"> <img src="assets/google.png" alt="google" class="circle">                        </picture>
+                </div>
+                <!-- cd-timeline-img -->
+                <div class="cd-timeline-content">
+                    <h2>NISHA PRO, AT GOOGLE</h2>
+                    <h6>SOFTWARE ENGINEER</h6>
+                    <p> Worked in the Live Results team, creating cards for Google Search.
+                        <ul class="browser-default">
+                            <li>Used Agile practices and Test Driven Development techniques
+                                to provide reliable, working software early and often</li>
+                            <li>Server side and client side data manipulation</li>
+                            <li>Worked on adapting Google search UI components to load
+                                and run faster on poor internet connections, minimizing
+                                the Google Search page size.
+                                <li>
+                        </ul>
+                    </p> <a href="#0" class="cd-read-more">Read more</a> <span class="cd-date">Feb 2015 – Oct 2015</span>                    </div>
+                <!-- cd-timeline-content -->
+            </div>
+            <!-- cd-timeline-block -->
+            <div class="cd-timeline-block">
+                <div class="cd-timeline-img amdocs">
+                    <picture>
+                        <source srcset="assets/amdocs.webp" type="image/webp">
+                        <source srcset="assets/amdocs.jpg" type="image/jpeg"> <img src="assets/amdocs.jpg" alt="amdocs" class="circle"
+                          id="amdocs"> </picture>
+                </div>
+                <!-- cd-timeline-img -->
+                <div class="cd-timeline-content">
+                    <h2>AMDOCS</h2>
+                    <h6>FRONT-END DEVELOPER</h6>
+                    <p>
+                        <ul class="browser-default">
+                            <li>Working on web components that were used by other Amdocs
+                                products</li>
+                            <li>Creating responsive designs</li>
+                            <li>Writing code that is customizable and theme-able.
+                                <li>
+                                    <li>Complex CSS animations</li>
+                        </ul>
+                    </p> <a href="#0" class="cd-read-more">Read more</a> <span class="cd-date">Jan 2014 – Feb 2015</span>                    </div>
+                <!-- cd-timeline-content -->
+            </div>
+            <!-- cd-timeline-block -->
+            <div class="cd-timeline-block">
+                <div class="cd-timeline-header">
+                    <h4>Education</h4> </div>
+            </div>
+            <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-location"> <img class="circle" src="assets/tel-aviv-university.svg" id="university">                    </div>
+                <!-- cd-timeline-img -->
+                <div class="cd-timeline-content">
+                    <h2>TEL AVIV UNIVERSITY</h2>
+                    <p><strong>B.Sc. in Computer Science and Life Science</strong>,
+                        Combined program with an emphasis on Bioinformatics (double
+                        major).
+                    </p> <a href="#0" class="cd-read-more">Read more</a>
+                    <span class="cd-date">2009-2013</span>
+                </div>
+                <!-- cd-timeline-content -->
+            </div>
+            <!-- cd-timeline-block -->
+        </section>
+        <!-- cd-timeline -->
+    </div>
+    <div id="test3" class="col s12">
+        <div class="container">
+            <div class="row section" id="bands">
+                <div class="col s12">
+                    <div class="content">
+                        <div class="row about-title"> <span class="about-symbol"><i class="material-icons">speaker</i></span><span class="about-topic">Bands</span> <span class="about-line"></span></div>
+                        <div class="band-card z-depth-3">
+        <div class="picture z-depth-2">
+            <img src="https://f4.bcbits.com/img/a0807138205_2.jpg">
+        </div>
+        <div class="info">
+            <div class="band-name">
+                reo
+            </div>
+            <div class="band-genres">
+                <div class="chip">
+                    dream disco
+                </div>
+                <div class="chip">
+                    analog
+                </div>
+                <div class="chip">
+                    electronic
+                </div>
+            </div>
+            <p>
+
+                Reo is a <strong>pop-disco-electronic</strong> duo, performed and produced by the musicians Zoe Polanski and Or Edri.
+                The songs were written, produced and fully performed by Polanski and Edri, exclusively on analogue equipment from the 80's and 90's that were collected carefully to create the warm and unique sound of the debut album.
             </p>
-        <a href="#0" class="cd-read-more">Read more</a>
-        <span class="cd-date">Feb 2015 – Oct 2015</span>
-    </div> <!-- cd-timeline-content -->
-</div> <!-- cd-timeline-block -->
-
-<div class="cd-timeline-block">
-    <div class="cd-timeline-img amdocs">
-      <picture>
-          <source srcset="assets/amdocs.webp" type="image/webp">
-          <source srcset="assets/amdocs.jpg" type="image/jpeg">
-          <img src="assets/amdocs.jpg" alt="amdocs" class="circle" id="amdocs">
-      </picture>
-    </div> <!-- cd-timeline-img -->
-
-    <div class="cd-timeline-content">
-        <h2>AMDOCS</h2>
-        <h6>FRONT-END DEVELOPER</h6>
-        <p>
-        <ul class="browser-default">
-            <li>Working on web components that were used by other Amdocs products</li>
-            <li>Creating responsive designs</li>
-            <li>Writing code that is customizable and theme-able.<li>
-            <li>Complex CSS animations</li>
-        </ul>
-        </p>
-    <a href="#0" class="cd-read-more">Read more</a>
-    <span class="cd-date">Jan 2014 – Feb 2015</span>
-</div> <!-- cd-timeline-content -->
-</div> <!-- cd-timeline-block -->
-<div class="cd-timeline-block">
-    <div class="cd-timeline-header">
-        <h4>Education</h4>
-    </div>
-</div>
-<div class="cd-timeline-block">
-    <div class="cd-timeline-img cd-location">
-        <img class="circle" src="assets/tel-aviv-university.svg" id="university">
-    </div> <!-- cd-timeline-img -->
-
-    <div class="cd-timeline-content">
-        <h2>TEL AVIV UNIVERSITY</h2>
-        <p><strong>B.Sc. in Computer Science and Life Science</strong>,
-            Combined program with an emphasis on Bioinformatics (double
-            major).</p>
-        <a href="#0" class="cd-read-more">Read more</a>
-        <span class="cd-date">2009-2013</span>
-    </div> <!-- cd-timeline-content -->
-</div> <!-- cd-timeline-block -->
-</section> <!-- cd-timeline -->
-
-</div>
-<div id="test3" class="col s12">
-  <div class="container">
-    <div class="row section" id="bands">
-      <div class="row about-title">
-        <span class="about-symbol"><i class="material-icons">speaker</i></span>
-        <span class="about-topic">Bands</span>
-        <span class="about-line"></span>
-      </div>
-    </div>
-      <div class="row section" id="albums">
-        <div class="row about-title">
-          <span class="about-symbol"><i class="material-icons">music_note</i></span>
-          <span class="about-topic">Listen</span>
-          <span class="about-line"></span>
+            <p>
+                Behind the ensemble are many performances at leading Tel-Aviv clubs and festivals all over.
+            </p>
         </div>
-          <div class="col s12 music-cards-container">
-            <div class="card music blue-grey darken-1 z-depth-3">
-              <div class="card-image z-depth-3">
-                  <div class="vinyl-container ">
-                      <div class="vinyl"></div>
-                      <div class="shadow"></div>
-                  </div>
-                  <img src="assets/pancho-pancho.jpg">
-                  <span class="card-title">Pancho - Pancho</span>
-                  <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>
-              </div>
-              <div class="collection">
-                  <a class="waves-effect waves-dark-orange btn-flat" song-index="0">
-                      <i class="material-icons">play_circle_outline</i>
-                      01. Power Of Weakness
-
-                  </a>
-                  <a class="waves-effect waves-dark-orange btn-flat" song-index="1">
-                      <i class="material-icons">play_circle_outline</i>
-                      02. Shwarma de Pulpo
-                  </a>
-                  <a class="waves-effect waves-dark-orange btn-flat" song-index="2">
-                      <i class="material-icons">play_circle_outline</i>
-                      03. Cincuenta
-                  </a>
-                  <a class="waves-effect waves-dark-orange btn-flat" song-index="3">
-                      <i class="material-icons">play_circle_outline</i>
-                      04. Con Limón
-                  </a>
-                  <a class="waves-effect waves-dark-orange btn-flat" song-index="4">
-                      <i class="material-icons">play_circle_outline</i>
-                      05. Timmy
-                  </a>
-                  <a class="waves-effect waves-dark-orange btn-flat" song-index="5">
-                      <i class="material-icons">play_circle_outline</i>
-                      06. Piekielny
-                  </a>
-                  <a class="waves-effect waves-dark-orange btn-flat" song-index="6">
-                      <i class="material-icons">play_circle_outline</i>
-                      07. Ballyhoo
-                  </a>
-                  <a class="waves-effect waves-dark-orange btn-flat" song-index="7">
-                      <i class="material-icons">play_circle_outline</i>
-                      08. Scentless Apprentice
-                  </a>
-                  <a class="waves-effect waves-dark-orange btn-flat" song-index="8">
-                      <i class="material-icons">play_circle_outline</i>
-                      09. Panchito
-                  </a>
-                  <a class="waves-effect waves-dark-orange btn-flat" song-index="9">
-                      <i class="material-icons">play_circle_outline</i>
-                      10. Sex On A Pyramid
-                  </a>
-              </div>
-              <div class="card-action">
-                  <a href="#">Listen on Bandcamp</a>
-              </div>
-          </div>
-          <div class="card music blue-grey darken-1 z-depth-3">
-            <div class="card-image z-depth-3">
-                <div class="vinyl-container ">
-                    <div class="vinyl"></div>
-                    <div class="shadow"></div>
-                </div>
-                <img src="assets/carmel-funny.jpg">
-                <span class="card-title">Funny​/​Not Funny</span>
-                <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>
-            </div>
-            <div class="collection">
-                <a class="waves-effect waves-dark-orange btn-flat" song-index="10">
-                    <i class="material-icons">play_circle_outline</i>
-                    01. Funny
-
-                </a>
-                <a class="waves-effect waves-dark-orange btn-flat" song-index="11">
-                    <i class="material-icons">play_circle_outline</i>
-                    02. Hostage
-                </a>
-                <a class="waves-effect waves-dark-orange btn-flat" song-index="12">
-                    <i class="material-icons">play_circle_outline</i>
-                    03. It's Carlos
-                </a>
-                <a class="waves-effect waves-dark-orange btn-flat" song-index="13">
-                    <i class="material-icons">play_circle_outline</i>
-                    04. Foie Gras
-                </a>
-                <a class="waves-effect waves-dark-orange btn-flat" song-index="14">
-                    <i class="material-icons">play_circle_outline</i>
-                    05. Boiler Room
-                </a>
-                <a class="waves-effect waves-dark-orange btn-flat" song-index="15">
-                    <i class="material-icons">play_circle_outline</i>
-                    06. Trains and Rooftops
-                </a>
-                <a class="waves-effect waves-dark-orange btn-flat" song-index="16">
-                    <i class="material-icons">play_circle_outline</i>
-                    07. Broken Blood Freezer
-                </a>
-                <a class="waves-effect waves-dark-orange btn-flat" song-index="17">
-                    <i class="material-icons">play_circle_outline</i>
-                    08. Pix Mate
-                </a>
-                <a class="waves-effect waves-dark-orange btn-flat" song-index="18">
-                    <i class="material-icons">play_circle_outline</i>
-                    09. Five Million Dollars
-                </a>
-                <a class="waves-effect waves-dark-orange btn-flat" song-index="19">
-                    <i class="material-icons">play_circle_outline</i>
-                    10. Sunday Pizza
-                </a>
-                <a class="waves-effect waves-dark-orange btn-flat" song-index="20">
-                    <i class="material-icons">play_circle_outline</i>
-                    11. Short Sugar Canes
-                </a>
-                <a class="waves-effect waves-dark-orange btn-flat" song-index="21">
-                    <i class="material-icons">play_circle_outline</i>
-                    12. Not Funny
-                </a>
-                <a class="waves-effect waves-dark-orange btn-flat" song-index="22">
-                    <i class="material-icons">play_circle_outline</i>
-                    13. Summer Overture / Lux Aeterna
-                </a>
-                <a class="waves-effect waves-dark-orange btn-flat" song-index="23">
-                    <i class="material-icons">play_circle_outline</i>
-                    14. Ultra Sexy (Bonus)
-                </a>
-            </div>
-            <div class="card-action">
-                <a href="#">Listen on Bandcamp</a>
-            </div>
-        </div>
-        <div class="card music blue-grey darken-1 z-depth-3">
-          <div class="card-image z-depth-3">
-              <div class="vinyl-container ">
-                  <div class="vinyl"></div>
-                  <div class="shadow"></div>
-              </div>
-              <img src="assets/toy-croc.jpg">
-              <span class="card-title">Igor Krutogolov's Karate Band - How To Be A Crocodile</span>
-              <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>
-          </div>
-          <div class="collection">
-              <a class="waves-effect waves-dark-orange btn-flat" song-index="24">
-                  <i class="material-icons">play_circle_outline</i>
-                  01. Skeleton Dance
-              </a>
-              <a class="waves-effect waves-dark-orange btn-flat" song-index="25">
-                  <i class="material-icons">play_circle_outline</i>
-                  02. Last Supper Souffle
-              </a>
-              <a class="waves-effect waves-dark-orange btn-flat" song-index="26">
-                  <i class="material-icons">play_circle_outline</i>
-                  03. Seven
-              </a>
-              <a class="waves-effect waves-dark-orange btn-flat" song-index="27">
-                  <i class="material-icons">play_circle_outline</i>
-                  04. Beyond The Hill
-              </a>
-              <a class="waves-effect waves-dark-orange btn-flat" song-index="28">
-                  <i class="material-icons">play_circle_outline</i>
-                  05. Mad Medow
-              </a>
-              <a class="waves-effect waves-dark-orange btn-flat" song-index="29">
-                  <i class="material-icons">play_circle_outline</i>
-                  06. Drink N' Drive
-              </a>
-              <a class="waves-effect waves-dark-orange btn-flat" song-index="30">
-                  <i class="material-icons">play_circle_outline</i>
-                  07. Swamp King
-              </a>
-              <a class="waves-effect waves-dark-orange btn-flat" song-index="31">
-                  <i class="material-icons">play_circle_outline</i>
-                  08. Black Lip Oyster
-              </a>
-              <a class="waves-effect waves-dark-orange btn-flat" song-index="32">
-                  <i class="material-icons">play_circle_outline</i>
-                  09. Zhuravli i Korbli
-              </a>
-          </div>
-          <div class="card-action">
-              <a href="#">Listen on Bandcamp</a>
-          </div>
-      </div>
-          <div class="card music blue-grey darken-1 z-depth-3">
-            <div class="card-image z-depth-3">
-                <div class="vinyl-container ">
-                    <div class="vinyl"></div>
-                    <div class="shadow"></div>
-                </div>
-                <img src="assets/toy-roots.jpg">
-                <span class="card-title">Igor Krutogolov's Toy Orchestra - Roots Over Roots</span>
-                <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>
-            </div>
-            <div class="collection">
-                <a class="waves-effect waves-dark-orange btn-flat">
-                    <i class="material-icons">play_circle_outline</i>
-                    01. Roots Over Roots
-
-                </a>
-            </div>
-            <div class="card-action">
-                <a href="#">Listen on Bandcamp</a>
-            </div>
-        </div>
-        <div class="card music blue-grey darken-1 z-depth-3">
-          <div class="card-image z-depth-3">
-              <div class="vinyl-container ">
-                  <div class="vinyl"></div>
-                  <div class="shadow"></div>
-              </div>
-              <img src="assets/aperco-battle.jpg">
-              <span class="card-title">Aperco - The Battle</span>
-              <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>
-          </div>
-          <div class="collection">
-              <a class="waves-effect waves-dark-orange btn-flat" song-index="33">
-                  <i class="material-icons">play_circle_outline</i>
-                  03. Another Day To Live
-
-              </a>
-          </div>
-          <div class="card-action">
-              <a href="#">Listen on Bandcamp</a>
-          </div>
-      </div>
-      <div class="card music blue-grey darken-1 z-depth-3">
-        <div class="card-image z-depth-3">
-            <div class="vinyl-container ">
-                <div class="vinyl"></div>
-                <div class="shadow"></div>
-            </div>
-            <img src="assets/bilgo-rewind.jpg">
-            <span class="card-title">Bilgo & Co - Rewind My Life</span>
-            <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>
-        </div>
-        <div class="collection">
-            <a class="waves-effect waves-dark-orange btn-flat" song-index="34">
-                <i class="material-icons">play_circle_outline</i>
-                01. Rewind My Life
-
-            </a>
-        </div>
-        <div class="card-action">
-            <a href="#">Listen on Bandcamp</a>
+        <div class="actions z-depth-2">
+            <a class="waves-effect waves-dark-orange btn-flat"><i class="btn-icn socicon-bandcamp"></i></a>
+            <a class="waves-effect waves-dark-orange btn-flat"><i class="btn-icn socicon-facebook"></i></a>
         </div>
     </div>
+    <div class="band-card z-depth-3">
+        <div class="picture z-depth-2">
+            <img src="https://f4.bcbits.com/img/a3219931196_16.jpg">
         </div>
-      </div>
-      <div class="row section" id="music-videos">
-        <div class="row about-title">
-          <span class="about-symbol"><i class="material-icons">remove_red_eye</i></span>
-          <span class="about-topic">Watch</span>
-          <span class="about-line"></span>
+        <div class="info">
+            <div class="band-name">
+                Or Edry
+            </div>
+            <div class="band-genres">
+                <div class="chip">
+                    pop
+                </div>
+                <div class="chip">
+                    disco
+                </div>
+                <div class="chip">
+                    downtempo
+                </div>
+                <div class="chip">
+                    dream pop
+                </div>
+            </div>
+            <p>
+                Or Edri is one of the busiest and most versatile bass players in Tel-Aviv. In her solo project, she stays close to the genre of Rio, but while the duo stroked with technicolor sensuality, Edri alone is a deeper submarine. It's still sexy, still groovy, still going through the body like goosebumps, still gives you a desire to get up and dance, & still psychedelic and decorated with her stimulating bass lines.
+            </p>
         </div>
-      </div>
-  </div>
-</div>
-<div id="test4" class="col s12">
-    <div class="container">
-        <div class="row">
-            <div class="col s12 cards-container">
-                <!-- CARD -->
-                <div class="card blue-grey darken-1">
-                    <div class="card-image">
-                        <img src="/assets/video_family.webp">
-                        <span class="card-title rtl"><div class="reshet">
-                            <p>טלוויזיה מהעתיד</p>
+        <div class="actions z-depth-2">
+            <a class="waves-effect waves-dark-orange btn-flat"><i class="btn-icn socicon-bandcamp"></i></a>
+            <a class="waves-effect waves-dark-orange btn-flat"><i class="btn-icn socicon-facebook"></i></a>
+        </div>
+    </div>
+    <div class="band-card z-depth-3">
+        <div class="picture z-depth-2">
+            <img src="https://f4.bcbits.com/img/a0459707748_16.jpg">
+        </div>
+        <div class="info">
+            <div class="band-name">
+                pancho
+            </div>
+            <div class="band-genres">
+                <div class="chip">
+                    avant rock
+                </div>
+                <div class="chip">
+                    free-jazz
+                </div>
+                <div class="chip">
+                    avante garde
+                </div>
+                <div class="chip">
+                    experimental
+                </div>
+                <div class="chip">
+                    instrumental
+                </div>
+            </div>
+            <p>
+                Pancho is part of the independent scene of Tel-Aviv. Pancho creates unique instrumental music with tremendous merit and quirkiness. Drummer ( Niv Majar ), Guitarist ( Dror Pikielny ) and Saxophonist ( Neil Kalman ) give shape to this original and unclassifiable sound.
+            </p>
+        </div>
+        <div class="actions z-depth-2">
+            <a class="waves-effect waves-dark-orange btn-flat"><i class="btn-icn socicon-bandcamp"></i></a>
+            <a class="waves-effect waves-dark-orange btn-flat"><i class="btn-icn socicon-facebook"></i></a>
+            <a class="waves-effect waves-dark-orange btn-flat"><i class="btn-icn socicon-spotify"></i></a>
+            <a class="waves-effect waves-dark-orange btn-flat"><i class="btn-icn socicon-apple"></i></a>
+            <a class="waves-effect waves-dark-orange btn-flat"><i class="btn-icn socicon-play"></i></a>
+        </div>
+    </div>
+    <div class="band-card z-depth-3">
+        <div class="picture z-depth-2">
+            <img src="https://f4.bcbits.com/img/a3775861312_16.jpg">
+        </div>
+        <div class="info">
+            <div class="band-name">
+                Omer Schneider Band
+            </div>
+            <div class="band-genres">
+                <div class="chip">
+                    world
+                </div>
+                <div class="chip">
+                    fusion
+                </div>
+                <div class="chip">
+                    jewish music
+                </div>
+                <div class="chip">
+                    new age
+                </div>
+                <div class="chip">
+                    instrumental
+                </div>
+                <div class="chip">
+                    jazz
+                </div>
+            </div>
+            <p>
+                Like in a magical dream, virtuoso guitarist's <strong>Omer Schneider</strong> sensitively weaves within his music an abundance of different musical genres.
+            </p><p>
+            After a number of tours in Europe with the glam rock band <strong>CHASE THE ACE</strong>, Omer decided to go on a new way and make his own art. With the trio Tamir Borsuk (Drums), Tal Shturm (Bass), and Neil Kalman (Saxophones), they create magical picturesque melodies, wrapped in a heavy rock spirit.
+            </p>
+        </div>
+        <div class="actions z-depth-2">
+            <a class="waves-effect waves-dark-orange btn-flat"><i class="btn-icn socicon-bandcamp"></i></a>
+            <a class="waves-effect waves-dark-orange btn-flat"><i class="btn-icn socicon-facebook"></i></a>
+            <a class="waves-effect waves-dark-orange btn-flat"><i class="btn-icn socicon-spotify"></i></a>
+            <a class="waves-effect waves-dark-orange btn-flat"><i class="btn-icn socicon-apple"></i></a>
+            <a class="waves-effect waves-dark-orange btn-flat"><i class="btn-icn socicon-play"></i></a>
+        </div>
+    </div>
+    <div class="band-card z-depth-3">
+        <div class="picture z-depth-2">
+            <img src="https://scontent.fsdv3-1.fna.fbcdn.net/v/t31.0-8/415425_10150831051621194_706497548_o.jpg?oh=b3cbd33ac1ae378fb61e80d76aaa9a76&oe=5A57B8D8">
+        </div>
+        <div class="info">
+            <div class="band-name">
+                Carmel Apple Pop
+            </div>
+            <div class="band-genres">
+                <div class="chip">
+                    jazz
+                </div>
+                <div class="chip">
+                    metal
+                </div>
+                <div class="chip">
+                    funk
+                </div>
+                <div class="chip">
+                    punk
+                </div>
+                <div class="chip">
+                    avante garde
+                </div>
+            </div>
+            <p>
+                Caramel Apple Pop has been working for several years in the indie scene, creating funny and amusing performances that include jazz, metal, funk, punk and mostly - a lot of talent.
+            </p><p>
+            They are energetic guys who know what they do and do it great - their style is a kind of jazz metal songs in Hebrew and English their, and performance is overwhelming and mesmerizing.
+            </p>
+        </div>
+        <div class="actions z-depth-2">
+            <a class="waves-effect waves-dark-orange btn-flat"><i class="btn-icn socicon-bandcamp"></i></a>
+            <a class="waves-effect waves-dark-orange btn-flat"><i class="btn-icn socicon-facebook"></i></a>
+            <a class="waves-effect waves-dark-orange btn-flat"><i class="btn-icn socicon-spotify"></i></a>
+            <a class="waves-effect waves-dark-orange btn-flat"><i class="btn-icn socicon-apple"></i></a>
+            <a class="waves-effect waves-dark-orange btn-flat"><i class="btn-icn socicon-play"></i></a>
+        </div>
+    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row section" id="albums">
+                <div class="col s12">
+                    <div class="content">
+                        <div class="row about-title"> <span class="about-symbol"><i class="material-icons">music_note</i></span>                            <span class="about-topic">Listen</span> <span class="about-line"></span>                            </div>
+                        <div class="col s12 music-cards-container">
+                            <div class="card music blue-grey darken-1 z-depth-3">
+                                <div class="card-image z-depth-3">
+                                    <div class="vinyl-container ">
+                                        <div class="vinyl"></div>
+                                        <div class="shadow"></div>
+                                    </div> <img src="assets/pancho-pancho.jpg"> <span class="card-title">Pancho - Pancho</span>                                    <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>                                    </div>
+                                <div class="collection"> <a class="waves-effect waves-dark-orange btn-flat"
+                                      song-index="0">
+      <i class="material-icons">play_circle_outline</i>
+      01. Power Of Weakness
+  </a> <a class="waves-effect waves-dark-orange btn-flat" song-index="1">
+      <i class="material-icons">play_circle_outline</i>
+      02. Shwarma de Pulpo
+  </a> <a class="waves-effect waves-dark-orange btn-flat" song-index="2">
+      <i class="material-icons">play_circle_outline</i>
+      03. Cincuenta
+  </a> <a class="waves-effect waves-dark-orange btn-flat" song-index="3">
+      <i class="material-icons">play_circle_outline</i>
+      04. Con Limón
+  </a> <a class="waves-effect waves-dark-orange btn-flat" song-index="4">
+      <i class="material-icons">play_circle_outline</i>
+      05. Timmy
+  </a> <a class="waves-effect waves-dark-orange btn-flat" song-index="5">
+      <i class="material-icons">play_circle_outline</i>
+      06. Piekielny
+  </a> <a class="waves-effect waves-dark-orange btn-flat" song-index="6">
+      <i class="material-icons">play_circle_outline</i>
+      07. Ballyhoo
+  </a> <a class="waves-effect waves-dark-orange btn-flat" song-index="7">
+      <i class="material-icons">play_circle_outline</i>
+      08. Scentless Apprentice
+  </a> <a class="waves-effect waves-dark-orange btn-flat" song-index="8">
+      <i class="material-icons">play_circle_outline</i>
+      09. Panchito
+  </a> <a class="waves-effect waves-dark-orange btn-flat" song-index="9">
+      <i class="material-icons">play_circle_outline</i>
+      10. Sex On A Pyramid
+  </a> </div>
+                                <div class="card-action"> <a href="#">Listen on Bandcamp</a> </div>
                             </div>
-                        </span>
-                    </div>
-                    <div class="card-content white-text">
-                        <span class="card-title rtl">הלה-פמיליה של טלוויזיה מהעתיד</span>
-                        <p>Aug 2017</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="http://reshet.tv/item/entertainment/futuretv/season-01/clips/wpc7c-416540/" rel="noopener" target="_blank">watch on RESHSET</a>
-                    </div>
-                </div>
-                <!-- END CARD -->
-                <!-- CARD -->
-                <div class="card blue-grey darken-1">
-                    <div class="card-image">
-                        <img src="/assets/video_terr.webp">
-                        <span class="card-title rtl"><div class="reshet">
-                            <p>טלוויזיה מהעתיד</p>
+                            <div class="card music blue-grey darken-1 z-depth-3">
+                                <div class="card-image z-depth-3">
+                                    <div class="vinyl-container ">
+                                        <div class="vinyl"></div>
+                                        <div class="shadow"></div>
+                                    </div> <img src="assets/carmel-funny.jpg"> <span class="card-title">Funny​/​Not Funny</span>                                    <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>                                    </div>
+                                <div class="collection"> <a class="waves-effect waves-dark-orange btn-flat"
+                                      song-index="10">
+    <i class="material-icons">play_circle_outline</i>
+    01. Funny
+
+</a> <a class="waves-effect waves-dark-orange btn-flat" song-index="11">
+    <i class="material-icons">play_circle_outline</i>
+    02. Hostage
+</a> <a class="waves-effect waves-dark-orange btn-flat" song-index="12">
+    <i class="material-icons">play_circle_outline</i>
+    03. It's Carlos
+</a> <a class="waves-effect waves-dark-orange btn-flat" song-index="13">
+    <i class="material-icons">play_circle_outline</i>
+    04. Foie Gras
+</a> <a class="waves-effect waves-dark-orange btn-flat" song-index="14">
+    <i class="material-icons">play_circle_outline</i>
+    05. Boiler Room
+</a> <a class="waves-effect waves-dark-orange btn-flat" song-index="15">
+    <i class="material-icons">play_circle_outline</i>
+    06. Trains and Rooftops
+</a> <a class="waves-effect waves-dark-orange btn-flat" song-index="16">
+    <i class="material-icons">play_circle_outline</i>
+    07. Broken Blood Freezer
+</a> <a class="waves-effect waves-dark-orange btn-flat" song-index="17">
+    <i class="material-icons">play_circle_outline</i>
+    08. Pix Mate
+</a> <a class="waves-effect waves-dark-orange btn-flat" song-index="18">
+    <i class="material-icons">play_circle_outline</i>
+    09. Five Million Dollars
+</a> <a class="waves-effect waves-dark-orange btn-flat" song-index="19">
+    <i class="material-icons">play_circle_outline</i>
+    10. Sunday Pizza
+</a> <a class="waves-effect waves-dark-orange btn-flat" song-index="20">
+    <i class="material-icons">play_circle_outline</i>
+    11. Short Sugar Canes
+</a> <a class="waves-effect waves-dark-orange btn-flat" song-index="21">
+    <i class="material-icons">play_circle_outline</i>
+    12. Not Funny
+</a> <a class="waves-effect waves-dark-orange btn-flat" song-index="22">
+    <i class="material-icons">play_circle_outline</i>
+    13. Summer Overture / Lux Aeterna
+</a> <a class="waves-effect waves-dark-orange btn-flat" song-index="23">
+    <i class="material-icons">play_circle_outline</i>
+    14. Ultra Sexy (Bonus)
+</a> </div>
+                                <div class="card-action"> <a href="#">Listen on Bandcamp</a> </div>
                             </div>
-                        </span>
-                    </div>
-                    <div class="card-content white-text">
-                        <span class="card-title rtl">גיבור היום</span>
-                        <p>Aug 2017</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="http://reshet.tv/item/entertainment/futuretv/season-01/clips/dg5s0-416535/" rel="noopener" target="_blank">watch on RESHSET</a>
-                    </div>
-                </div>
-                <!-- END CARD -->
-                <!-- CARD -->
-                <div class="card blue-grey darken-1">
-                    <div class="card-image">
-                        <img src="/assets/video_ariel.webp">
-                        <span class="card-title rtl"><div class="reshet">
-                            <p>טלוויזיה מהעתיד</p>
+                            <div class="card music blue-grey darken-1 z-depth-3">
+                                <div class="card-image z-depth-3">
+                                    <div class="vinyl-container ">
+                                        <div class="vinyl"></div>
+                                        <div class="shadow"></div>
+                                    </div> <img src="assets/toy-croc.jpg"> <span class="card-title">Igor Krutogolov's Karate Band - How To Be A Crocodile</span>                                    <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>                                    </div>
+                                <div class="collection"> <a class="waves-effect waves-dark-orange btn-flat"
+                                      song-index="24">
+  <i class="material-icons">play_circle_outline</i>
+  01. Skeleton Dance
+</a> <a class="waves-effect waves-dark-orange btn-flat" song-index="25">
+  <i class="material-icons">play_circle_outline</i>
+  02. Last Supper Souffle
+</a> <a class="waves-effect waves-dark-orange btn-flat" song-index="26">
+  <i class="material-icons">play_circle_outline</i>
+  03. Seven
+</a> <a class="waves-effect waves-dark-orange btn-flat" song-index="27">
+  <i class="material-icons">play_circle_outline</i>
+  04. Beyond The Hill
+</a> <a class="waves-effect waves-dark-orange btn-flat" song-index="28">
+  <i class="material-icons">play_circle_outline</i>
+  05. Mad Medow
+</a> <a class="waves-effect waves-dark-orange btn-flat" song-index="29">
+  <i class="material-icons">play_circle_outline</i>
+  06. Drink N' Drive
+</a> <a class="waves-effect waves-dark-orange btn-flat" song-index="30">
+  <i class="material-icons">play_circle_outline</i>
+  07. Swamp King
+</a> <a class="waves-effect waves-dark-orange btn-flat" song-index="31">
+  <i class="material-icons">play_circle_outline</i>
+  08. Black Lip Oyster
+</a> <a class="waves-effect waves-dark-orange btn-flat" song-index="32">
+  <i class="material-icons">play_circle_outline</i>
+  09. Zhuravli i Korbli
+</a> </div>
+                                <div class="card-action"> <a href="#">Listen on Bandcamp</a> </div>
                             </div>
-                        </span>
-                    </div>
-                    <div class="card-content white-text">
-                        <span class="card-title rtl">שלום כבוד האומן אריאל</span>
-                        <p>Aug 2017</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="http://reshet.tv/item/entertainment/futuretv/season-01/clips/vaocl-410159/" rel="noopener" target="_blank">watch on RESHSET</a>
-                    </div>
-                </div>
-                <!-- END CARD -->
-                <!-- CARD -->
-                <div class="card blue-grey darken-1">
-                    <div class="card-image">
-                        <img src="/assets/video_shlem.webp">
-                        <span class="card-title rtl"><div class="reshet">
-                            <p>טלוויזיה מהעתיד</p>
+                            <div class="card music blue-grey darken-1 z-depth-3">
+                                <div class="card-image z-depth-3">
+                                    <div class="vinyl-container ">
+                                        <div class="vinyl"></div>
+                                        <div class="shadow"></div>
+                                    </div> <img src="assets/toy-roots.jpg"> <span class="card-title">Igor Krutogolov's Toy Orchestra - Roots Over Roots</span>                                    <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>                                    </div>
+                                <div class="collection"> <a class="waves-effect waves-dark-orange btn-flat">
+    <i class="material-icons">play_circle_outline</i>
+    01. Roots Over Roots
+
+</a> </div>
+                                <div class="card-action"> <a href="#">Listen on Bandcamp</a> </div>
                             </div>
-                        </span>
-                    </div>
-                    <div class="card-content white-text">
-                        <span class="card-title rtl">שלמייזל - פרק 4</span>
-                        <p>Aug 2017</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="http://reshet.tv/item/entertainment/futuretv/season-01/clips/nrupz-396361/" rel="noopener" target="_blank">watch on RESHSET</a>
-                    </div>
-                </div>
-                <!-- END CARD -->
-                <!-- CARD -->
-                <div class="card blue-grey darken-1">
-                    <div class="card-image">
-                      <picture>
-                          <source srcset="assets/neuman.webp" type="image/webp">
-                          <source srcset="assets/neuman.png" type="image/png">
-                          <img src="assets/neuman.png" alt="Ikea Catalog 2017 Ad - Israel">
-                      </picture>
-                    </div>
-                    <div class="card-content white-text">
-                        <span class="card-title">
-                            Ikea Catalog 2017 Ad - Israel
-                        </span>
-                        <p>Published on Sep 2016</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://youtu.be/LaOF0bVax74" rel="noopener" target="_blank">watch on Youtube</a>
-                    </div>
-                </div>
-                <!-- END CARD -->
-                <!-- CARD -->
-                <div class="card blue-grey darken-1">
-                    <div class="card-image">
-                      <picture>
-                          <source srcset="assets/pepsi_max.webp" type="image/webp">
-                          <source srcset="assets/pepsi_max.jpg" type="image/jpeg">
-                          <img src="assets/pepsi_max.jpg" alt="Pepsi Max Presents: This Falafel Is Making Me Thirsty!">
-                      </picture>
-                    </div>
-                    <div class="card-content white-text">
-                        <span class="card-title">
-                            Pepsi Max Presents: This Falafel Is Making Me Thirsty!
-                        </span>
-                        <p>Published on Jun 2015</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://youtu.be/5qaK7ihiSIY" rel="noopener" target="_blank">watch on Youtube</a>
+                            <div class="card music blue-grey darken-1 z-depth-3">
+                                <div class="card-image z-depth-3">
+                                    <div class="vinyl-container ">
+                                        <div class="vinyl"></div>
+                                        <div class="shadow"></div>
+                                    </div> <img src="assets/aperco-battle.jpg"> <span class="card-title">Aperco - The Battle</span>                                    <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>                                    </div>
+                                <div class="collection"> <a class="waves-effect waves-dark-orange btn-flat"
+                                      song-index="33">
+  <i class="material-icons">play_circle_outline</i>
+  03. Another Day To Live
+
+</a> </div>
+                                <div class="card-action"> <a href="#">Listen on Bandcamp</a> </div>
+                            </div>
+                            <div class="card music blue-grey darken-1 z-depth-3">
+                                <div class="card-image z-depth-3">
+                                    <div class="vinyl-container ">
+                                        <div class="vinyl"></div>
+                                        <div class="shadow"></div>
+                                    </div> <img src="assets/bilgo-rewind.jpg"> <span class="card-title">Bilgo & Co - Rewind My Life</span>                                    <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange"><i class="material-icons">play_arrow</i></a>                                    </div>
+                                <div class="collection"> <a class="waves-effect waves-dark-orange btn-flat"
+                                      song-index="34">
+<i class="material-icons">play_circle_outline</i>
+01. Rewind My Life
+
+</a> </div>
+                                <div class="card-action"> <a href="#">Listen on Bandcamp</a> </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- END CARD -->
-                <!-- CARD -->
-                <div class="card blue-grey darken-1">
-                    <div class="card-image">
-                      <picture>
-                          <source srcset="assets/video_adi.webp" type="image/webp">
-                          <source srcset="assets/video_adi.jpg" type="image/jpeg">
-                          <img src="assets/video_adi.jpg" alt="Adi Ulmansky - A.D.I">
-                      </picture>
-                    </div>
-                    <div class="card-content white-text">
-                        <span class="card-title">
-                            Adi Ulmansky - A.D.I
-                        </span>
-                        <p>Published on Nov 2012</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://youtu.be/thmSzqGkMT8" rel="noopener" target="_blank">watch on Youtube</a>
+            </div>
+            <div class="row section" id="music-videos">
+                <div class="col s12">
+                    <div class="content">
+                        <div class="row about-title"> <span class="about-symbol"><i class="material-icons">remove_red_eye</i></span>                            <span class="about-topic">Watch</span> <span class="about-line"></span>                            </div>
                     </div>
                 </div>
-                <!-- END CARD -->
-                <!-- CARD -->
-                <div class="card blue-grey darken-1">
-                    <div class="card-image">
-                      <picture>
-                          <source srcset="assets/video_brief_psy.webp" type="image/webp">
-                          <source srcset="assets/video_brief_psy.jpg" type="image/jpeg">
-                          <img src="assets/video_brief_psy.jpg" alt="Brief">
-                      </picture>
-                    </div>
-                    <div class="card-content white-text">
-                        <span class="card-title rtl">
-                            בקיצור, הלכתי לפסיכולוג
-                        </span>
-                        <p>Published on Feb 2013</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="http://www.mako.co.il/tv-erez-nehederet/season10-briefs/video/Video-2cd8f30038eec31006.htm" rel="noopener" target="_blank">watch on Mako</a>
-                    </div>
-                </div>
-                <!-- END CARD -->
-                <!-- CARD -->
-                <div class="card blue-grey darken-1">
-                    <div class="card-image">
-                      <picture>
-                          <source srcset="assets/video_brief_job.webp" type="image/webp">
-                          <source srcset="assets/video_brief_job.jpg" type="image/jpeg">
-                          <img src="assets/video_brief_job.jpg" alt="Brief">
-                      </picture>
-                    </div>
-                    <div class="card-content white-text">
-                        <span class="card-title rtl">
-                            בקיצור, היה לי ראיון עבודה
-                        </span>
-                        <p>Published on Jan 2013</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="http://www.mako.co.il/tv-erez-nehederet/season10-briefs/video/Video-61d469e07b51c31006.htm" rel="noopener" target="_blank">watch on Mako</a>
-                    </div>
-                </div>
-                <!-- END CARD -->
-                <!-- CARD -->
-                <div class="card blue-grey darken-1">
-                    <div class="card-image">
-                      <picture>
-                          <source srcset="assets/leon01.webp" type="image/webp">
-                          <source srcset="assets/leon01.jpg" type="image/jpeg">
-                          <img src="assets/leon01.jpg" alt="Neil & Yoav - Episode 01">
-                      </picture>
-                    </div>
-                    <div class="card-content white-text">
-                        <span class="card-title rtl ep1">
-                            ניל ויואב מראיינים!
-                        </span>
-                        <p>Published on Jul 2015</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://youtu.be/EeNuzr1HSxM" rel="noopener" target="_blank">watch on Youtube</a>
-                    </div>
-                </div>
-                <!-- END CARD -->
-                <!-- CARD -->
-                <div class="card blue-grey darken-1">
-                    <div class="card-image">
-                      <picture>
-                          <source srcset="assets/leon02.webp" type="image/webp">
-                          <source srcset="assets/leon02.jpg" type="image/jpeg">
-                          <img src="assets/leon02.jpg" alt="Neil & Yoav - Episode 02">
-                      </picture>
-                    </div>
-                    <div class="card-content white-text">
-                        <span class="card-title rtl ep2">
-                            ניל ויואב מראיינים!
-                        </span>
-                        <p>Published on Aug 2015</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://youtu.be/d1nGJEX8_ak" rel="noopener" target="_blank">watch on Youtube</a>
-                    </div>
-                </div>
-                <!-- END CARD -->
-                <!-- CARD -->
-                <div class="card blue-grey darken-1">
-                    <div class="card-image">
-                      <picture>
-                          <source srcset="assets/leon03.webp" type="image/webp">
-                          <source srcset="assets/leon03.jpg" type="image/jpeg">
-                          <img src="assets/leon03.jpg" alt="Neil & Yoav - Episode 03">
-                      </picture>
-                    </div>
-                    <div class="card-content white-text">
-                        <span class="card-title rtl ep3">
-                            ניל ויואב מראיינים!
-                        </span>
-                        <p>Published on Oct 2015</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://youtu.be/2NRHKwAQ01M" rel="noopener" target="_blank">watch on Youtube</a>
-                    </div>
-                </div>
-                <!-- END CARD -->
-                <!-- CARD -->
-                <div class="card blue-grey darken-1">
-                    <div class="card-image">
-                      <picture>
-                          <source srcset="assets/leon04.webp" type="image/webp">
-                          <source srcset="assets/leon04.jpg" type="image/jpeg">
-                          <img src="assets/leon04.jpg" alt="Neil & Yoav - Episode 04">
-                      </picture>
-                    </div>
-                    <div class="card-content white-text">
-                        <span class="card-title rtl ep4">
-                            ניל ויואב מראיינים!
-                        </span>
-                        <p>Published on Nov 2015</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://youtu.be/9q9thgtz8nk" rel="noopener" target="_blank">watch on Youtube</a>
-                    </div>
-                </div>
-                <!-- END CARD -->
-                <!-- CARD -->
-                <div class="card blue-grey darken-1">
-                    <div class="card-image">
-                      <picture>
-                          <source srcset="assets/leon05.webp" type="image/webp">
-                          <source srcset="assets/leon05.jpg" type="image/jpeg">
-                          <img src="assets/leon05.jpg" alt="Neil & Yoav - Episode 05">
-                      </picture>
-                    </div>
-                    <div class="card-content white-text">
-                        <span class="card-title rtl ep5">
-                            ניל ויואב מראיינים!
-                        </span>
-                        <p>Published on Feb 2016</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="https://youtu.be/CEQkkJShKkI" rel="noopener" target="_blank">watch on Youtube</a>
-                    </div>
-                </div>
-                <!-- END CARD -->
             </div>
         </div>
     </div>
-</div>
+    <div id="test4" class="col s12">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 cards-container">
+                    <!-- CARD -->
+                    <div class="card blue-grey darken-1">
+                        <div class="card-image"> <img src="/assets/video_family.webp"> <span class="card-title rtl"><div class="reshet">
+            <p>טלוויזיה מהעתיד</p>
+            </div>
+        </span> </div>
+                        <div class="card-content white-text"> <span class="card-title rtl">הלה-פמיליה של טלוויזיה מהעתיד</span>
+                            <p>Aug 2017</p>
+                        </div>
+                        <div class="card-action"> <a href="http://reshet.tv/item/entertainment/futuretv/season-01/clips/wpc7c-416540/"
+                              rel="noopener" target="_blank">watch on RESHSET</a> </div>
+                    </div>
+                    <!-- END CARD -->
+                    <!-- CARD -->
+                    <div class="card blue-grey darken-1">
+                        <div class="card-image"> <img src="/assets/video_terr.webp"> <span class="card-title rtl"><div class="reshet">
+            <p>טלוויזיה מהעתיד</p>
+            </div>
+        </span> </div>
+                        <div class="card-content white-text"> <span class="card-title rtl">גיבור היום</span>
+                            <p>Aug 2017</p>
+                        </div>
+                        <div class="card-action"> <a href="http://reshet.tv/item/entertainment/futuretv/season-01/clips/dg5s0-416535/"
+                              rel="noopener" target="_blank">watch on RESHSET</a> </div>
+                    </div>
+                    <!-- END CARD -->
+                    <!-- CARD -->
+                    <div class="card blue-grey darken-1">
+                        <div class="card-image"> <img src="/assets/video_ariel.webp"> <span class="card-title rtl"><div class="reshet">
+            <p>טלוויזיה מהעתיד</p>
+            </div>
+        </span> </div>
+                        <div class="card-content white-text"> <span class="card-title rtl">שלום כבוד האומן אריאל</span>
+                            <p>Aug 2017</p>
+                        </div>
+                        <div class="card-action"> <a href="http://reshet.tv/item/entertainment/futuretv/season-01/clips/vaocl-410159/"
+                              rel="noopener" target="_blank">watch on RESHSET</a> </div>
+                    </div>
+                    <!-- END CARD -->
+                    <!-- CARD -->
+                    <div class="card blue-grey darken-1">
+                        <div class="card-image"> <img src="/assets/video_shlem.webp"> <span class="card-title rtl"><div class="reshet">
+            <p>טלוויזיה מהעתיד</p>
+            </div>
+        </span> </div>
+                        <div class="card-content white-text"> <span class="card-title rtl">שלמייזל - פרק 4</span>
+                            <p>Aug 2017</p>
+                        </div>
+                        <div class="card-action"> <a href="http://reshet.tv/item/entertainment/futuretv/season-01/clips/nrupz-396361/"
+                              rel="noopener" target="_blank">watch on RESHSET</a> </div>
+                    </div>
+                    <!-- END CARD -->
+                    <!-- CARD -->
+                    <div class="card blue-grey darken-1">
+                        <div class="card-image">
+                            <picture>
+                                <source srcset="assets/neuman.webp" type="image/webp">
+                                <source srcset="assets/neuman.png" type="image/png"> <img src="assets/neuman.png" alt="Ikea Catalog 2017 Ad - Israel">                                </picture>
+                        </div>
+                        <div class="card-content white-text"> <span class="card-title">
+            Ikea Catalog 2017 Ad - Israel
+        </span>
+                            <p>Published on Sep 2016</p>
+                        </div>
+                        <div class="card-action"> <a href="https://youtu.be/LaOF0bVax74" rel="noopener" target="_blank">watch on Youtube</a>                            </div>
+                    </div>
+                    <!-- END CARD -->
+                    <!-- CARD -->
+                    <div class="card blue-grey darken-1">
+                        <div class="card-image">
+                            <picture>
+                                <source srcset="assets/pepsi_max.webp" type="image/webp">
+                                <source srcset="assets/pepsi_max.jpg" type="image/jpeg"> <img src="assets/pepsi_max.jpg" alt="Pepsi Max Presents: This Falafel Is Making Me Thirsty!">                                </picture>
+                        </div>
+                        <div class="card-content white-text"> <span class="card-title">
+            Pepsi Max Presents: This Falafel Is Making Me Thirsty!
+        </span>
+                            <p>Published on Jun 2015</p>
+                        </div>
+                        <div class="card-action"> <a href="https://youtu.be/5qaK7ihiSIY" rel="noopener" target="_blank">watch on Youtube</a>                            </div>
+                    </div>
+                    <!-- END CARD -->
+                    <!-- CARD -->
+                    <div class="card blue-grey darken-1">
+                        <div class="card-image">
+                            <picture>
+                                <source srcset="assets/video_adi.webp" type="image/webp">
+                                <source srcset="assets/video_adi.jpg" type="image/jpeg"> <img src="assets/video_adi.jpg" alt="Adi Ulmansky - A.D.I">                                </picture>
+                        </div>
+                        <div class="card-content white-text"> <span class="card-title">
+            Adi Ulmansky - A.D.I
+        </span>
+                            <p>Published on Nov 2012</p>
+                        </div>
+                        <div class="card-action"> <a href="https://youtu.be/thmSzqGkMT8" rel="noopener" target="_blank">watch on Youtube</a>                            </div>
+                    </div>
+                    <!-- END CARD -->
+                    <!-- CARD -->
+                    <div class="card blue-grey darken-1">
+                        <div class="card-image">
+                            <picture>
+                                <source srcset="assets/video_brief_psy.webp" type="image/webp">
+                                <source srcset="assets/video_brief_psy.jpg" type="image/jpeg"> <img src="assets/video_brief_psy.jpg" alt="Brief">                                </picture>
+                        </div>
+                        <div class="card-content white-text"> <span class="card-title rtl">
+            בקיצור, הלכתי לפסיכולוג
+        </span>
+                            <p>Published on Feb 2013</p>
+                        </div>
+                        <div class="card-action"> <a href="http://www.mako.co.il/tv-erez-nehederet/season10-briefs/video/Video-2cd8f30038eec31006.htm"
+                              rel="noopener" target="_blank">watch on Mako</a> </div>
+                    </div>
+                    <!-- END CARD -->
+                    <!-- CARD -->
+                    <div class="card blue-grey darken-1">
+                        <div class="card-image">
+                            <picture>
+                                <source srcset="assets/video_brief_job.webp" type="image/webp">
+                                <source srcset="assets/video_brief_job.jpg" type="image/jpeg"> <img src="assets/video_brief_job.jpg" alt="Brief">                                </picture>
+                        </div>
+                        <div class="card-content white-text"> <span class="card-title rtl">
+            בקיצור, היה לי ראיון עבודה
+        </span>
+                            <p>Published on Jan 2013</p>
+                        </div>
+                        <div class="card-action"> <a href="http://www.mako.co.il/tv-erez-nehederet/season10-briefs/video/Video-61d469e07b51c31006.htm"
+                              rel="noopener" target="_blank">watch on Mako</a> </div>
+                    </div>
+                    <!-- END CARD -->
+                    <!-- CARD -->
+                    <div class="card blue-grey darken-1">
+                        <div class="card-image">
+                            <picture>
+                                <source srcset="assets/leon01.webp" type="image/webp">
+                                <source srcset="assets/leon01.jpg" type="image/jpeg"> <img src="assets/leon01.jpg" alt="Neil & Yoav - Episode 01">                                </picture>
+                        </div>
+                        <div class="card-content white-text"> <span class="card-title rtl ep1">
+            ניל ויואב מראיינים!
+        </span>
+                            <p>Published on Jul 2015</p>
+                        </div>
+                        <div class="card-action"> <a href="https://youtu.be/EeNuzr1HSxM" rel="noopener" target="_blank">watch on Youtube</a>                            </div>
+                    </div>
+                    <!-- END CARD -->
+                    <!-- CARD -->
+                    <div class="card blue-grey darken-1">
+                        <div class="card-image">
+                            <picture>
+                                <source srcset="assets/leon02.webp" type="image/webp">
+                                <source srcset="assets/leon02.jpg" type="image/jpeg"> <img src="assets/leon02.jpg" alt="Neil & Yoav - Episode 02">                                </picture>
+                        </div>
+                        <div class="card-content white-text"> <span class="card-title rtl ep2">
+            ניל ויואב מראיינים!
+        </span>
+                            <p>Published on Aug 2015</p>
+                        </div>
+                        <div class="card-action"> <a href="https://youtu.be/d1nGJEX8_ak" rel="noopener" target="_blank">watch on Youtube</a>                            </div>
+                    </div>
+                    <!-- END CARD -->
+                    <!-- CARD -->
+                    <div class="card blue-grey darken-1">
+                        <div class="card-image">
+                            <picture>
+                                <source srcset="assets/leon03.webp" type="image/webp">
+                                <source srcset="assets/leon03.jpg" type="image/jpeg"> <img src="assets/leon03.jpg" alt="Neil & Yoav - Episode 03">                                </picture>
+                        </div>
+                        <div class="card-content white-text"> <span class="card-title rtl ep3">
+            ניל ויואב מראיינים!
+        </span>
+                            <p>Published on Oct 2015</p>
+                        </div>
+                        <div class="card-action"> <a href="https://youtu.be/2NRHKwAQ01M" rel="noopener" target="_blank">watch on Youtube</a>                            </div>
+                    </div>
+                    <!-- END CARD -->
+                    <!-- CARD -->
+                    <div class="card blue-grey darken-1">
+                        <div class="card-image">
+                            <picture>
+                                <source srcset="assets/leon04.webp" type="image/webp">
+                                <source srcset="assets/leon04.jpg" type="image/jpeg"> <img src="assets/leon04.jpg" alt="Neil & Yoav - Episode 04">                                </picture>
+                        </div>
+                        <div class="card-content white-text"> <span class="card-title rtl ep4">
+            ניל ויואב מראיינים!
+        </span>
+                            <p>Published on Nov 2015</p>
+                        </div>
+                        <div class="card-action"> <a href="https://youtu.be/9q9thgtz8nk" rel="noopener" target="_blank">watch on Youtube</a>                            </div>
+                    </div>
+                    <!-- END CARD -->
+                    <!-- CARD -->
+                    <div class="card blue-grey darken-1">
+                        <div class="card-image">
+                            <picture>
+                                <source srcset="assets/leon05.webp" type="image/webp">
+                                <source srcset="assets/leon05.jpg" type="image/jpeg"> <img src="assets/leon05.jpg" alt="Neil & Yoav - Episode 05">                                </picture>
+                        </div>
+                        <div class="card-content white-text"> <span class="card-title rtl ep5">
+            ניל ויואב מראיינים!
+        </span>
+                            <p>Published on Feb 2016</p>
+                        </div>
+                        <div class="card-action"> <a href="https://youtu.be/CEQkkJShKkI" rel="noopener" target="_blank">watch on Youtube</a>                            </div>
+                    </div>
+                    <!-- END CARD -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script src="three.min.js"></script>
+    <script src="tween.min.js"></script>
+    <script src="Stats.js"></script>
+    <script src="dat.gui.min.js"></script>
+    <script src="leap.min.js"></script>
+    <script src="materialize.min.js"></script>
+    <script src="amplitude.min.js"></script>
+    <script src="widget.js"></script>
+    <script type="text/javascript" src="mustache.min.js"></script>
+    <script type="text/javascript" src="github-activity-0.1.5.min.js"></script>
+    <script src="main.js"></script>
+</body>
 
-  <script src="jquery.min.js"></script>
-  <script src="three.min.js"></script>
-  <script src="tween.min.js"></script>
-  <script src="Stats.js"></script>
-  <script src="dat.gui.min.js"></script>
-  <script src="leap.min.js"></script>
-  <script src="materialize.min.js"></script>
-  <script src="amplitude.min.js"></script>
-  <script src="widget.js"></script>
-  <script type="text/javascript" src="mustache.min.js"></script>
-  <script type="text/javascript" src="github-activity-0.1.5.min.js"></script>
-  <script src="main.js"></script>
-
-  </body>
 </html>
