@@ -307,8 +307,8 @@ if('serviceWorker' in navigator) {
             : window.requestAnimationFrame(function(){ showBlocks(timelineBlocks, offset); });
         });
 
-        $('.btn-flat').on('click', onItemClick);
-        $('.album-play').on('click', function() {
+        $('.card.music .btn-flat').on('click', onItemClick);
+        $('.card.music .album-play').on('click', function() {
           var $this = $(this);
             if ($this.find('i').text() === 'pause') {
                 Amplitude.pause();
@@ -347,13 +347,13 @@ if('serviceWorker' in navigator) {
       }
 
       function resetPlaylist() {
-          var allBtns = $('.btn-flat');
+          var allBtns = $('.card.music .btn-flat');
 
           // reset all buttons
           $('.card.music').removeClass('play');
           allBtns.removeClass('active');
           allBtns.find('i').text('play_circle_outline');
-          $('.album-play i').text('play_arrow');
+          $('.card.music .album-play i').text('play_arrow');
           $('.card.music .play-bars').remove();
       }
 
