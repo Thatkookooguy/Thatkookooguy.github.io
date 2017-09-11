@@ -486,8 +486,7 @@ nav.nav-extended {
   display: inline-block;
   overflow: visible;
 }
-
-@media only screen and (max-width: 799px) {
+@media only screen and (max-width: 731px) {
   .music-cards-container {
     -webkit-column-count: 1;
     -moz-column-count: 1;
@@ -499,7 +498,7 @@ nav.nav-extended {
   }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 732px) {
   .card.music {
     flex-grow: 0;
     margin-right: 37px;
@@ -519,6 +518,24 @@ nav.nav-extended {
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
+  }
+}
+
+@media only screen
+and (min-device-width : 732px)
+and (max-device-width : 1455px)
+and (orientation : landscape) {
+  .card.music {
+    flex-grow: 0;
+    margin-right: 37px;
+  }
+  .vinyl-container {
+    display: block;
+  }
+  .music-cards-container {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
   }
 }
 
