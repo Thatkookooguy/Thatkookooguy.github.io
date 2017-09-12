@@ -1,0 +1,27 @@
+{% import '../macros/general-components.nunjucks' as generalComponents %}
+
+<div class="band-card z-depth-3">
+  <div class="picture z-depth-2">
+    {{ generalComponents.picture(band.image) }}
+  </div>
+  <div class="info">
+    <div class="band-name">
+      {{ band.name }}
+    </div>
+    <div class="band-genres">
+      {% for genre in band.genres %}
+      <div class="chip">
+        {{ genre }}
+      </div>
+      {% endfor %}
+    </div>
+    {{ band.description | safe }}
+  </div>
+  <div class="actions z-depth-2">
+    {% for social in band.social %}
+    <a class="waves-effect waves-dark-orange btn-flat" href="{{ social.url }}" rel="noopener" target="_blank">
+      <i class="btn-icn socicon-{{ social.name }}"></i>
+    </a>
+    {% endfor %}
+  </div>
+</div>

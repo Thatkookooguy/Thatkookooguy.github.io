@@ -1,0 +1,28 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+  <!-- HEADER -->
+  {% include "partials/navigation.nunjucks" %}
+
+  {% if about %}
+  <div id="about" class="col s12">
+      {% include "partials/about.nunjucks" %}
+  </div>
+  {% endif %}
+  {% if resume %}
+  <div id="resume" class="col s12">
+      {% include "partials/resume.nunjucks" %}
+  </div>
+  {% endif %}
+  {% if music %}
+  <div id="music" class="col s12">
+      {% include "partials/music.nunjucks" %}
+  </div>
+  {% endif %}
+  {% if actor %}
+  <div id="actor" class="col s12">
+      {% include "partials/actor.nunjucks" %}
+  </div>
+  {% endif %}
+
+{% endblock %}

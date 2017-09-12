@@ -1,0 +1,16 @@
+{% import '../macros/general-components.nunjucks' as generalComponents %}
+
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <div class="content">
+              {{ generalComponents.sectionTitle('Watch', 'material-icons', 'remove_red_eye') }}
+            </div>
+        </div>
+        <div class="col s12 cards-container">
+          {% for video in actor.videos %}
+            {% include "partials/video.nunjucks" %}
+          {% endfor %}
+        </div>
+    </div>
+</div>

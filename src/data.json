@@ -1,0 +1,497 @@
+{
+  "siteName": "Neil Kalman - thatkookooguy",
+  "siteUrl": "https://thatkookooguy.github.io",
+  "siteDescription": "thatkookooguy@kibibit.io",
+  "siteImage": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/154887/86_trans.png",
+  "siteThemeColor": "#000000",
+  "name": "Neil Kalman",
+  "role": "Software Engineer || FrontEnd Developer",
+  "avatar": {
+    "alt": "Neil's avatar",
+    "image": {
+      "png": "assets/images/86_trans.png",
+      "webp": "assets/images/86_trans.webp"
+    }
+  },
+  "about": {
+    "intro": "[introduction]",
+    "projects": [
+      "kibibit/achievibit",
+      "kibibit/achievibit-chrome-extension",
+      "kibibit/kibibit-code-editor",
+      "thatkookooguy/monkey-js"
+    ],
+    "contributed": [
+      "FredrikNoren/ungit",
+      "zhukov/webogram",
+      "gregjacobs/Autolinker.js",
+      "jiahaog/nativefier"
+    ]
+  },
+  "resume": {
+    "jobs": [
+      {
+        "logo": {
+          "alt": "redkix",
+          "image": {
+            "png": "/assets/images/redkix.png",
+            "webp": "/assets/images/redkix.webp"
+          }
+          },
+        "name": "redkix",
+        "site": "https://redkix.com",
+        "role": "SENIOR SOFTWARE ENGINEER",
+        "description": "<ul class=\"browser-default\"><li> Programming an email web client for Redkix<blockquote>Worked on data handling and UI manipulation typically required by email clients. Including <strong>real-time</strong>, <strong>inline embedding of assets</strong>, <strong>manipulating images</strong> (crop, resize, etc.), <strong>text manipulation</strong> and <strong>integrating with a WYSIWYG</strong> (markdown, emojis, URLs, mentions), and more. </blockquote></li><li>Creating the native fork of Redkix for OS X & Windows, including certifications and installers</li><li>Developing complex UI components and animations</li></ul>",
+        "dates": "Dec 2015 – Apr 2017"
+      },
+      {
+        "logo": {
+          "alt": "google",
+          "image": {
+            "png": "/assets/images/google.png",
+            "webp": "/assets/images/google.webp"
+          }
+          },
+        "name": "NISHA PRO, AT GOOGLE",
+        "role": "SOFTWARE ENGINEER",
+        "description": "Worked in the Live Results team, creating cards for Google Search.<ul class=\"browser-default\"><li>Used Agile practices and Test Driven Development techniques to provide reliable, working software early and often</li><li>Server side and client side data manipulation</li><li>Worked on adapting Google search UI components to load and run faster on poor internet connections, minimizing the Google Search page size.<li></ul>",
+        "dates": "Feb 2015 – Oct 2015"
+      },
+      {
+        "logo": {
+          "alt": "amdocs",
+          "image": {
+            "png": "/assets/images/amdocs.png",
+            "webp": "/assets/images/amdocs.webp"
+          }
+          },
+        "name": "AMDOCS",
+        "role": "FRONT-END DEVELOPER",
+        "description": "<ul class=\"browser-default\"><li>Working on web components that were used by other Amdocs products</li><li>Creating responsive designs</li><li>Writing code that is customizable and theme-able.<li><li>Complex CSS animations</li></ul>",
+        "dates": "Jan 2014 – Feb 2015"
+      }
+    ],
+    "education": [
+      {
+        "logo": {
+          "alt": "tel-aviv-university",
+          "image": {
+            "svg": "/assets/images/tel-aviv-university.svg"
+          }
+          },
+        "name": "TEL AVIV UNIVERSITY",
+        "role": "Student",
+        "description": "<strong>B.Sc. in Computer Science and Life Science</strong>, Combined program with an emphasis on Bioinformatics (double major).",
+        "dates": "2009-2013"
+      }
+    ]
+  },
+  "actor": {
+    "videos": [
+      {
+        "rtl": true,
+        "reshet": true,
+        "name": "טלוויזיה מהעתיד",
+        "image": "/assets/images/video_family.webp",
+        "episode": "הלה-פמיליה של טלוויזיה מהעתיד",
+        "date": "Aug 2017",
+        "network": "RESHET",
+        "url": "http://reshet.tv/item/entertainment/futuretv/season-01/clips/wpc7c-416540/"
+      },
+      {
+        "rtl": true,
+        "reshet": true,
+        "name": "טלוויזיה מהעתיד",
+        "image": "/assets/images/video_terr.webp",
+        "episode": "גיבור היום",
+        "date": "Aug 2017",
+        "network": "RESHET",
+        "url": "http://reshet.tv/item/entertainment/futuretv/season-01/clips/dg5s0-416535/"
+      },
+      {
+        "rtl": true,
+        "reshet": true,
+        "name": "טלוויזיה מהעתיד",
+        "image": "/assets/images/video_ariel.webp",
+        "episode": "שלום כבוד האומן אריאל",
+        "date": "Aug 2017",
+        "network": "RESHET",
+        "url": "http://reshet.tv/item/entertainment/futuretv/season-01/clips/vaocl-410159/"
+      },
+      {
+        "rtl": true,
+        "reshet": true,
+        "name": "טלוויזיה מהעתיד",
+        "image": "/assets/images/video_shlem.webp",
+        "episode": "שלמייזל - פרק 4",
+        "date": "Aug 2017",
+        "network": "RESHET",
+        "url": "http://reshet.tv/item/entertainment/futuretv/season-01/clips/nrupz-396361/"
+      },
+      {
+        "name": "Ikea Catalog 2017 Ad - Israel",
+        "image": "assets/images/neuman.png",
+        "date": "Published on Sep 2016",
+        "network": "Youtube",
+        "url": "https://youtu.be/LaOF0bVax74"
+      },
+      {
+        "name": "Pepsi Max Presents: This Falafel Is Making Me Thirsty!",
+        "image": "assets/images/pepsi_max.jpg",
+        "date": "Published on Jun 2015",
+        "network": "Youtube",
+        "url": "https://youtu.be/5qaK7ihiSIY"
+      },
+      {
+        "name": "Adi Ulmansky - A.D.I",
+        "image": "assets/images/video_adi.jpg",
+        "date": "Published on Nov 2012",
+        "network": "Youtube",
+        "url": "https://youtu.be/thmSzqGkMT8"
+      },
+      {
+        "rtl": true,
+        "name": "בקיצור, הלכתי לפסיכולוג",
+        "image": "assets/images/video_brief_psy.jpg",
+        "date": "Published on Feb 2013",
+        "network": "Mako",
+        "url": "http://www.mako.co.il/tv-erez-nehederet/season10-briefs/video/Video-2cd8f30038eec31006.htm"
+      },
+      {
+        "rtl": true,
+        "name": "בקיצור, היה לי ראיון עבודה",
+        "image": "assets/images/video_brief_job.jpg",
+        "date": "Published on Jan 2013",
+        "network": "Mako",
+        "url": "http://www.mako.co.il/tv-erez-nehederet/season10-briefs/video/Video-61d469e07b51c31006.htm"
+      }
+    ]
+  },
+	"music": {
+    "bands": [
+      {
+        "name": "reo",
+        "image": "https://f4.bcbits.com/img/a0807138205_2.jpg",
+        "description": "<p>Reo is a <strong>pop-disco-electronic</strong> duo, performed and produced by the musicians Zoe Polanski and Or Edri. The songs were written, produced and fully performed by Polanski and Edri, exclusively on analogue equipment from the 80's and 90's that were collected carefully to create the warm and unique sound of the debut album.</p><p>Behind the ensemble are many performances at leading Tel-Aviv clubs and festivals all over.</p>",
+        "genres": [
+          "dream disco",
+          "analog",
+          "electronic"
+        ],
+        "social": [
+          {
+            "name": "bandcamp",
+            "url": "https://reoreoreo.bandcamp.com/"
+          },
+          {
+            "name": "facebook",
+            "url": "https://www.facebook.com/reorave/"
+          }
+        ]
+      },
+      {
+        "name": "Or Edry",
+        "image": "https://f4.bcbits.com/img/a3219931196_16.jpg",
+        "description": "<p>Or Edri is one of the busiest and most versatile bass players in Tel-Aviv. In her solo project, she stays close to the genre of Rio, but while the duo stroked with technicolor sensuality, Edri alone is a deeper submarine. It's still sexy, still groovy, still going through the body like goosebumps, still gives you a desire to get up and dance, & still psychedelic and decorated with her stimulating bass lines.</p>",
+        "genres": [
+          "pop",
+          "disco",
+          "downtempo",
+          "dream pop"
+        ],
+        "social": [
+          {
+            "name": "bandcamp",
+            "url": "https://oredry.bandcamp.com/releases"
+          },
+          {
+            "name": "facebook",
+            "url": "https://www.facebook.com/oedry"
+          }
+        ]
+      },
+      {
+        "name": "pancho",
+        "image": "https://f4.bcbits.com/img/a0459707748_16.jpg",
+        "description": "<p>Pancho is part of the independent scene of Tel-Aviv. Pancho creates unique instrumental music with tremendous merit and quirkiness. Drummer ( Niv Majar ), Guitarist ( Dror Pikielny ) and Saxophonist ( Neil Kalman ) give shape to this original and unclassifiable sound.</p>",
+        "genres": [
+          "avant rock",
+          "free-jazz",
+          "avante garde",
+          "experimental",
+          "instrumental"
+        ],
+        "social": [
+          {
+            "name": "bandcamp",
+            "url": "https://carmelapplepop.bandcamp.com/album/pancho"
+          },
+          {
+            "name": "facebook",
+            "url": "https://www.facebook.com/PanchoTheBand/"
+          },
+          {
+            "name": "spotify",
+            "url": "https://open.spotify.com/album/0xkRVrg0Qo8Is2ea8zWP1E"
+          },
+          {
+            "name": "apple",
+            "url": "https://itunes.apple.com/us/album/pancho-feat-carmel-apple-pop/id979290965"
+          },
+          {
+            "name": "play",
+            "url": "https://play.google.com/store/music/album/Pancho_Pancho_feat_Carmel_Apple_Pop?id=Bv36sjq7sc3ygl77k4t4hnjgqve"
+          }
+        ]
+      },
+      {
+        "name": "Omer Schneider Band",
+        "image": "https://f4.bcbits.com/img/a3775861312_16.jpg",
+        "description": "<p>Like in a magical dream, virtuoso guitarist's <strong>Omer Schneider</strong> sensitively weaves within his music an abundance of different musical genres.</p><p>After a number of tours in Europe with the glam rock band <strong>CHASE THE ACE</strong>, Omer decided to go on a new way and make his own art. With the trio Tamir Borsuk (Drums), Tal Shturm (Bass), and Neil Kalman (Saxophones), they create magical picturesque melodies, wrapped in a heavy rock spirit.</p>",
+        "genres": [
+          "world",
+          "fusion",
+          "jewish music",
+          "new age",
+          "instrumental",
+          "jazz"
+        ],
+        "social": [
+          {
+            "name": "bandcamp",
+            "url": "https://omer-schneider.bandcamp.com/releases"
+          },
+          {
+            "name": "facebook",
+            "url": "https://www.facebook.com/omerschneiderband/"
+          }
+        ]
+      },
+      {
+        "name": "Carmel Apple Pop",
+        "image": "https://scontent.fsdv3-1.fna.fbcdn.net/v/t31.0-8/415425_10150831051621194_706497548_o.jpg?oh=b3cbd33ac1ae378fb61e80d76aaa9a76&oe=5A57B8D8",
+        "description": "<p>Caramel Apple Pop has been working for several years in the indie scene, creating funny and amusing performances that include jazz, metal, funk, punk and mostly - a lot of talent.</p><p>They are energetic guys who know what they do and do it great - their style is a kind of jazz metal songs in Hebrew and English their, and performance is overwhelming and mesmerizing.</p>",
+        "genres": [
+          "jazz",
+          "metal",
+          "funk",
+          "punk",
+          "avante garde"
+        ],
+        "social": [
+          {
+            "name": "bandcamp",
+            "url": "https://carmelapplepop.bandcamp.com/"
+          },
+          {
+            "name": "facebook",
+            "url": "https://www.facebook.com/carmel.a.pop/"
+          },
+          {
+            "name": "spotify",
+            "url": "https://open.spotify.com/artist/0tRqI485klkqQyfxetzU9k"
+          },
+          {
+            "name": "apple",
+            "url": "https://itunes.apple.com/us/artist/carmel-apple-pop/id341368550"
+          },
+          {
+            "name": "play",
+            "url": "https://play.google.com/store/music/artist/Carmel_Apple_Pop?id=At2i7ha7z2k34iykao6pj6wavt4"
+          }
+        ]
+      }
+    ],
+		"albums": [{
+				"artist": "Pancho",
+				"name": "Pancho",
+				"cover": {
+          "alt": "Pancho - Pancho",
+          "image": {
+            "jpg": "assets/images/pancho-pancho.jpg",
+            "webp": "assets/images/pancho-pancho.webp"
+          }
+        },
+				"bandcamp": "",
+				"songs": [
+          {
+						"name": "01. Power Of Weakness",
+						"index": 0
+					},
+					{
+						"name": "02. Shwarma de Pulpo",
+						"index": 1
+					},
+					{
+						"name": "03. Cincuenta",
+						"index": 2
+					},
+					{
+						"name": "04. Con Limón",
+						"index": 3
+					},
+					{
+						"name": "05. Timmy",
+						"index": 4
+					},
+					{
+						"name": "06. Piekielny",
+						"index": 5
+					},
+					{
+						"name": "07. Ballyhoo",
+						"index": 6
+					},
+					{
+						"name": "08. Scentless Apprentice",
+						"index": 7
+					},
+					{
+						"name": "09. Panchito",
+						"index": 8
+					},
+					{
+						"name": "10. Sex On A Pyramid",
+						"index": 9
+					}
+				]
+			},
+			{
+				"artist": "Carmel Apple Pop",
+				"name": "Funny​/​Not Funny",
+				"cover": "assets/images/carmel-funny.jpg",
+				"bandcamp": "",
+				"songs": [{
+						"name": "01. Funny",
+						"index": 10
+					},
+					{
+						"name": "02. Hostage",
+						"index": 11
+					},
+					{
+						"name": "03. It's Carlos",
+						"index": 12
+					},
+					{
+						"name": "04. Foie Gras",
+						"index": 13
+					},
+					{
+						"name": "05. Boiler Room",
+						"index": 14
+					},
+					{
+						"name": "06. Trains and Rooftops",
+						"index": 15
+					},
+					{
+						"name": "07. Broken Blood Freezer",
+						"index": 16
+					},
+					{
+						"name": "08. Pix Mate",
+						"index": 17
+					},
+					{
+						"name": "09. Five Million Dollars",
+						"index": 18
+					},
+					{
+						"name": "10. Sunday Pizza",
+						"index": 19
+					},
+					{
+						"name": "11. Short Sugar Canes",
+						"index": 20
+					},
+					{
+						"name": "12. Not Funny",
+						"index": 21
+					},
+					{
+						"name": "13. Summer Overture / Lux Aeterna",
+						"index": 22
+					},
+					{
+						"name": "14. Ultra Sexy (Bonus)",
+						"index": 23
+					}
+				]
+			},
+			{
+				"artist": "Igor Krutogolov's Karate Band",
+				"name": "How To Be A Crocodile",
+				"cover": "assets/images/toy-croc.jpg",
+				"bandcamp": "",
+				"songs": [{
+						"name": "01. Skeleton Dance",
+						"index": 24
+					},
+					{
+						"name": "02. Last Supper Souffle",
+						"index": 25
+					},
+					{
+						"name": "03. Seven",
+						"index": 26
+					},
+					{
+						"name": "04. Beyond The Hill",
+						"index": 27
+					},
+					{
+						"name": "05. Mad Medow",
+						"index": 28
+					},
+					{
+						"name": "06. Drink N' Drive",
+						"index": 29
+					},
+					{
+						"name": "07. Swamp King",
+						"index": 30
+					},
+					{
+						"name": "08. Black Lip Oyster",
+						"index": 31
+					},
+					{
+						"name": "09. Zhuravli i Korbli",
+						"index": 32
+					}
+				]
+			},
+			{
+				"artist": "Igor Krutogolov's Toy Orchestra",
+				"name": "Roots Over Roots",
+				"cover": "assets/images/toy-roots.jpg",
+				"bandcamp": "",
+				"songs": [{
+					"name": "01. Roots Over Roots",
+					"index": 24
+				}]
+			},
+			{
+				"artist": "Aperco",
+				"name": "The Battle",
+				"cover": "assets/images/aperco-battle.jpg",
+				"bandcamp": "",
+				"songs": [{
+					"name": "03. Another Day To Live",
+					"index": 33
+				}]
+			},
+			{
+				"artist": "Bilgo & Co",
+				"name": "Rewind My Life",
+				"cover": "assets/images/bilgo-rewind.jpg",
+				"bandcamp": "",
+				"songs": [{
+					"name": "01. Rewind My Life",
+					"index": 34
+				}]
+			}
+		]
+	}
+}

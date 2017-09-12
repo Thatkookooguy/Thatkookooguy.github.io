@@ -1,0 +1,27 @@
+<div class="card blue-grey darken-1">
+    <div class="card-image">
+      <img src="{{ video.image }}">
+      <span class="card-title {% if video.rtl %} rtl {% endif %}">
+        {% if video.reshet %}
+        <div class="reshet">
+          <p>{{ video.name }}</p>
+        </div>
+        {% else %}
+        {{ video.name }}
+        {% endif %}
+      </span>
+    </div>
+    <div class="card-content white-text">
+      {% if video.reshet %}
+      <span class="card-title {% if video.rtl %} rtl {% endif %}">
+        {{ video.episode }}
+      </span>
+      {% endif %}
+        <p>{{ video.date }}</p>
+    </div>
+    <div class="card-action">
+      <a href="{{ video.url }}" rel="noopener" target="_blank">
+        watch on {{ video.network }}
+      </a>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+{% import '../macros/general-components.nunjucks' as generalComponents %}
+
+<div class="card music blue-grey darken-1 z-depth-3">
+    <div class="card-image z-depth-3">
+        <div class="vinyl-container">
+            <div class="vinyl"></div>
+            <div class="shadow"></div>
+        </div>
+        {{ generalComponents.picture(album.cover) }}
+        <span class="card-title">{{ album.artist }} - {{ album.name }}</span>
+        <a class="album-play btn-floating btn-large z-depth-2 halfway-fab waves-effect waves-light dark-orange">
+          <i class="material-icons">play_arrow</i>
+        </a>
+      </div>
+    <div class="collection">
+      {% for song in album.songs %}
+      <a class="waves-effect waves-dark-orange btn-flat" song-index="{{ song.index }}">
+        <i class="material-icons">play_circle_outline</i>
+        {{ song.name }}
+      </a>
+      {% endfor %}
+    </div>
+    <div class="card-action">
+      <a href="{{ album.bandcamp }}" rel="noopener" target="_blank">
+        Listen on Bandcamp
+      </a>
+    </div>
+</div>

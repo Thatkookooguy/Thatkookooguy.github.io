@@ -1,0 +1,26 @@
+<section id="cd-timeline" class="cd-container">
+  {% if resume.jobs %}
+  <div class="cd-timeline-block">
+    <div class="cd-timeline-header">
+      <h4>Work Experience</h4>
+    </div>
+  </div>
+
+  {% for job in resume.jobs %}
+    {% include "partials/job.nunjucks" %}
+  {% endfor %}
+
+  {% endif %}
+
+  {% if resume.education %}
+  <div class="cd-timeline-block">
+    <div class="cd-timeline-header">
+      <h4>Education</h4>
+    </div>
+  </div>
+  {% for job in resume.education %}
+    {% include "partials/job.nunjucks" %}
+  {% endfor %}
+
+  {% endif %}
+</section>

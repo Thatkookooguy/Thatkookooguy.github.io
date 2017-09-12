@@ -1,0 +1,15 @@
+{% import '../macros/general-components.nunjucks' as generalComponents %}
+
+<div class="cd-timeline-block">
+    <div class="cd-timeline-img {{ job.logo.alt }}">
+      {{ generalComponents.picture(job.logo, 'circle') }}
+    </div>
+    <div class="cd-timeline-content">
+        <h2>{{ job.name }}</h2>
+        <a href="{{ job.site }}" rel="noopener" target="_blank">{{ job.site }}</a>
+        <h6>{{ job.role }}</h6>
+        <p>{{ job.description | safe }}</p>
+        <a href="#0" class="cd-read-more">Read more</a>
+        <span class="cd-date">{{ job.dates }}</span>
+      </div>
+</div>

@@ -1,0 +1,42 @@
+{% import '../macros/general-components.nunjucks' as generalComponents %}
+
+<div class="container section">
+  <div class="row">
+    <div class="col s12 m7">
+      <div class="content">
+        {{ generalComponents.sectionTitle('About Me', 'material-icons', 'tag_faces') }}
+        <h4>{{ about.intro }}</h4>
+      </div>
+    </div>
+    <div class="col s12 m5">
+      <div class="content">
+        {{ generalComponents.sectionTitle('GitHub Recent Activity', 'octicon', 'mark-github') }}
+        <div id="feed"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      <div class="content">
+        {{ generalComponents.sectionTitle('Projects', 'octicon', 'repo') }}
+        <div class="cards-container">
+          {% for project in about.projects %}
+          <div class="github-card" data-github="{{ project }}" data-width="400" data-height="299" data-theme="medium"></div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      <div class="content">
+        {{ generalComponents.sectionTitle('Contributed to', 'octicon', 'repo') }}
+        <div class="cards-container">
+          {% for project in about.contributed %}
+          <div class="github-card" data-github="{{ project }}" data-width="400" data-height="299" data-theme="medium"></div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

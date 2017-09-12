@@ -1,0 +1,38 @@
+{% import '../macros/general-components.nunjucks' as generalComponents %}
+
+<div class="container">
+    <div class="row section" id="bands">
+        <div class="col s12">
+            <div class="content">
+              {{ generalComponents.sectionTitle('Bands', 'material-icons', 'speaker') }}
+                {% for band in music.bands %}
+                  {% include "partials/bandCard.nunjucks" %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="row section" id="albums">
+        <div class="col s12">
+            <div class="content">
+              {{ generalComponents.sectionTitle('Listen', 'material-icons', 'music_note') }}
+                <div class="col s12 music-cards-container">
+                  {% for album in music.albums %}
+                    {% include "partials/albumCard.nunjucks" %}
+                  {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row section" id="music-videos">
+        <div class="col s12">
+            <div class="content">
+              {{ generalComponents.sectionTitle('Watch', 'material-icons', 'remove_red_eye') }}
+            </div>
+        </div>
+        <div class="col s12 cards-container">
+          {% for video in music.videos %}
+            {% include "partials/video.nunjucks" %}
+          {% endfor %}
+        </div>
+    </div>
+</div>

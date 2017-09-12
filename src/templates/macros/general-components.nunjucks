@@ -1,0 +1,30 @@
+{% macro sectionTitle(title = 'Title', iconType = 'material-icons', iconSelector = '') %}
+  <div class="row about-title">
+    <span class="about-symbol">
+      {% if iconType == 'material-icons' %}
+        <i class="{{ iconType }}">{{ iconSelector }}</i>
+      {% elif iconType == 'octicon' %}
+        <i class="{{ iconType }} {{ iconType }}-{{ iconSelector }}"></i>
+      {% endif %}
+    </span>
+    <span class="about-topic">{{ title }}</span>
+    <span class="about-line"></span>
+  </div>
+{% endmacro %}
+
+{% macro picture(properties, class) %}
+  {% set image = properties.image or properties %}
+  {% set default = image.png or image.jpg or image.jpeg or image.svg or image %}
+  <picture {% if class %} class="{{ class }}" {% endif %}>
+    {% if image.webp %}
+      <source srcset="{{ image.webp }}" type="image/webp">
+    {% endif %}
+    {% if image.png %}
+      <source srcset="{{ image.png }}" type="image/png">
+    {% endif %}
+    {% if image.jpg or image.jpeg %}
+      <source srcset="{{ image.jpg or image.jpeg }}" type="image/jpeg">
+    {% endif %}
+    <img src="{{ default }}" {% if properties.alt %} alt="{{ properties.alt }}" {% endif %} {% if class %} class="{{ class }}" {% endif %}>
+  </picture>
+{% endmacro %}
