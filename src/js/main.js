@@ -7,6 +7,12 @@ if('serviceWorker' in navigator) {
 (function() {
     $(function() {
 
+      $('.skillbar').each(function(){
+    		$(this).find('.skillbar-bar').animate({
+    			width:$(this).attr('data-percent')
+    		},6000);
+    	});
+
       GitHubActivity.feed({
       	username: "Thatkookooguy",
       	selector: "#feed",

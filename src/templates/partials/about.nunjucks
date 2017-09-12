@@ -5,7 +5,7 @@
     <div class="col s12 m7">
       <div class="content">
         {{ generalComponents.sectionTitle('About Me', 'material-icons', 'tag_faces') }}
-        <h4>{{ about.intro }}</h4>
+        <h5>{{ about.intro | safe }}</h5>
       </div>
     </div>
     <div class="col s12 m5">

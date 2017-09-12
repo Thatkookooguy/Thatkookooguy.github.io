@@ -1,26 +1,50 @@
-<section id="cd-timeline" class="cd-container">
-  {% if resume.jobs %}
-  <div class="cd-timeline-block">
-    <div class="cd-timeline-header">
-      <h4>Work Experience</h4>
+{% import '../macros/general-components.nunjucks' as generalComponents %}
+
+<div class="container">
+  <div class="row section">
+    <div class="col s12">
+      <div class="content">
+        {{ generalComponents.sectionTitle('Watch', 'material-icons', 'remove_red_eye') }}
+        <section id="cd-timeline" class="cd-container">
+          {% if resume.jobs %}
+            <div class="cd-timeline-block">
+              <div class="cd-timeline-header">
+                <h4>Work Experience</h4>
+              </div>
+            </div>
+
+            {% for job in resume.jobs %}
+              {% include "partials/job.nunjucks" %}
+            {% endfor %}
+
+          {% endif %}
+
+          {% if resume.education %}
+            <div class="cd-timeline-block">
+              <div class="cd-timeline-header">
+                <h4>Education</h4>
+              </div>
+            </div>
+            {% for job in resume.education %}
+              {% include "partials/job.nunjucks" %}
+            {% endfor %}
+
+          {% endif %}
+        </section>
+      </div>
     </div>
   </div>
-
-  {% for job in resume.jobs %}
-    {% include "partials/job.nunjucks" %}
-  {% endfor %}
-
-  {% endif %}
-
-  {% if resume.education %}
-  <div class="cd-timeline-block">
-    <div class="cd-timeline-header">
-      <h4>Education</h4>
+  <div class="row section">
+    <div class="col s12">
+      <div class="content">
+        {{ generalComponents.sectionTitle('Skills', 'material-icons', 'remove_red_eye') }}
+        {{ generalComponents.skill('HTML5', '90%') }}
+        {{ generalComponents.skill('CSS3', '100%') }}
+        {{ generalComponents.skill('javaScript', '100%') }}
+        {{ generalComponents.skill('jQuery', '95%') }}
+        {{ generalComponents.skill('Angular', '90%') }}
+        {{ generalComponents.skill('Java', '70%') }}
+      </div>
     </div>
   </div>
-  {% for job in resume.education %}
-    {% include "partials/job.nunjucks" %}
-  {% endfor %}
-
-  {% endif %}
-</section>
+</div>

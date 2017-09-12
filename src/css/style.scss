@@ -1,3 +1,55 @@
+.skillbar {
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  background: #43464B;
+  height: 35px;
+  border-radius: 3px;
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+
+  .skillbar-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #ffffff;
+    background: #6adcfa;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+    span {
+      display: block;
+      background: rgba(0, 0, 0, 0.1);
+      padding: 0 20px;
+      height: 35px;
+      line-height: 35px;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+  }
+
+  .skillbar-bar {
+    height: 35px;
+    width: 0;
+    background: #6adcfa;
+    border-radius: 3px;
+  }
+
+  .skill-bar-percent {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 11px;
+    height: 35px;
+    line-height: 35px;
+    color: #ffffff;
+  }
+}
+
 .github-card {
   text-align: center;
   overflow: hidden;
@@ -11,19 +63,21 @@
   margin-bottom: 13px;
   display: flex;
   flex-direction: column;
-  max-width: 282px;
 
   .repo-header {
     flex-shrink: 0;
     flex-grow: 0;
     position: relative;
-    padding: 0;
+    padding: 10px 0 0;
     margin: 0;
     height: 148px;
     overflow: hidden;
     background-size: cover;
     background-position: center;
     background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .repo-avatar {
       position: absolute;
@@ -41,11 +95,11 @@
     }
 
     a {
+      line-height: 25px;
       margin: 0;
       padding: 0;
-      line-height: 148px;
       color: #fff;
-      font-size: 36px;
+      font-size: 22px;
       font-weight: 400;
       text-transform: uppercase;
       text-decoration: none;
@@ -734,6 +788,7 @@ body {
 Modules - reusable parts of our design
 
 -------------------------------- */
+
 .cd-container {
   /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
   width: 90%;
@@ -752,6 +807,7 @@ Modules - reusable parts of our design
 Main components
 
 -------------------------------- */
+
 #cd-timeline {
   position: relative;
   padding: 2em 0;
@@ -1208,6 +1264,7 @@ Main components
   }
 }
 /* MY CSS */
+
 .intro h3 {
   margin-top: 0;
 }
