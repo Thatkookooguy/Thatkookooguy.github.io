@@ -1,3 +1,46 @@
+.skillbar {
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  background: #43464B;
+  height: 35px;
+  border-radius: 3px;
+  transition: 0.4s linear;
+  transition-property: width, background-color; }
+  .skillbar .skillbar-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #ffffff;
+    background: #6adcfa;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px; }
+    .skillbar .skillbar-title span {
+      display: block;
+      background: rgba(0, 0, 0, 0.1);
+      padding: 0 20px;
+      height: 35px;
+      line-height: 35px;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px; }
+  .skillbar .skillbar-bar {
+    height: 35px;
+    width: 0;
+    background: #6adcfa;
+    border-radius: 3px; }
+  .skillbar .skill-bar-percent {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 11px;
+    height: 35px;
+    line-height: 35px;
+    color: #ffffff; }
+
 .github-card {
   text-align: center;
   overflow: hidden;
@@ -10,19 +53,21 @@
   min-height: 282px;
   margin-bottom: 13px;
   display: flex;
-  flex-direction: column;
-  max-width: 282px; }
+  flex-direction: column; }
   .github-card .repo-header {
     flex-shrink: 0;
     flex-grow: 0;
     position: relative;
-    padding: 0;
+    padding: 10px 0 0;
     margin: 0;
     height: 148px;
     overflow: hidden;
     background-size: cover;
     background-position: center;
-    background-color: #000; }
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
     .github-card .repo-header .repo-avatar {
       position: absolute;
       top: 5px;
@@ -35,11 +80,11 @@
         width: 48px;
         height: 48px; }
     .github-card .repo-header a {
+      line-height: 25px;
       margin: 0;
       padding: 0;
-      line-height: 148px;
       color: #fff;
-      font-size: 36px;
+      font-size: 22px;
       font-weight: 400;
       text-transform: uppercase;
       text-decoration: none;

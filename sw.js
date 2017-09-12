@@ -1,98 +1,179 @@
 self.addEventListener('install', function(e) {
   e.waitUntil(caches.open('achievibit').then(function(cache) {
     return cache.addAll([
+      
+      '/assets/fonts/octicons/octicons.eot',
+      
+      '/assets/fonts/octicons/octicons.svg',
+      
+      '/assets/fonts/octicons/octicons.ttf',
+      
+      '/assets/fonts/octicons/octicons.woff',
+      
+      '/assets/fonts/roboto/Roboto-Bold.ttf',
+      
+      '/assets/fonts/roboto/Roboto-Bold.woff',
+      
+      '/assets/fonts/roboto/Roboto-Bold.woff2',
+      
+      '/assets/fonts/roboto/Roboto-Light.ttf',
+      
+      '/assets/fonts/roboto/Roboto-Light.woff',
+      
+      '/assets/fonts/roboto/Roboto-Light.woff2',
+      
+      '/assets/fonts/roboto/Roboto-Medium.ttf',
+      
+      '/assets/fonts/roboto/Roboto-Medium.woff',
+      
+      '/assets/fonts/roboto/Roboto-Medium.woff2',
+      
+      '/assets/fonts/roboto/Roboto-Regular.ttf',
+      
+      '/assets/fonts/roboto/Roboto-Regular.woff',
+      
+      '/assets/fonts/roboto/Roboto-Regular.woff2',
+      
+      '/assets/fonts/roboto/Roboto-Thin.woff',
+      
+      '/assets/fonts/roboto/Roboto-Thin.woff2',
+      
+      '/assets/fonts/roboto/roboto.css',
+      
+      '/assets/fonts/socicon/Socicon.eot',
+      
+      '/assets/fonts/socicon/Socicon.ttf',
+      
+      '/assets/fonts/socicon/Socicon.woff',
+      
+      '/assets/fonts/socicon/Socicon.woff2',
+      
+      '/assets/icons/icon-128x128.png',
+      
+      '/assets/icons/icon-144x144.png',
+      
+      '/assets/icons/icon-152x152.png',
+      
+      '/assets/icons/icon-192x192.png',
+      
+      '/assets/icons/icon-384x384.png',
+      
+      '/assets/icons/icon-512x512.png',
+      
+      '/assets/icons/icon-72x72.png',
+      
+      '/assets/icons/icon-96x96.png',
+      
+      '/assets/icons/manifest.json',
+      
+      '/assets/images/86_trans.png',
+      
+      '/assets/images/86_trans.webp',
+      
+      '/assets/images/amdocs.jpg',
+      
+      '/assets/images/amdocs.webp',
+      
+      '/assets/images/aperco-battle.jpg',
+      
+      '/assets/images/aperco-battle.webp',
+      
+      '/assets/images/bars.svg',
+      
+      '/assets/images/bilgo-rewind.jpg',
+      
+      '/assets/images/bilgo-rewind.webp',
+      
+      '/assets/images/carmel-funny.jpg',
+      
+      '/assets/images/carmel-funny.webp',
+      
+      '/assets/images/google.png',
+      
+      '/assets/images/google.webp',
+      
+      '/assets/images/leon01.jpg',
+      
+      '/assets/images/leon01.webp',
+      
+      '/assets/images/leon02.jpg',
+      
+      '/assets/images/leon02.webp',
+      
+      '/assets/images/leon03.jpg',
+      
+      '/assets/images/leon03.webp',
+      
+      '/assets/images/leon04.jpg',
+      
+      '/assets/images/leon04.webp',
+      
+      '/assets/images/leon05.jpg',
+      
+      '/assets/images/leon05.webp',
+      
+      '/assets/images/neuman.png',
+      
+      '/assets/images/neuman.webp',
+      
+      '/assets/images/pancho-pancho.jpg',
+      
+      '/assets/images/pancho-pancho.webp',
+      
+      '/assets/images/pepsi_max.jpg',
+      
+      '/assets/images/pepsi_max.webp',
+      
+      '/assets/images/redkix.png',
+      
+      '/assets/images/redkix.webp',
+      
+      '/assets/images/tel-aviv-university.svg',
+      
+      '/assets/images/toy-croc.jpg',
+      
+      '/assets/images/toy-croc.webp',
+      
+      '/assets/images/toy-roots.jpg',
+      
+      '/assets/images/toy-roots.webp',
+      
+      '/assets/images/video_adi.jpg',
+      
+      '/assets/images/video_adi.webp',
+      
+      '/assets/images/video_ariel.webp',
+      
+      '/assets/images/video_brief_job.jpg',
+      
+      '/assets/images/video_brief_job.webp',
+      
+      '/assets/images/video_brief_psy.jpg',
+      
+      '/assets/images/video_brief_psy.webp',
+      
+      '/assets/images/video_family.webp',
+      
+      '/assets/images/video_shlem.webp',
+      
+      '/assets/images/video_terr.webp',
+      
+      '/assets/images/vinyl.png',
+      
+      '/assets/images/vinyl.webp',
+      
       '/',
+      
       '/index.html',
+      
       '/index.html?homescreen=1',
+      
       '/?homescreen=1',
-      '/materialIcons.css',
-      '/materialize.min.css',
-      '/style.css',
-      '/jquery.min.js',
-      '/three.min.js',
-      '/tween.min.js',
-      '/Stats.js',
-      '/dat.gui.min.js',
-      '/leap.min.js',
-      '/materialize.min.js',
-      '/main.js',
-      '/assets/86_trans.webp',
-      '/assets/amdocs.webp',
-      '/assets/google.webp',
-      '/assets/redkix.webp',
-      '/assets/leon01.webp',
-      '/assets/leon02.webp',
-      '/assets/leon03.webp',
-      '/assets/leon04.webp',
-      '/assets/leon05.webp',
-      '/assets/neuman.webp',
-      '/assets/pepsi_max.webp',
-      '/assets/video_adi.webp',
-      '/assets/video_brief_job.webp',
-      '/assets/video_brief_psy.webp',
-      '/assets/86_trans.png',
-      '/assets/amdocs.jpg',
-      '/assets/google.png',
-      '/assets/redkix.png',
-      '/assets/leon01.jpg',
-      '/assets/leon02.jpg',
-      '/assets/leon03.jpg',
-      '/assets/leon04.jpg',
-      '/assets/leon05.jpg',
-      '/assets/neuman.png',
-      '/assets/pepsi_max.jpg',
-      '/assets/tel-aviv-university.svg',
-      '/assets/video_adi.jpg',
-      '/assets/video_ariel.webp',
-      '/assets/video_brief_job.jpg',
-      '/assets/video_brief_psy.jpg',
-      '/assets/video_family.webp',
-      '/assets/video_shlem.webp',
-      '/assets/video_terr.webp',
-      '/fonts/roboto/Roboto-Bold.ttf',
-      '/fonts/roboto/Roboto-Bold.woff',
-      '/fonts/roboto/Roboto-Bold.woff2',
-      '/fonts/roboto/Roboto-Light.ttf',
-      '/fonts/roboto/Roboto-Light.woff',
-      '/fonts/roboto/Roboto-Light.woff2',
-      '/fonts/roboto/Roboto-Medium.ttf',
-      '/fonts/roboto/Roboto-Medium.woff',
-      '/fonts/roboto/Roboto-Medium.woff2',
-      '/fonts/roboto/Roboto-Regular.ttf',
-      '/fonts/roboto/Roboto-Regular.woff',
-      '/fonts/roboto/Roboto-Regular.woff2',
-      '/fonts/roboto/Roboto-Thin.woff',
-      '/fonts/roboto/Roboto-Thin.woff2',
-      '/fonts/socicon/Socicon.eot',
-      '/fonts/socicon/Socicon.ttf',
-      '/fonts/socicon/Socicon.woff',
-      '/fonts/socicon/Socicon.woff2',
-      '/socicon.css',
-      '/github-activity-0.1.5.min.css',
-      '/octicons.min.css',
-      '/mustache.min.js',
-      '/github-activity-0.1.5.min.js',
-      '/widget.js',
-      '/amplitude.min.js',
-      '/assets/bars.svg',
-      '/assets/vinyl.png',
-      '/assets/vinyl.webp',
-      '/fonts/octicons/octicons.eot',
-      '/fonts/octicons/octicons.svg',
-      '/fonts/octicons/octicons.ttf',
-      '/fonts/octicons/octicons.woff',
-      '/assets/aperco-battle.jpg',
-      '/assets/aperco-battle.webp',
-      '/assets/bilgo-rewind.jpg',
-      '/assets/bilgo-rewind.webp',
-      '/assets/carmel-funny.jpg',
-      '/assets/carmel-funny.webp',
-      '/assets/pancho-pancho.jpg',
-      '/assets/pancho-pancho.webp',
-      '/assets/toy-croc.jpg',
-      '/assets/toy-croc.webp',
-      '/assets/toy-roots.jpg',
-      '/assets/toy-roots.webp'
+      
+      '/css/combined.css',
+      
+      '/scripts/combined.js',
+      
     ]);
   })
   );
