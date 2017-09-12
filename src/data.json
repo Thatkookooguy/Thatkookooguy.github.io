@@ -16,16 +16,64 @@
   "about": {
     "intro": "[introduction]",
     "projects": [
-      "kibibit/achievibit",
-      "kibibit/achievibit-chrome-extension",
-      "kibibit/kibibit-code-editor",
-      "thatkookooguy/monkey-js"
+      {
+        "name": "achievibit",
+        "stars": 18,
+        "forks": 5,
+        "user": "kibibit",
+        "description": "test"
+      },
+      {
+        "name": "achievibit-chrome-extension",
+        "stars": 0,
+        "forks": 0,
+        "user": "kibibit",
+        "description": "test"
+      },
+      {
+        "name": "kibibit-code-editor",
+        "stars": 8,
+        "forks": 1,
+        "user": "kibibit",
+        "description": "test"
+      },
+      {
+        "name": "monkey-js",
+        "stars": 1,
+        "forks": 0,
+        "user": "thatkookooguy",
+        "description": "test"
+      }
     ],
     "contributed": [
-      "FredrikNoren/ungit",
-      "zhukov/webogram",
-      "gregjacobs/Autolinker.js",
-      "jiahaog/nativefier"
+      {
+        "name": "ungit",
+        "stars": "7.2k",
+        "forks": 429,
+        "user": "FredrikNoren",
+        "description": "test"
+      },
+      {
+        "name": "webogram",
+        "stars": "4.2k",
+        "forks": "1.3k",
+        "user": "zhukov",
+        "description": "test"
+      },
+      {
+        "name": "Autolinker.js",
+        "stars": 847,
+        "forks": 163,
+        "user": "gregjacobs",
+        "description": "test"
+      },
+      {
+        "name": "nativefier",
+        "stars": "11k",
+        "forks": 539,
+        "user": "jiahaog",
+        "description": "test"
+      }
     ]
   },
   "resume": {

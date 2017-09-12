@@ -1,3 +1,78 @@
+.github-card {
+  text-align: center;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #fff;
+  color: #555;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  min-height: 282px;
+  margin-bottom: 13px;
+  display: flex;
+  flex-direction: column;
+  max-width: 282px; }
+  .github-card .repo-header {
+    flex-shrink: 0;
+    flex-grow: 0;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 148px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-color: #000; }
+    .github-card .repo-header .repo-avatar {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      overflow: hidden; }
+      .github-card .repo-header .repo-avatar img {
+        display: block;
+        width: 48px;
+        height: 48px; }
+    .github-card .repo-header a {
+      margin: 0;
+      padding: 0;
+      line-height: 148px;
+      color: #fff;
+      font-size: 36px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-decoration: none;
+      -webkit-font-smoothing: antialiased; }
+  .github-card .repo-content {
+    flex-grow: 1; }
+    .github-card .repo-content p {
+      font-size: 16px;
+      padding: 10px 20px; }
+  .github-card .status {
+    flex-shrink: 0;
+    flex-grow: 0;
+    height: 60px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #707070;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: stretch;
+    align-items: center; }
+    .github-card .status a {
+      flex-grow: 1;
+      padding: 8px 0;
+      color: #707070;
+      text-decoration: none; }
+      .github-card .status a strong {
+        display: block;
+        color: #292f33;
+        font-size: 16px;
+        line-height: 1.6; }
+
 strong {
   color: #ffab40; }
 
@@ -185,12 +260,12 @@ picture {
   animation-timing-function: linear;
   z-index: -11;
   display: block;
-  -webkit-transition: all .25s ease-out;
-  transition: all .25s ease-out;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
   background-size: cover;
   width: 100%;
   height: 100%;
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/154887/vinyl.png); }
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/154887/vinyl.png"); }
 
 .card.music .collection a.btn-flat {
   white-space: nowrap;
@@ -208,7 +283,7 @@ picture {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
 
 .card.music .collection a.btn-flat.active::after {
-  content: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/154887/bars.svg);
+  content: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/154887/bars.svg");
   width: 20px;
   height: 15px;
   width: 15px;
@@ -260,9 +335,9 @@ picture {
 .gha-feed a {
   color: #FF9A35; }
 
+.gha-footer,
 .gha-header,
 .gha-push,
-.gha-footer,
 .gha-push-small {
   display: none; }
 
@@ -330,8 +405,8 @@ picture {
   content: "skip_next"; }
 
 .amplitude-current-time,
-.amplitude-duration-time,
-.amplitude-duration-name {
+.amplitude-duration-name,
+.amplitude-duration-time {
   vertical-align: baseline; }
 
 .amplitude-current-time::after {
@@ -373,7 +448,7 @@ picture {
   min-width: 100%;
   text-align: center;
   color: #fff;
-  text-shadow: 1px 1px 0px #000000;
+  text-shadow: 1px 1px 0 #000000;
   line-height: 35px;
   filter: dropshadow(color=#000000, offx=1, offy=1); }
 
@@ -494,8 +569,8 @@ nav.nav-extended {
   padding: 0 30px;
   background-color: #f1bb00;
   border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 0px;
-  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
   border-top-right-radius: 20px; }
   .reshet p {
     white-space: nowrap;
@@ -715,14 +790,14 @@ Main components
 .cd-timeline-content h2 {
   color: #303e49; }
 
-.cd-timeline-content p,
+.cd-timeline-content .cd-date,
 .cd-timeline-content .cd-read-more,
-.cd-timeline-content .cd-date {
+.cd-timeline-content p {
   font-size: 13px;
   font-size: 0.8125rem; }
 
-.cd-timeline-content .cd-read-more,
-.cd-timeline-content .cd-date {
+.cd-timeline-content .cd-date,
+.cd-timeline-content .cd-read-more {
   display: inline-block; }
 
 .cd-timeline-content p {
@@ -731,7 +806,7 @@ Main components
 
 .cd-timeline-content .cd-read-more {
   float: right;
-  padding: .8em 1em;
+  padding: 0.8em 1em;
   background: #acb7c0;
   color: white;
   border-radius: 0.25em; }
@@ -741,8 +816,8 @@ Main components
 
 .cd-timeline-content .cd-date {
   float: left;
-  padding: .8em 0;
-  opacity: .7; }
+  padding: 0.8em 0;
+  opacity: 0.7; }
 
 .cd-timeline-content::before {
   content: '';
@@ -761,8 +836,8 @@ Main components
   .cd-timeline-content p {
     font-size: 16px;
     font-size: 1rem; }
-  .cd-timeline-content .cd-read-more,
-  .cd-timeline-content .cd-date {
+  .cd-timeline-content .cd-date,
+  .cd-timeline-content .cd-read-more {
     font-size: 14px;
     font-size: 0.875rem; } }
 

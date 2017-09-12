@@ -20,8 +20,8 @@
       <div class="content">
         {{ generalComponents.sectionTitle('Projects', 'octicon', 'repo') }}
         <div class="cards-container">
-          {% for project in about.projects %}
-          <div class="github-card" data-github="{{ project }}" data-width="400" data-height="299" data-theme="medium"></div>
+          {% for repo in about.projects %}
+          {% include "partials/repo.nunjucks" %}
           {% endfor %}
         </div>
       </div>
@@ -32,8 +32,8 @@
       <div class="content">
         {{ generalComponents.sectionTitle('Contributed to', 'octicon', 'repo') }}
         <div class="cards-container">
-          {% for project in about.contributed %}
-          <div class="github-card" data-github="{{ project }}" data-width="400" data-height="299" data-theme="medium"></div>
+          {% for repo in about.contributed %}
+          {% include "partials/repo.nunjucks" %}
           {% endfor %}
         </div>
       </div>

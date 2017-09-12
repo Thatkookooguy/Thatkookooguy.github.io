@@ -1,0 +1,25 @@
+<div class="github-card repo-card">
+  <div class="repo-header">
+    <a class="repo-avatar" href="https://github.com/{{ repo.user }}" target="_top">
+      <img src="https://github.com/{{ repo.user }}.png" alt="{{ repo.user }}">
+    </a>
+    <h1>
+      <a href="https://github.com/{{ repo.user }}/{{ repo.name }}" target="_top">
+        {{ repo.name }}
+      </a>
+    </h1>
+  </div>
+  <div class="repo-content">
+    <p>
+      {{ repo.description }}
+    </p>
+  </div>
+  <div class="status">
+      <a href="https://github.com/{{ repo.user }}/{{ repo.name }}/network" target="_top">
+        <strong>{{ repo.forks }}</strong>Forks
+      </a>
+      <a href="https://github.com/{{ repo.user }}/{{ repo.name }}/stargazers" target="_top">
+        <strong>{{ repo.stars }}</strong>Stars
+      </a>
+  </div>
+</div>
