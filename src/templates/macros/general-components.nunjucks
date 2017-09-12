@@ -28,3 +28,13 @@
     <img src="{{ default }}" {% if properties.alt %} alt="{{ properties.alt }}" {% endif %} {% if class %} class="{{ class }}" {% endif %}>
   </picture>
 {% endmacro %}
+
+{% macro skill(name, precent = '50%', titleColor = '#d35400', barColor = '#e67e22') %}
+  <div class="skillbar clearfix " data-percent="{{ precent }}">
+    <div class="skillbar-title" style="background: {{ titleColor }};">
+      <span>{{ name }}</span>
+    </div>
+    <div class="skillbar-bar" style="background: {{ barColor }};"></div>
+    <div class="skill-bar-percent">{{ precent }}</div>
+  </div>
+{% endmacro %}
