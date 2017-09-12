@@ -14,65 +14,65 @@
     }
   },
   "about": {
-    "intro": "[introduction]",
+    "intro": "<p>I'm very passionate about software development. In the past 3 years, I made myself a proficient full-stack web developer. I also love to research build systems (like gulp), company development culture (like slack, reviewable, & dashboards), collaboration, integrations, and readable maintainable code.</p><p>I also like to play the saxophone, get involved in the MAKER community, and draw.</p>",
     "projects": [
       {
         "name": "achievibit",
         "stars": 18,
         "forks": 5,
         "user": "kibibit",
-        "description": "test"
+        "description": "Github Gamification - Achievements system as a GitHub WebHook."
       },
       {
         "name": "achievibit-chrome-extension",
         "stars": 0,
         "forks": 0,
         "user": "kibibit",
-        "description": "test"
+        "description": "chrome extension to integrate achievibit inside GitHub"
       },
       {
         "name": "kibibit-code-editor",
         "stars": 8,
         "forks": 1,
         "user": "kibibit",
-        "description": "test"
+        "description": "code editor in the cloud"
       },
       {
         "name": "monkey-js",
         "stars": 1,
         "forks": 0,
         "user": "thatkookooguy",
-        "description": "test"
+        "description": "monkey.js is a monk.js mock library for testing. Saves data to a local file to check results against"
       }
     ],
     "contributed": [
+      {
+        "name": "Autolinker.js",
+        "stars": 847,
+        "forks": 163,
+        "user": "gregjacobs",
+        "description": "Utility to Automatically Link URLs, Email Addresses, Phone Numbers, Twitter handles, and Hashtags in a given block of text/HTML"
+      },
       {
         "name": "ungit",
         "stars": "7.2k",
         "forks": 429,
         "user": "FredrikNoren",
-        "description": "test"
+        "description": "The easiest way to use git. On any platform. Anywhere."
       },
       {
         "name": "webogram",
         "stars": "4.2k",
         "forks": "1.3k",
         "user": "zhukov",
-        "description": "test"
-      },
-      {
-        "name": "Autolinker.js",
-        "stars": 847,
-        "forks": 163,
-        "user": "gregjacobs",
-        "description": "test"
+        "description": "Telegram web application, GPL v3 https://web.telegram.org"
       },
       {
         "name": "nativefier",
         "stars": "11k",
         "forks": 539,
         "user": "jiahaog",
-        "description": "test"
+        "description": "Make any web page a desktop application"
       }
     ]
   },
