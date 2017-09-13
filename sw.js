@@ -138,6 +138,102 @@ self.addEventListener('install', function(e) {
       
       '/assets/images/toy-roots.webp',
       
+      '/assets/images/v-army-beatles.jpg',
+      
+      '/assets/images/v-army-beatles.webp',
+      
+      '/assets/images/v-army-broza.jpg',
+      
+      '/assets/images/v-army-broza.webp',
+      
+      '/assets/images/v-bilgo-tower.jpg',
+      
+      '/assets/images/v-bilgo-tower.webp',
+      
+      '/assets/images/v-carmel-egg.jpg',
+      
+      '/assets/images/v-carmel-egg.webp',
+      
+      '/assets/images/v-carmel-gras.jpg',
+      
+      '/assets/images/v-carmel-gras.webp',
+      
+      '/assets/images/v-carmel-neil.jpg',
+      
+      '/assets/images/v-carmel-neil.webp',
+      
+      '/assets/images/v-carmel-trains.jpg',
+      
+      '/assets/images/v-carmel-trains.webp',
+      
+      '/assets/images/v-dan-kid.jpg',
+      
+      '/assets/images/v-dan-kid.webp',
+      
+      '/assets/images/v-dan-peg.jpg',
+      
+      '/assets/images/v-dan-peg.webp',
+      
+      '/assets/images/v-dan-school.jpg',
+      
+      '/assets/images/v-dan-school.webp',
+      
+      '/assets/images/v-dan-work.jpg',
+      
+      '/assets/images/v-dan-work.webp',
+      
+      '/assets/images/v-edry-abraxas.jpg',
+      
+      '/assets/images/v-edry-abraxas.webp',
+      
+      '/assets/images/v-edry-alma.jpg',
+      
+      '/assets/images/v-edry-alma.webp',
+      
+      '/assets/images/v-funny-gron.jpg',
+      
+      '/assets/images/v-funny-gron.webp',
+      
+      '/assets/images/v-pancho-cinc.jpg',
+      
+      '/assets/images/v-pancho-cinc.webp',
+      
+      '/assets/images/v-pancho-shwarma.jpg',
+      
+      '/assets/images/v-pancho-shwarma.webp',
+      
+      '/assets/images/v-push.jpg',
+      
+      '/assets/images/v-push.webp',
+      
+      '/assets/images/v-reo-assaf.jpg',
+      
+      '/assets/images/v-reo-assaf.webp',
+      
+      '/assets/images/v-reo-ometz.jpg',
+      
+      '/assets/images/v-reo-ometz.webp',
+      
+      '/assets/images/v-toys-kutner.jpg',
+      
+      '/assets/images/v-toys-kutner.webp',
+      
+      '/assets/images/v-toys-skele.jpg',
+      
+      '/assets/images/v-toys-skele.webp',
+      
+      '/assets/images/v-zbang-doo-wop.jpg',
+      
+      '/assets/images/v-zbang-doo-wop.webp',
+      
+      '/assets/images/v-zbang-sikes.jpg',
+      
+      '/assets/images/v-zbang-sikes.webp',
+      
+      '/assets/images/v-zbang-spitz.jpg',
+      
+      '/assets/images/v-zbang-spitz.webp',
+      
       '/assets/images/video_adi.jpg',
       
       '/assets/images/video_adi.webp',

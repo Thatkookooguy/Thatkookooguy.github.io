@@ -531,21 +531,39 @@
     "videos": [
       {
         "name": "Reo - Ometz (opening act for Time Impala @ Live Park Zappa)",
-        "image": "http://img.youtube.com/vi/t-sRaHv4rIA/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-reo-ometz.webp",
+            "jpg": "assets/images/v-reo-ometz.jpg"
+          }
+        },
         "date": "Published on Apr 6, 2017",
         "network": "Youtube",
         "url": "https://youtu.be/t-sRaHv4rIA"
       },
       {
         "name": "REO feat. Assaf Amdursky - 7th Wave (Live In Sudio)",
-        "image": "http://img.youtube.com/vi/cJA-dz4LZIw/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-reo-assaf.webp",
+            "jpg": "assets/images/v-reo-assaf.jpg"
+          }
+        },
         "date": "Published on Nov 11, 2015",
         "network": "Youtube",
         "url": "https://youtu.be/cJA-dz4LZIw"
       },
       {
         "name": "Carmel Apple Pop - This is Neil",
-        "image": "http://img.youtube.com/vi/nK6q6kuruR0/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-carmel-neil.webp",
+            "jpg": "assets/images/v-carmel-neil.jpg"
+          }
+        },
         "date": "Published on Oct 5, 2013",
         "network": "Youtube",
         "url": "https://youtu.be/nK6q6kuruR0"
@@ -553,7 +571,13 @@
       {
         "rtl": true,
         "name": "שיר פתיחה נדחפים - לילי פרנקו (מארחים את ניל קלמן)",
-        "image": "http://img.youtube.com/vi/Q7V3OjbJ4GY/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-push.webp",
+            "jpg": "assets/images/v-push.jpg"
+          }
+        },
         "date": "Published on Mar 29, 2015",
         "network": "Youtube",
         "url": "https://youtu.be/Q7V3OjbJ4GY"
@@ -561,35 +585,65 @@
       {
         "rtl": true,
         "name": "שלמה גרוניך וכל מה שמצחיק בעולם",
-        "image": "http://img.youtube.com/vi/6e1wrULa-U8/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-funny-gron.webp",
+            "jpg": "assets/images/v-funny-gron.jpg"
+          }
+        },
         "date": "Published on Dec 24, 2014",
         "network": "Youtube",
         "url": "https://youtu.be/6e1wrULa-U8?t=3m16s"
       },
       {
         "name": "Israeli Air Force Band feat. David Broza - It's all or nothing",
-        "image": "http://img.youtube.com/vi/HCvPmFFxYl0/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-army-broza.webp",
+            "jpg": "assets/images/v-army-broza.jpg"
+          }
+        },
         "date": "Published on Jul 15, 2011",
         "network": "Youtube",
         "url": "https://youtu.be/HCvPmFFxYl0"
       },
       {
         "name": "Or Edry - LIVE(@ KULI ALMA)",
-        "image": "http://img.youtube.com/vi/sfTGL7Tm2uc/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-edry-alma.webp",
+            "jpg": "assets/images/v-edry-alma.jpg"
+          }
+        },
         "date": "Published on Jul 11, 2017",
         "network": "Youtube",
         "url": "https://youtu.be/sfTGL7Tm2uc"
       },
       {
         "name": "Or Edry - LIVE(@ Abraxas)",
-        "image": "http://img.youtube.com/vi/IHxtr3KiqPU/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-edry-abraxas.webp",
+            "jpg": "assets/images/v-edry-abraxas.jpg"
+          }
+        },
         "date": "Published on Jun 8, 2017",
         "network": "Youtube",
         "url": "https://youtu.be/IHxtr3KiqPU"
       },
       {
         "name": "Igor Krutogolov's Karate Band - Skeleton Dance",
-        "image": "http://img.youtube.com/vi/-hpp2ueEVso/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-toys-skele.webp",
+            "jpg": "assets/images/v-toys-skele.jpg"
+          }
+        },
         "date": "Published on Dec 30, 2014",
         "network": "Youtube",
         "url": "https://youtu.be/-hpp2ueEVso"
@@ -597,105 +651,195 @@
       {
         "rtl": true,
         "name": "להקת חיל האוויר 2007 - עושה ביטלס",
-        "image": "http://img.youtube.com/vi/E-TR8VHYStY/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-army-beatles.webp",
+            "jpg": "assets/images/v-army-beatles.jpg"
+          }
+        },
         "date": "Published on May 12, 2010",
         "network": "Youtube",
         "url": "https://youtu.be/E-TR8VHYStY"
       },
       {
         "name": "Bilgo - Tower Of Power @Yefet with acoustic band",
-        "image": "http://img.youtube.com/vi/PBXikNZLmJM/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-bilgo-tower.webp",
+            "jpg": "assets/images/v-bilgo-tower.jpg"
+          }
+        },
         "date": "Published on Jun 20, 2013",
         "network": "Youtube",
         "url": "https://youtu.be/PBXikNZLmJM"
       },
       {
         "name": "Igor Krutogolov's Toy Orchestra 'Skeleton Dance' - ON AIR - Yoav Kutner",
-        "image": "http://img.youtube.com/vi/x32ovCv1sVc/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-toys-kutner.webp",
+            "jpg": "assets/images/v-toys-kutner.jpg"
+          }
+        },
         "date": "Published on Feb 28, 2014",
         "network": "Youtube",
         "url": "https://youtu.be/x32ovCv1sVc"
       },
       {
         "name": "Pancho - Cincuenta",
-        "image": "http://img.youtube.com/vi/94pqcl7QVfs/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-pancho-cinc.webp",
+            "jpg": "assets/images/v-pancho-cinc.jpg"
+          }
+        },
         "date": "Published on Sep 18, 2012",
         "network": "Youtube",
         "url": "https://youtu.be/94pqcl7QVfs"
       },
       {
         "name": "Pancho - Shwarma de Pulpo",
-        "image": "http://img.youtube.com/vi/f5QSnFMwv0I/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-pancho-shwarma.webp",
+            "jpg": "assets/images/v-pancho-shwarma.jpg"
+          }
+        },
         "date": "Published on Sep 18, 2012",
         "network": "Youtube",
         "url": "https://youtu.be/f5QSnFMwv0I"
       },
       {
         "name": "Carmel Apple Pop - \"Foie Gras\"",
-        "image": "http://img.youtube.com/vi/HeUy_IfWqVA/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-carmel-gras.webp",
+            "jpg": "assets/images/v-carmel-gras.jpg"
+          }
+        },
         "date": "Published on May 24, 2013",
         "network": "Youtube",
         "url": "https://youtu.be/HeUy_IfWqVA"
       },
       {
         "name": "Carmel Apple Pop - \"Trains and Rooftops\"",
-        "image": "http://img.youtube.com/vi/_C3vw3dmYmU/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-carmel-trains.webp",
+            "jpg": "assets/images/v-carmel-trains.jpg"
+          }
+        },
         "date": "Published on May 27, 2013",
         "network": "Youtube",
         "url": "https://youtu.be/_C3vw3dmYmU"
       },
       {
         "name": "Carmel Apple Pop - \"Egg\"",
-        "image": "http://img.youtube.com/vi/ZQikCyMQ-00/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-carmel-egg.webp",
+            "jpg": "assets/images/v-carmel-egg.jpg"
+          }
+        },
         "date": "Published on Aug 10, 2013",
         "network": "Youtube",
         "url": "https://youtu.be/ZQikCyMQ-00"
       },
       {
         "name": "Steely Dan Tribute - Kid Charlamagne feat. Guy Mazig",
-        "image": "http://img.youtube.com/vi/C9NKiJHdW6E/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-dan-kid.webp",
+            "jpg": "assets/images/v-dan-kid.jpg"
+          }
+        },
         "date": "Published on Dec 30, 2011",
         "network": "Youtube",
         "url": "https://youtu.be/C9NKiJHdW6E"
       },
       {
         "name": "Steely Dan Tribute- My Old School feat. Arthur Krasnobaiev",
-        "image": "http://img.youtube.com/vi/mC_LBT9o_gw/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-dan-school.webp",
+            "jpg": "assets/images/v-dan-school.jpg"
+          }
+        },
         "date": "Published on Dec 31, 2011",
         "network": "Youtube",
         "url": "https://youtu.be/mC_LBT9o_gw"
       },
       {
         "name": "Steely Dan Tribute - Peg feat. Arthur Krasnobaiev",
-        "image": "http://img.youtube.com/vi/aZKWLY3RYrQ/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-dan-peg.webp",
+            "jpg": "assets/images/v-dan-peg.jpg"
+          }
+        },
         "date": "Published on Dec 30, 2011",
         "network": "Youtube",
         "url": "https://youtu.be/aZKWLY3RYrQ"
       },
       {
         "name": "Steely Dan Tribute feat. Ruthi Navon - Dirty Work",
-        "image": "http://img.youtube.com/vi/EAnuT2ArQ9k/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-dan-work.webp",
+            "jpg": "assets/images/v-dan-work.jpg"
+          }
+        },
         "date": "Published on Dec 31, 2011",
         "network": "Youtube",
         "url": "https://youtu.be/EAnuT2ArQ9k"
       },
       {
         "name": "The Big Zbang & the Doo-Wop Girls",
-        "image": "http://img.youtube.com/vi/PUGfTbZpOIY/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-zbang-doo-wop.webp",
+            "jpg": "assets/images/v-zbang-doo-wop.jpg"
+          }
+        },
         "date": "Published on Feb 25, 2011",
         "network": "Youtube",
         "url": "https://youtu.be/PUGfTbZpOIY"
       },
       {
         "name": "The Big Zbang & Anna Spitz",
-        "image": "http://img.youtube.com/vi/FCuAcsI2d1Q/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-zbang-spitz.webp",
+            "jpg": "assets/images/v-zbang-spitz.jpg"
+          }
+        },
         "date": "Published on Feb 25, 2011",
         "network": "Youtube",
         "url": "https://youtu.be/FCuAcsI2d1Q"
       },
       {
         "name": "The Big Zbang & Aaron Lee Sikes",
-        "image": "http://img.youtube.com/vi/bcxfgZSqQF4/0.jpg",
+        "image": {
+          "alt": "Reo - Ometz",
+          "image": {
+            "webp": "assets/images/v-zbang-sikes.webp",
+            "jpg": "assets/images/v-zbang-sikes.jpg"
+          }
+        },
         "date": "Published on Feb 25, 2011",
         "network": "Youtube",
         "url": "https://youtu.be/bcxfgZSqQF4"
