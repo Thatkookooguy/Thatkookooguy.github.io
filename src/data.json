@@ -1,5 +1,5 @@
 {
-  "version": "v2",
+  "version": "v3",
   "siteName": "Neil Kalman - thatkookooguy",
   "siteUrl": "https://thatkookooguy.github.io",
   "siteDescription": "thatkookooguy@kibibit.io",
@@ -213,7 +213,10 @@
   "music": {
     "bands": [{
         "name": "reo",
-        "image": "https://f4.bcbits.com/img/a0807138205_2.jpg",
+        "image": {
+          "jpg": "assets/images/b-reo.jpg",
+          "webp": "assets/images/b-reo.webp"
+        },
         "description": "<p>Reo is a <strong>pop-disco-electronic</strong> duo, performed and produced by the musicians Zoe Polanski and Or Edri. The songs were written, produced and fully performed by Polanski and Edri, exclusively on analogue equipment from the 80's and 90's that were collected carefully to create the warm and unique sound of the debut album.</p><p>Behind the ensemble are many performances at leading Tel-Aviv clubs and festivals all over.</p>",
         "genres": [
           "dream disco",
@@ -232,7 +235,10 @@
       },
       {
         "name": "Or Edry",
-        "image": "https://f4.bcbits.com/img/a3219931196_16.jpg",
+        "image": {
+          "jpg": "assets/images/b-or.jpg",
+          "webp": "assets/images/b-or.webp"
+        },
         "description": "<p>Or Edri is one of the busiest and most versatile bass players in Tel-Aviv. In her solo project, she stays close to the genre of Rio, but while the duo stroked with technicolor sensuality, Edri alone is a deeper submarine. It's still sexy, still groovy, still going through the body like goosebumps, still gives you a desire to get up and dance, & still psychedelic and decorated with her stimulating bass lines.</p>",
         "genres": [
           "pop",
@@ -252,7 +258,10 @@
       },
       {
         "name": "pancho",
-        "image": "https://f4.bcbits.com/img/a0459707748_16.jpg",
+        "image": {
+          "jpg": "assets/images/pancho-pancho.jpg",
+          "webp": "assets/images/pancho-pancho.webp"
+        },
         "description": "<p>Pancho is part of the independent scene of Tel-Aviv. Pancho creates unique instrumental music with tremendous merit and quirkiness. Drummer ( Niv Majar ), Guitarist ( Dror Pikielny ) and Saxophonist ( Neil Kalman ) give shape to this original and unclassifiable sound.</p>",
         "genres": [
           "avant rock",
@@ -285,7 +294,10 @@
       },
       {
         "name": "Omer Schneider Band",
-        "image": "https://f4.bcbits.com/img/a3775861312_16.jpg",
+        "image": {
+          "jpg": "assets/images/b-omer.jpg",
+          "webp": "assets/images/b-omer.webp"
+        },
         "description": "<p>Like in a magical dream, virtuoso guitarist's <strong>Omer Schneider</strong> sensitively weaves within his music an abundance of different musical genres.</p><p>After a number of tours in Europe with the glam rock band <strong>CHASE THE ACE</strong>, Omer decided to go on a new way and make his own art. With the trio Tamir Borsuk (Drums), Tal Shturm (Bass), and Neil Kalman (Saxophones), they create magical picturesque melodies, wrapped in a heavy rock spirit.</p>",
         "genres": [
           "world",
@@ -307,7 +319,10 @@
       },
       {
         "name": "Carmel Apple Pop",
-        "image": "https://scontent.fsdv3-1.fna.fbcdn.net/v/t31.0-8/415425_10150831051621194_706497548_o.jpg?oh=b3cbd33ac1ae378fb61e80d76aaa9a76&oe=5A57B8D8",
+        "image": {
+          "jpg": "assets/images/b-carmel.jpg",
+          "webp": "assets/images/b-carmel.webp"
+        },
         "description": "<p>Caramel Apple Pop has been working for several years in the indie scene, creating funny and amusing performances that include jazz, metal, funk, punk and mostly - a lot of talent.</p><p>They are energetic guys who know what they do and do it great - their style is a kind of jazz metal songs in Hebrew and English their, and performance is overwhelming and mesmerizing.</p>",
         "genres": [
           "jazz",
