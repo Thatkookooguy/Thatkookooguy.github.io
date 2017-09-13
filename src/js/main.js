@@ -270,7 +270,7 @@ if('serviceWorker' in navigator) {
           'url': '/assets/songs/bilgo/bilgo01.mp3',
           'index': 34
         }
-      ];
+      ]
 
         // MUSIC VISUALIZER. SHOULD CONNECT TO PLAYER
         //createVisualizer(window, 'nav.nav-extended');
@@ -278,7 +278,7 @@ if('serviceWorker' in navigator) {
         Amplitude.init({
           //'soundclound_client': 123, // do this when client keys are available
           'callbacks': {
-            'after_play': function() {
+            'song_change': function() {
               var currSong = Amplitude.getActiveSongMetadata();
               onItemClick(currSong.index, undefined, true);
             },
@@ -291,6 +291,15 @@ if('serviceWorker' in navigator) {
           },
       		'songs': songs
       	});
+
+        var count = 0;
+        window.onSongChange = function() {
+            var currSong = Amplitude.getActiveSongMetadata();
+            //if (count !== 0) {
+              onItemClick(currSong.index, undefined, true);
+            //}
+            count++;
+        };
 
         $(".button-collapse").sideNav();
 
@@ -326,7 +335,7 @@ if('serviceWorker' in navigator) {
 
       function onItemClick(index, albumElement, fromAmplitude) {
           var allBtns = $('.card.music .btn-flat');
-          var $this = albumElement ? $($(albumElement).find('.btn-flat')[0]) : Number.isInteger(index) ? $('[song-index="' + currSong.index + '"]') : $(this);
+          var $this = albumElement ? $($(albumElement).find('.btn-flat')[0]) : Number.isInteger(index) ? $('[song-index="' + index + '"]') : $(this);
           var wasActive = $this.hasClass('active');
 
           // reset all buttons

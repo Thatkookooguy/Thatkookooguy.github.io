@@ -28,6 +28,7 @@
   {% block content %} {% endblock %}
 
   <!-- build:js scripts/combined.js -->
+  <script src="js/init.js"></script>
   <script src="libs/jquery.min.js"></script>
   <script src="libs/three.min.js"></script>
   <script src="libs/tween.min.js"></script>
@@ -35,7 +36,7 @@
   <script src="libs/dat.gui.min.js"></script>
   <script src="libs/leap.min.js"></script>
   <script src="libs/materialize.min.js"></script>
-  <script src="libs/amplitude.min.js"></script>
+  <script src="libs/amplitude.js"></script>
   <script src="libs/widget.js"></script>
   <script type="text/javascript" src="libs/mustache.min.js"></script>
   <script type="text/javascript" src="libs/github-activity-0.1.5.min.js"></script>
