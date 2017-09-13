@@ -15,8 +15,7 @@
   },
   "about": {
     "intro": "<p>I'm very passionate about software development. In the past 3 years, I made myself a proficient full-stack web developer. I also love to research build systems (like gulp), company development culture (like slack, reviewable, & dashboards), collaboration, integrations, and readable maintainable code.</p><p>I also like to play the saxophone, get involved in the MAKER community, and draw.</p>",
-    "projects": [
-      {
+    "projects": [{
         "name": "achievibit",
         "stars": 18,
         "forks": 5,
@@ -45,8 +44,7 @@
         "description": "monkey.js is a monk.js mock library for testing. Saves data to a local file to check results against"
       }
     ],
-    "contributed": [
-      {
+    "contributed": [{
         "name": "Autolinker.js",
         "stars": 847,
         "forks": 163,
@@ -77,15 +75,14 @@
     ]
   },
   "resume": {
-    "jobs": [
-      {
+    "jobs": [{
         "logo": {
           "alt": "redkix",
           "image": {
             "png": "/assets/images/redkix.png",
             "webp": "/assets/images/redkix.webp"
           }
-          },
+        },
         "name": "redkix",
         "site": "https://redkix.com",
         "role": "SENIOR SOFTWARE ENGINEER",
@@ -99,7 +96,7 @@
             "png": "/assets/images/google.png",
             "webp": "/assets/images/google.webp"
           }
-          },
+        },
         "name": "NISHA PRO, AT GOOGLE",
         "role": "SOFTWARE ENGINEER",
         "description": "Worked in the Live Results team, creating cards for Google Search.<ul class=\"browser-default\"><li>Used Agile practices and Test Driven Development techniques to provide reliable, working software early and often</li><li>Server side and client side data manipulation</li><li>Worked on adapting Google search UI components to load and run faster on poor internet connections, minimizing the Google Search page size.<li></ul>",
@@ -112,31 +109,28 @@
             "png": "/assets/images/amdocs.png",
             "webp": "/assets/images/amdocs.webp"
           }
-          },
+        },
         "name": "AMDOCS",
         "role": "FRONT-END DEVELOPER",
         "description": "<ul class=\"browser-default\"><li>Working on web components that were used by other Amdocs products</li><li>Creating responsive designs</li><li>Writing code that is customizable and theme-able.<li><li>Complex CSS animations</li></ul>",
         "dates": "Jan 2014 – Feb 2015"
       }
     ],
-    "education": [
-      {
-        "logo": {
-          "alt": "tel-aviv-university",
-          "image": {
-            "svg": "/assets/images/tel-aviv-university.svg"
-          }
-          },
-        "name": "TEL AVIV UNIVERSITY",
-        "role": "Student",
-        "description": "<strong>B.Sc. in Computer Science and Life Science</strong>, Combined program with an emphasis on Bioinformatics (double major).",
-        "dates": "2009-2013"
-      }
-    ]
+    "education": [{
+      "logo": {
+        "alt": "tel-aviv-university",
+        "image": {
+          "svg": "/assets/images/tel-aviv-university.svg"
+        }
+      },
+      "name": "TEL AVIV UNIVERSITY",
+      "role": "Student",
+      "description": "<strong>B.Sc. in Computer Science and Life Science</strong>, Combined program with an emphasis on Bioinformatics (double major).",
+      "dates": "2009-2013"
+    }]
   },
   "actor": {
-    "videos": [
-      {
+    "videos": [{
         "rtl": true,
         "reshet": true,
         "name": "טלוויזיה מהעתיד",
@@ -215,9 +209,8 @@
       }
     ]
   },
-	"music": {
-    "bands": [
-      {
+  "music": {
+    "bands": [{
         "name": "reo",
         "image": "https://f4.bcbits.com/img/a0807138205_2.jpg",
         "description": "<p>Reo is a <strong>pop-disco-electronic</strong> duo, performed and produced by the musicians Zoe Polanski and Or Edri. The songs were written, produced and fully performed by Polanski and Edri, exclusively on analogue equipment from the 80's and 90's that were collected carefully to create the warm and unique sound of the debut album.</p><p>Behind the ensemble are many performances at leading Tel-Aviv clubs and festivals all over.</p>",
@@ -226,8 +219,7 @@
           "analog",
           "electronic"
         ],
-        "social": [
-          {
+        "social": [{
             "name": "bandcamp",
             "url": "https://reoreoreo.bandcamp.com/"
           },
@@ -247,8 +239,7 @@
           "downtempo",
           "dream pop"
         ],
-        "social": [
-          {
+        "social": [{
             "name": "bandcamp",
             "url": "https://oredry.bandcamp.com/releases"
           },
@@ -269,8 +260,7 @@
           "experimental",
           "instrumental"
         ],
-        "social": [
-          {
+        "social": [{
             "name": "bandcamp",
             "url": "https://carmelapplepop.bandcamp.com/album/pancho"
           },
@@ -304,8 +294,7 @@
           "instrumental",
           "jazz"
         ],
-        "social": [
-          {
+        "social": [{
             "name": "bandcamp",
             "url": "https://omer-schneider.bandcamp.com/releases"
           },
@@ -326,8 +315,7 @@
           "punk",
           "avante garde"
         ],
-        "social": [
-          {
+        "social": [{
             "name": "bandcamp",
             "url": "https://carmelapplepop.bandcamp.com/"
           },
@@ -350,196 +338,368 @@
         ]
       }
     ],
-		"albums": [{
-				"artist": "Pancho",
-				"name": "Pancho",
-				"cover": {
+    "albums": [{
+        "artist": "Pancho",
+        "name": "Pancho",
+        "cover": {
           "alt": "Pancho - Pancho",
           "image": {
             "jpg": "assets/images/pancho-pancho.jpg",
             "webp": "assets/images/pancho-pancho.webp"
           }
         },
-				"bandcamp": "",
-				"songs": [
+        "bandcamp": "",
+        "songs": [{
+            "name": "01. Power Of Weakness",
+            "index": 0
+          },
           {
-						"name": "01. Power Of Weakness",
-						"index": 0
-					},
-					{
-						"name": "02. Shwarma de Pulpo",
-						"index": 1
-					},
-					{
-						"name": "03. Cincuenta",
-						"index": 2
-					},
-					{
-						"name": "04. Con Limón",
-						"index": 3
-					},
-					{
-						"name": "05. Timmy",
-						"index": 4
-					},
-					{
-						"name": "06. Piekielny",
-						"index": 5
-					},
-					{
-						"name": "07. Ballyhoo",
-						"index": 6
-					},
-					{
-						"name": "08. Scentless Apprentice",
-						"index": 7
-					},
-					{
-						"name": "09. Panchito",
-						"index": 8
-					},
-					{
-						"name": "10. Sex On A Pyramid",
-						"index": 9
-					}
-				]
-			},
-			{
-				"artist": "Carmel Apple Pop",
-				"name": "Funny​/​Not Funny",
-				"cover": "assets/images/carmel-funny.jpg",
-				"bandcamp": "",
-				"songs": [{
-						"name": "01. Funny",
-						"index": 10
-					},
-					{
-						"name": "02. Hostage",
-						"index": 11
-					},
-					{
-						"name": "03. It's Carlos",
-						"index": 12
-					},
-					{
-						"name": "04. Foie Gras",
-						"index": 13
-					},
-					{
-						"name": "05. Boiler Room",
-						"index": 14
-					},
-					{
-						"name": "06. Trains and Rooftops",
-						"index": 15
-					},
-					{
-						"name": "07. Broken Blood Freezer",
-						"index": 16
-					},
-					{
-						"name": "08. Pix Mate",
-						"index": 17
-					},
-					{
-						"name": "09. Five Million Dollars",
-						"index": 18
-					},
-					{
-						"name": "10. Sunday Pizza",
-						"index": 19
-					},
-					{
-						"name": "11. Short Sugar Canes",
-						"index": 20
-					},
-					{
-						"name": "12. Not Funny",
-						"index": 21
-					},
-					{
-						"name": "13. Summer Overture / Lux Aeterna",
-						"index": 22
-					},
-					{
-						"name": "14. Ultra Sexy (Bonus)",
-						"index": 23
-					}
-				]
-			},
-			{
-				"artist": "Igor Krutogolov's Karate Band",
-				"name": "How To Be A Crocodile",
-				"cover": "assets/images/toy-croc.jpg",
-				"bandcamp": "",
-				"songs": [{
-						"name": "01. Skeleton Dance",
-						"index": 24
-					},
-					{
-						"name": "02. Last Supper Souffle",
-						"index": 25
-					},
-					{
-						"name": "03. Seven",
-						"index": 26
-					},
-					{
-						"name": "04. Beyond The Hill",
-						"index": 27
-					},
-					{
-						"name": "05. Mad Medow",
-						"index": 28
-					},
-					{
-						"name": "06. Drink N' Drive",
-						"index": 29
-					},
-					{
-						"name": "07. Swamp King",
-						"index": 30
-					},
-					{
-						"name": "08. Black Lip Oyster",
-						"index": 31
-					},
-					{
-						"name": "09. Zhuravli i Korbli",
-						"index": 32
-					}
-				]
-			},
-			{
-				"artist": "Igor Krutogolov's Toy Orchestra",
-				"name": "Roots Over Roots",
-				"cover": "assets/images/toy-roots.jpg",
-				"bandcamp": "",
-				"songs": [{
-					"name": "01. Roots Over Roots",
-					"index": 24
-				}]
-			},
-			{
-				"artist": "Aperco",
-				"name": "The Battle",
-				"cover": "assets/images/aperco-battle.jpg",
-				"bandcamp": "",
-				"songs": [{
-					"name": "03. Another Day To Live",
-					"index": 33
-				}]
-			},
-			{
-				"artist": "Bilgo & Co",
-				"name": "Rewind My Life",
-				"cover": "assets/images/bilgo-rewind.jpg",
-				"bandcamp": "",
-				"songs": [{
-					"name": "01. Rewind My Life",
-					"index": 34
-				}]
-			}
-		]
-	}
+            "name": "02. Shwarma de Pulpo",
+            "index": 1
+          },
+          {
+            "name": "03. Cincuenta",
+            "index": 2
+          },
+          {
+            "name": "04. Con Limón",
+            "index": 3
+          },
+          {
+            "name": "05. Timmy",
+            "index": 4
+          },
+          {
+            "name": "06. Piekielny",
+            "index": 5
+          },
+          {
+            "name": "07. Ballyhoo",
+            "index": 6
+          },
+          {
+            "name": "08. Scentless Apprentice",
+            "index": 7
+          },
+          {
+            "name": "09. Panchito",
+            "index": 8
+          },
+          {
+            "name": "10. Sex On A Pyramid",
+            "index": 9
+          }
+        ]
+      },
+      {
+        "artist": "Carmel Apple Pop",
+        "name": "Funny​/​Not Funny",
+        "cover": "assets/images/carmel-funny.jpg",
+        "bandcamp": "",
+        "songs": [{
+            "name": "01. Funny",
+            "index": 10
+          },
+          {
+            "name": "02. Hostage",
+            "index": 11
+          },
+          {
+            "name": "03. It's Carlos",
+            "index": 12
+          },
+          {
+            "name": "04. Foie Gras",
+            "index": 13
+          },
+          {
+            "name": "05. Boiler Room",
+            "index": 14
+          },
+          {
+            "name": "06. Trains and Rooftops",
+            "index": 15
+          },
+          {
+            "name": "07. Broken Blood Freezer",
+            "index": 16
+          },
+          {
+            "name": "08. Pix Mate",
+            "index": 17
+          },
+          {
+            "name": "09. Five Million Dollars",
+            "index": 18
+          },
+          {
+            "name": "10. Sunday Pizza",
+            "index": 19
+          },
+          {
+            "name": "11. Short Sugar Canes",
+            "index": 20
+          },
+          {
+            "name": "12. Not Funny",
+            "index": 21
+          },
+          {
+            "name": "13. Summer Overture / Lux Aeterna",
+            "index": 22
+          },
+          {
+            "name": "14. Ultra Sexy (Bonus)",
+            "index": 23
+          }
+        ]
+      },
+      {
+        "artist": "Igor Krutogolov's Karate Band",
+        "name": "How To Be A Crocodile",
+        "cover": "assets/images/toy-croc.jpg",
+        "bandcamp": "",
+        "songs": [{
+            "name": "01. Skeleton Dance",
+            "index": 24
+          },
+          {
+            "name": "02. Last Supper Souffle",
+            "index": 25
+          },
+          {
+            "name": "03. Seven",
+            "index": 26
+          },
+          {
+            "name": "04. Beyond The Hill",
+            "index": 27
+          },
+          {
+            "name": "05. Mad Medow",
+            "index": 28
+          },
+          {
+            "name": "06. Drink N' Drive",
+            "index": 29
+          },
+          {
+            "name": "07. Swamp King",
+            "index": 30
+          },
+          {
+            "name": "08. Black Lip Oyster",
+            "index": 31
+          },
+          {
+            "name": "09. Zhuravli i Korbli",
+            "index": 32
+          }
+        ]
+      },
+      {
+        "artist": "Igor Krutogolov's Toy Orchestra",
+        "name": "Roots Over Roots",
+        "cover": "assets/images/toy-roots.jpg",
+        "bandcamp": "",
+        "songs": [{
+          "name": "01. Roots Over Roots",
+          "index": 24
+        }]
+      },
+      {
+        "artist": "Aperco",
+        "name": "The Battle",
+        "cover": "assets/images/aperco-battle.jpg",
+        "bandcamp": "",
+        "songs": [{
+          "name": "03. Another Day To Live",
+          "index": 33
+        }]
+      },
+      {
+        "artist": "Bilgo & Co",
+        "name": "Rewind My Life",
+        "cover": "assets/images/bilgo-rewind.jpg",
+        "bandcamp": "",
+        "songs": [{
+          "name": "01. Rewind My Life",
+          "index": 34
+        }]
+      }
+    ],
+    "videos": [
+      {
+        "name": "Reo - Ometz (opening act for Time Impala @ Live Park Zappa)",
+        "image": "http://img.youtube.com/vi/t-sRaHv4rIA/0.jpg",
+        "date": "Published on Apr 6, 2017",
+        "network": "Youtube",
+        "url": "https://youtu.be/t-sRaHv4rIA"
+      },
+      {
+        "name": "REO feat. Assaf Amdursky - 7th Wave (Live In Sudio)",
+        "image": "http://img.youtube.com/vi/cJA-dz4LZIw/0.jpg",
+        "date": "Published on Nov 11, 2015",
+        "network": "Youtube",
+        "url": "https://youtu.be/cJA-dz4LZIw"
+      },
+      {
+        "name": "Carmel Apple Pop - This is Neil",
+        "image": "http://img.youtube.com/vi/nK6q6kuruR0/0.jpg",
+        "date": "Published on Oct 5, 2013",
+        "network": "Youtube",
+        "url": "https://youtu.be/nK6q6kuruR0"
+      },
+      {
+        "rtl": true,
+        "name": "שיר פתיחה נדחפים - לילי פרנקו (מארחים את ניל קלמן)",
+        "image": "http://img.youtube.com/vi/Q7V3OjbJ4GY/0.jpg",
+        "date": "Published on Mar 29, 2015",
+        "network": "Youtube",
+        "url": "https://youtu.be/Q7V3OjbJ4GY"
+      },
+      {
+        "rtl": true,
+        "name": "שלמה גרוניך וכל מה שמצחיק בעולם",
+        "image": "http://img.youtube.com/vi/6e1wrULa-U8/0.jpg",
+        "date": "Published on Dec 24, 2014",
+        "network": "Youtube",
+        "url": "https://youtu.be/6e1wrULa-U8?t=3m16s"
+      },
+      {
+        "name": "Israeli Air Force Band feat. David Broza - It's all or nothing",
+        "image": "http://img.youtube.com/vi/HCvPmFFxYl0/0.jpg",
+        "date": "Published on Jul 15, 2011",
+        "network": "Youtube",
+        "url": "https://youtu.be/HCvPmFFxYl0"
+      },
+      {
+        "name": "Or Edry - LIVE(@ KULI ALMA)",
+        "image": "http://img.youtube.com/vi/sfTGL7Tm2uc/0.jpg",
+        "date": "Published on Jul 11, 2017",
+        "network": "Youtube",
+        "url": "https://youtu.be/sfTGL7Tm2uc"
+      },
+      {
+        "name": "Or Edry - LIVE(@ Abraxas)",
+        "image": "http://img.youtube.com/vi/IHxtr3KiqPU/0.jpg",
+        "date": "Published on Jun 8, 2017",
+        "network": "Youtube",
+        "url": "https://youtu.be/IHxtr3KiqPU"
+      },
+      {
+        "name": "Igor Krutogolov's Karate Band - Skeleton Dance",
+        "image": "http://img.youtube.com/vi/-hpp2ueEVso/0.jpg",
+        "date": "Published on Dec 30, 2014",
+        "network": "Youtube",
+        "url": "https://youtu.be/-hpp2ueEVso"
+      },
+      {
+        "rtl": true,
+        "name": "להקת חיל האוויר 2007 - עושה ביטלס",
+        "image": "http://img.youtube.com/vi/E-TR8VHYStY/0.jpg",
+        "date": "Published on May 12, 2010",
+        "network": "Youtube",
+        "url": "https://youtu.be/E-TR8VHYStY"
+      },
+      {
+        "name": "Bilgo - Tower Of Power @Yefet with acoustic band",
+        "image": "http://img.youtube.com/vi/PBXikNZLmJM/0.jpg",
+        "date": "Published on Jun 20, 2013",
+        "network": "Youtube",
+        "url": "https://youtu.be/PBXikNZLmJM"
+      },
+      {
+        "name": "Igor Krutogolov's Toy Orchestra 'Skeleton Dance' - ON AIR - Yoav Kutner",
+        "image": "http://img.youtube.com/vi/x32ovCv1sVc/0.jpg",
+        "date": "Published on Feb 28, 2014",
+        "network": "Youtube",
+        "url": "https://youtu.be/x32ovCv1sVc"
+      },
+      {
+        "name": "Pancho - Cincuenta",
+        "image": "http://img.youtube.com/vi/94pqcl7QVfs/0.jpg",
+        "date": "Published on Sep 18, 2012",
+        "network": "Youtube",
+        "url": "https://youtu.be/94pqcl7QVfs"
+      },
+      {
+        "name": "Pancho - Shwarma de Pulpo",
+        "image": "http://img.youtube.com/vi/f5QSnFMwv0I/0.jpg",
+        "date": "Published on Sep 18, 2012",
+        "network": "Youtube",
+        "url": "https://youtu.be/f5QSnFMwv0I"
+      },
+      {
+        "name": "Carmel Apple Pop - \"Foie Gras\"",
+        "image": "http://img.youtube.com/vi/HeUy_IfWqVA/0.jpg",
+        "date": "Published on May 24, 2013",
+        "network": "Youtube",
+        "url": "https://youtu.be/HeUy_IfWqVA"
+      },
+      {
+        "name": "Carmel Apple Pop - \"Trains and Rooftops\"",
+        "image": "http://img.youtube.com/vi/_C3vw3dmYmU/0.jpg",
+        "date": "Published on May 27, 2013",
+        "network": "Youtube",
+        "url": "https://youtu.be/_C3vw3dmYmU"
+      },
+      {
+        "name": "Carmel Apple Pop - \"Egg\"",
+        "image": "http://img.youtube.com/vi/ZQikCyMQ-00/0.jpg",
+        "date": "Published on Aug 10, 2013",
+        "network": "Youtube",
+        "url": "https://youtu.be/ZQikCyMQ-00"
+      },
+      {
+        "name": "Steely Dan Tribute - Kid Charlamagne feat. Guy Mazig",
+        "image": "http://img.youtube.com/vi/C9NKiJHdW6E/0.jpg",
+        "date": "Published on Dec 30, 2011",
+        "network": "Youtube",
+        "url": "https://youtu.be/C9NKiJHdW6E"
+      },
+      {
+        "name": "Steely Dan Tribute- My Old School feat. Arthur Krasnobaiev",
+        "image": "http://img.youtube.com/vi/mC_LBT9o_gw/0.jpg",
+        "date": "Published on Dec 31, 2011",
+        "network": "Youtube",
+        "url": "https://youtu.be/mC_LBT9o_gw"
+      },
+      {
+        "name": "Steely Dan Tribute - Peg feat. Arthur Krasnobaiev",
+        "image": "http://img.youtube.com/vi/aZKWLY3RYrQ/0.jpg",
+        "date": "Published on Dec 30, 2011",
+        "network": "Youtube",
+        "url": "https://youtu.be/aZKWLY3RYrQ"
+      },
+      {
+        "name": "Steely Dan Tribute feat. Ruthi Navon - Dirty Work",
+        "image": "http://img.youtube.com/vi/EAnuT2ArQ9k/0.jpg",
+        "date": "Published on Dec 31, 2011",
+        "network": "Youtube",
+        "url": "https://youtu.be/EAnuT2ArQ9k"
+      },
+      {
+        "name": "The Big Zbang & the Doo-Wop Girls",
+        "image": "http://img.youtube.com/vi/PUGfTbZpOIY/0.jpg",
+        "date": "Published on Feb 25, 2011",
+        "network": "Youtube",
+        "url": "https://youtu.be/PUGfTbZpOIY"
+      },
+      {
+        "name": "The Big Zbang & Anna Spitz",
+        "image": "http://img.youtube.com/vi/FCuAcsI2d1Q/0.jpg",
+        "date": "Published on Feb 25, 2011",
+        "network": "Youtube",
+        "url": "https://youtu.be/FCuAcsI2d1Q"
+      },
+      {
+        "name": "The Big Zbang & Aaron Lee Sikes",
+        "image": "http://img.youtube.com/vi/bcxfgZSqQF4/0.jpg",
+        "date": "Published on Feb 25, 2011",
+        "network": "Youtube",
+        "url": "https://youtu.be/bcxfgZSqQF4"
+      }
+    ]
+  }
 }
