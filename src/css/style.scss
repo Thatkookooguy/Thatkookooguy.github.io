@@ -1268,3 +1268,22 @@ Main components
 .intro h3 {
   margin-top: 0;
 }
+@media only screen and (max-width: 376px) {
+  .cd-timeline-block {
+    margin: 4em 0;
+  }
+
+  .cd-timeline-content {
+    margin-left: 0;
+  }
+
+  .cd-timeline-img {
+    z-index: 5;
+    top: -10px;
+    left: -10px;
+  }
+
+  #cd-timeline::before {
+    left: 8px;
+  }
+}
