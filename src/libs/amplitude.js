@@ -507,7 +507,9 @@ var AmplitudeHelpers = function () {
 		config.active_album = song.album;
 		config.active_index = index;
 
-		_helpers2.default.runCallback('song_change');
+		if (window.onSongChange) {
+			window.onSongChange();
+		}
 	}
 
 	/*--------------------------------------------------------------------------
