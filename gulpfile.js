@@ -84,10 +84,17 @@ gulp.task('default', ['sw', 'assets', 'sass'], function() {
 });
 
 function getAllCachedFiles() {
-  var allAssets = glob.sync('./src/assets/**/*', {
-    ignore: './src/assets/{**/*.mp3,images/fullsize/*}',
+  var allAssets = glob.sync('./src/assets/images/*', {
+    ignore: './src/assets/images/fullsize/*',
     nodir: true
   });
+
+  var fonts = glob.sync('./src/assets/fonts/**/*', {
+    ignore: './src/assets/fonts/roboto/roboto.css',
+    nodir: true
+  });
+
+  allAssets = allAssets.concat(fonts);
 
   allAssets = _.map(allAssets, function(asset)  {
     return _.replace(asset, './src', '');
