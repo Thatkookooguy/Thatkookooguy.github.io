@@ -1,9 +1,9 @@
 var imagemin = require("imagemin"),    // The imagemin module.
     webp = require("imagemin-webp"),   // imagemin's WebP plugin.
-    outputFolder = "./assets",            // Output folder
-    PNGImages = "./assets/*.png",         // PNG images
-    JPEGImages = "./assets/*.jpg";        // JPEG images
-    SVGImages = "./assets/*.svg";         // SVG images
+    outputFolder = "./src/assets/images",            // Output folder
+    PNGImages = "./src/assets/images/*.png",         // PNG images
+    JPEGImages = "./src/assets/images/*.jpg";        // JPEG images
+    SVGImages = "./src/assets/images/*.svg";         // SVG images
 
 imagemin([PNGImages], outputFolder, {
     plugins: [webp({
@@ -11,11 +11,11 @@ imagemin([PNGImages], outputFolder, {
     })]
 });
 
-imagemin([SVGImages], outputFolder, {
-    plugins: [webp({
-        lossless: true // Losslessly encode images
-    })]
-});
+// imagemin([SVGImages], outputFolder, {
+//     plugins: [webp({
+//         lossless: true // Losslessly encode images
+//     })]
+// });
 
 imagemin([JPEGImages], outputFolder, {
     plugins: [webp({
