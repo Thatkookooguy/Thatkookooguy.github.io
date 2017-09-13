@@ -11,6 +11,7 @@ var sass = require('gulp-sass');
 var gulpCopy = require('gulp-copy');
 var glob = require('glob');
 var _ = require('lodash');
+var pageData = require('./src/data.json');
 
 // gulp.task('default', function () {
 //   return gulp.src('assets/*.{png,jpg}')
@@ -25,7 +26,14 @@ var _ = require('lodash');
 //     .pipe(gulp.dest('dist'));
 // });
 
-gulp.task('assets', function() {
+gulp.task('copyImagesNotCompressed', function() {
+  return gulp.src('./src/assets/images/fullsize/*.svg', {
+      base: './src/assets/images/fullsize'
+    })
+    .pipe(gulp.dest('./src/assets/images'));
+});
+
+gulp.task('assets', ['copyImagesNotCompressed'], function() {
   return gulp.src('./src/assets/**/*', {
       base: './src/assets'
     })
@@ -42,7 +50,8 @@ gulp.task('sw', function() {
   return gulp.src('src/sw.js')
     .pipe(data(function() {
       return {
-        'toBeCached': getAllCachedFiles()
+        'toBeCached': getAllCachedFiles(),
+        'version': pageData.version || 'v1'
       }
     }))
     .pipe(nunjucksRender({ ext: '.js', }))
@@ -54,7 +63,7 @@ gulp.task('default', ['sw', 'assets', 'sass'], function() {
   return gulp.src('src/pages/**/*.+(html|nunjucks)')
     // Adding data to Nunjucks
     .pipe(data(function() {
-      return require('./src/data.json')
+      return pageData
     }))
     // Renders template with nunjucks
     .pipe(nunjucksRender({
@@ -76,7 +85,7 @@ gulp.task('default', ['sw', 'assets', 'sass'], function() {
 
 function getAllCachedFiles() {
   var allAssets = glob.sync('./src/assets/**/*', {
-    ignore: './src/assets/**/*.mp3',
+    ignore: './src/assets/{**/*.mp3,images/fullsize/*}',
     nodir: true
   });
 
