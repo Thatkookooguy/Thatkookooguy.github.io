@@ -4,7 +4,7 @@
   <div class="row section">
     <div class="col s12">
       <div class="content">
-        {{ generalComponents.sectionTitle('Watch', 'material-icons', 'remove_red_eye') }}
+        {{ generalComponents.sectionTitle('Experience', 'material-icons', 'explore') }}
         <section id="cd-timeline" class="cd-container">
           {% if resume.jobs %}
             <div class="cd-timeline-block">
@@ -37,7 +37,7 @@
   <div class="row section">
     <div class="col s12">
       <div class="content">
-        {{ generalComponents.sectionTitle('Skills', 'material-icons', 'remove_red_eye') }}
+        {{ generalComponents.sectionTitle('Skills', 'material-icons', 'code') }}
         {{ generalComponents.skill('HTML5', '90%') }}
         {{ generalComponents.skill('CSS3', '100%') }}
         {{ generalComponents.skill('javaScript', '100%') }}

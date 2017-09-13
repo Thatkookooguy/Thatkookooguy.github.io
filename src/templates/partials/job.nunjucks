@@ -9,7 +9,7 @@
         <a href="{{ job.site }}" rel="noopener" target="_blank">{{ job.site }}</a>
         <h6>{{ job.role }}</h6>
         <p>{{ job.description | safe }}</p>
-        <a href="#0" class="cd-read-more">Read more</a>
+        {# <a href="#0" class="cd-read-more">Read more</a> #}
         <span class="cd-date">{{ job.dates }}</span>
       </div>
 </div>
