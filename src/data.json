@@ -1,5 +1,5 @@
 {
-  "version": "v3",
+  "version": "v4",
   "siteName": "Neil Kalman - thatkookooguy",
   "siteUrl": "https://thatkookooguy.github.io",
   "siteDescription": "thatkookooguy@kibibit.io",
@@ -76,6 +76,44 @@
     ]
   },
   "resume": {
+    "skills": [
+      {
+        "name": "HTML5",
+        "precent": "90",
+        "titleColor": "#d35400",
+        "barColor": "#e67e22"
+      },
+      {
+        "name": "CSS3",
+        "precent": "100",
+        "titleColor": "#0277BD",
+        "barColor": "#039BE5"
+      },
+      {
+        "name": "javaScript",
+        "precent": "100",
+        "titleColor": "#D6BA32",
+        "barColor": "#FDDA3E"
+      },
+      {
+        "name": "jQuery",
+        "precent": "95",
+        "titleColor": "#076AAD",
+        "barColor": "#79CEF4"
+      },
+      {
+        "name": "Angular",
+        "precent": "90",
+        "titleColor": "#B52E31",
+        "barColor": "#E23237"
+      },
+      {
+        "name": "Java",
+        "precent": "50",
+        "titleColor": "#0074BD",
+        "barColor": "#EA2A2D"
+      }
+    ],
     "jobs": [{
         "logo": {
           "alt": "redkix",

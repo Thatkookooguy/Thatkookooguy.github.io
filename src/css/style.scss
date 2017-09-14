@@ -494,6 +494,15 @@ picture {
   background: #212121;
   border-radius: 5px;
   color: #89BDFF;
+  position: relative;
+
+  &:after {
+    content: "";
+    bottom: 0;
+    height: 1px;
+    left: 0;
+    right: 0;
+  }
 }
 
 .gha-time {
@@ -570,6 +579,11 @@ picture {
   width: 430px;
   height: 50px;
   max-width: 80vw;
+  visibility: hidden;
+
+  &.bb-show {
+    visibility: visible;
+  }
 }
 
 .bbplayer .button.amplitude-play-pause.amplitude-playing::after {

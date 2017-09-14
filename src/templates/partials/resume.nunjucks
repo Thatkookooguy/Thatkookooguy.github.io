@@ -38,12 +38,9 @@
     <div class="col s12">
       <div class="content">
         {{ generalComponents.sectionTitle('Skills', 'material-icons', 'code') }}
-        {{ generalComponents.skill('HTML5', '90') }}
-        {{ generalComponents.skill('CSS3', '100') }}
-        {{ generalComponents.skill('javaScript', '100') }}
-        {{ generalComponents.skill('jQuery', '95') }}
-        {{ generalComponents.skill('Angular', '90') }}
-        {{ generalComponents.skill('Java', '50') }}
+        {% for skill in resume.skills %}
+        {{ generalComponents.skill(skill.name, skill.precent, skill.titleColor, skill.barColor) }}
+        {% endfor %}
       </div>
     </div>
   </div>

@@ -269,16 +269,13 @@ if ('serviceWorker' in navigator) {
       if ($this.find('i').text() === 'pause') {
         Amplitude.pause();
         resetPlaylist();
+        $('.bbplayer').removeClass('bb-show');
       } else {
         onItemClick(0, $this.closest('.card.music'));
       }
     });
 
     function initializeAllTheThings() {
-      // material design
-      $(".button-collapse").sideNav();
-
-      $('ul.tabs').tabs();
 
       // feed in about me
       GitHubActivity.feed({
@@ -313,11 +310,29 @@ if ('serviceWorker' in navigator) {
       var offset = 0.8;
 
       hideBlocks(timelineBlocks, offset, bars);
-      //on scolling, show/animate timeline blocks when enter the viewport
-      $(window).on('scroll', function(){
-          (!window.requestAnimationFrame)
-              ? setTimeout(function(){ showBlocks(timelineBlocks, offset, bars); }, 100)
-          : window.requestAnimationFrame(function(){ showBlocks(timelineBlocks, offset, bars); });
+
+      // material design
+      $(".button-collapse").sideNav();
+
+      $('ul.tabs').tabs({
+        onShow: function(tab) {
+
+          hideBlocks(timelineBlocks, offset, bars);
+          setTimeout(function() {
+            showBlocks(timelineBlocks, offset, bars);
+          });
+
+          if (tab[0].id === 'resume') {
+            //on scolling, show/animate timeline blocks when enter the viewport
+            $(window).on('scroll', function(){
+                (!window.requestAnimationFrame)
+                    ? setTimeout(function(){ showBlocks(timelineBlocks, offset, bars); }, 100)
+                : window.requestAnimationFrame(function(){ showBlocks(timelineBlocks, offset, bars); });
+            });
+          } else {
+            $(window).off('scroll');
+          }
+        }
       });
     }
 
@@ -334,6 +349,7 @@ if ('serviceWorker' in navigator) {
         var song = Amplitude.getSongByIndex(parseInt($this.attr('song-index')));
         if (!fromAmplitude) {
           Amplitude.playNow(song);
+          $('.bbplayer').addClass('bb-show');
         }
 
         $this.closest(".card.music").addClass('play');
@@ -344,6 +360,7 @@ if ('serviceWorker' in navigator) {
       } else {
         if (!fromAmplitude) {
           Amplitude.pause();
+          $('.bbplayer').removeClass('bb-show');
         }
       }
 
@@ -379,7 +396,7 @@ if ('serviceWorker' in navigator) {
 
     function hideBlocks(blocks, offset, bars) {
       blocks.each(function() {
-        ($(this).offset().top > $(window).scrollTop() + $(window).height() * offset) && $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
+        ($(this).offset().top > $(window).scrollTop() + $(window).height() * offset) && $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden').removeClass('bounce-in');
       });
 
       bars.each(function() {
