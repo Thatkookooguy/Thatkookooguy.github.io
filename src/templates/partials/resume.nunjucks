@@ -38,12 +38,12 @@
     <div class="col s12">
       <div class="content">
         {{ generalComponents.sectionTitle('Skills', 'material-icons', 'code') }}
-        {{ generalComponents.skill('HTML5', '90%') }}
-        {{ generalComponents.skill('CSS3', '100%') }}
-        {{ generalComponents.skill('javaScript', '100%') }}
-        {{ generalComponents.skill('jQuery', '95%') }}
-        {{ generalComponents.skill('Angular', '90%') }}
-        {{ generalComponents.skill('Java', '70%') }}
+        {{ generalComponents.skill('HTML5', '90') }}
+        {{ generalComponents.skill('CSS3', '100') }}
+        {{ generalComponents.skill('javaScript', '100') }}
+        {{ generalComponents.skill('jQuery', '95') }}
+        {{ generalComponents.skill('Angular', '90') }}
+        {{ generalComponents.skill('Java', '50') }}
       </div>
     </div>
   </div>

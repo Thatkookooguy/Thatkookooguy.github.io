@@ -32,11 +32,15 @@
     }
   }
 
+  &.not-in-view .skillbar-bar {
+    width: 0;
+  }
+
   .skillbar-bar {
     height: 35px;
-    width: 0;
     background: #6adcfa;
     border-radius: 3px;
+    transition: width 4s;
   }
 
   .skill-bar-percent {
@@ -48,6 +52,50 @@
     line-height: 35px;
     color: #ffffff;
   }
+}
+
+.precent-50 {
+  width: 50%;
+}
+
+.precent-55 {
+  width: 55%;
+}
+
+.precent-60 {
+  width: 60%;
+}
+
+.precent-65 {
+  width: 65%;
+}
+
+.precent-70 {
+  width: 70%;
+}
+
+.precent-75 {
+  width: 75%;
+}
+
+.precent-80 {
+  width: 80%;
+}
+
+.precent-85 {
+  width: 85%;
+}
+
+.precent-90 {
+  width: 90%;
+}
+
+.precent-95 {
+  width: 95%;
+}
+
+.precent-100 {
+  width: 100%;
 }
 
 .github-card {
@@ -1130,11 +1178,11 @@ Main components
     text-align: right;
   }
 
-  .cssanimations .cd-timeline-content.is-hidden {
+  .cd-container .is-hidden {
     visibility: hidden;
   }
 
-  .cssanimations .cd-timeline-content.bounce-in {
+  .cd-timeline-content.bounce-in {
     visibility: visible;
     -webkit-animation: cd-bounce-2 0.6s;
     -moz-animation: cd-bounce-2 0.6s;
@@ -1143,7 +1191,7 @@ Main components
 }
 @media only screen and (min-width: 1170px) {
   /* inverse bounce effect on even content blocks */
-  .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
+  .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
     -webkit-animation: cd-bounce-2-inverse 0.6s;
     -moz-animation: cd-bounce-2-inverse 0.6s;
     animation: cd-bounce-2-inverse 0.6s;
