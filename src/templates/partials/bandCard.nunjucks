@@ -10,7 +10,7 @@
     </div>
     <div class="band-genres">
       {% for genre in band.genres %}
-      <div class="chip">
+      <div class="chip band-chip">
         {{ genre }}
       </div>
       {% endfor %}

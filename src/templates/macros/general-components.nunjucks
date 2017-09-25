@@ -34,7 +34,50 @@
     <div class="skillbar-title" style="background: {{ titleColor }};">
       <span>{{ name }}</span>
     </div>
-    <div class="skillbar-bar precent-{{ precent }}" style="background: {{ barColor }};"></div>
+    <div class="skillbar-bar-container">
+      <div class="skillbar-bar precent-{{ precent }}" style="background: {{ barColor }};"></div>
+    </div>
     <div class="skill-bar-percent">{{ precent }}</div>
+  </div>
+{% endmacro %}
+
+{% macro tech(name, img) %}
+  <div class="chip">
+    {% if img %}
+      <img src="images/yuna.jpg" alt="{{ name }}">
+    {% endif %}
+    {{ name }}
+  </div>
+{% endmacro %}
+
+{% macro language(lang) %}
+  <div class="lang">
+    <div class="lang-name">{{ lang.name }}</div>
+    <div class="lang-description">
+      {% if lang.native %}
+      <div class="lang-lvl">
+        {% if lang.native and lang.main %}
+        <div class="lang-category">native</div>
+        {% elif lang.native %}
+        <div class="lang-category">native level</div>
+        {% endif %}
+        <div class="lang-things">
+          {% for langSkill in  lang.native %}
+          <div>{{ langSkill }}</div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      {% if lang.good %}
+      <div class="lang-lvl">
+        <div class="lang-category">good</div>
+        <div class="lang-things">
+          {% for langSkill in  lang.good %}
+          <div>{{ langSkill }}</div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
   </div>
 {% endmacro %}
