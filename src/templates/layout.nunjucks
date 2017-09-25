@@ -12,6 +12,8 @@
     <meta property="og:site_name" content="{{ siteName }}"/>
     <meta name="theme-color" content="{{ siteThemeColor }}"/>
     <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <title>{{ siteName }}</title>
 
     <!-- build:css css/combined.css -->
