@@ -1,6 +1,20 @@
+.lang {
+  display: flex; }
+  .lang .lang-name {
+    flex-shrink: 0;
+    width: 30%; }
+  .lang .lang-description {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; }
+    .lang .lang-description .lang-lvl {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center; }
+
 .skillbar {
   position: relative;
-  display: block;
+  display: flex;
   margin-bottom: 15px;
   width: 100%;
   background: #43464B;
@@ -9,9 +23,8 @@
   transition: 0.4s linear;
   transition-property: width, background-color; }
   .skillbar .skillbar-title {
-    position: absolute;
-    top: 0;
-    left: 0;
+    flex-shrink: 0;
+    flex-grow: 0;
     width: 110px;
     font-weight: bold;
     font-size: 13px;
@@ -27,13 +40,18 @@
       line-height: 35px;
       border-top-left-radius: 3px;
       border-bottom-left-radius: 3px; }
+  .skillbar .skillbar-bar-container {
+    flex-grow: 1;
+    width: 1px; }
   .skillbar.not-in-view .skillbar-bar {
     width: 0; }
   .skillbar .skillbar-bar {
     height: 35px;
     background: #6adcfa;
     border-radius: 3px;
-    transition: width 4s; }
+    transition: width 4s;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0; }
   .skillbar .skill-bar-percent {
     position: absolute;
     right: 10px;
@@ -43,35 +61,32 @@
     line-height: 35px;
     color: #ffffff; }
 
+.precent-10 {
+  width: 10%; }
+
+.precent-20 {
+  width: 20%; }
+
+.precent-30 {
+  width: 30%; }
+
+.precent-40 {
+  width: 40%; }
+
 .precent-50 {
   width: 50%; }
-
-.precent-55 {
-  width: 55%; }
 
 .precent-60 {
   width: 60%; }
 
-.precent-65 {
-  width: 65%; }
-
 .precent-70 {
   width: 70%; }
-
-.precent-75 {
-  width: 75%; }
 
 .precent-80 {
   width: 80%; }
 
-.precent-85 {
-  width: 85%; }
-
 .precent-90 {
   width: 90%; }
-
-.precent-95 {
-  width: 95%; }
 
 .precent-100 {
   width: 100%; }
@@ -167,7 +182,7 @@ picture {
 .main-avatar {
   height: 150px; }
 
-.chip {
+.chip.band-chip {
   height: 22px;
   line-height: 22px;
   padding: 0 8px;
