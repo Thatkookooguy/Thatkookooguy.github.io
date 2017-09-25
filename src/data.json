@@ -76,8 +76,7 @@
     ]
   },
   "resume": {
-    "skills": [
-      {
+    "skills": [{
         "name": "HTML5",
         "precent": "90",
         "titleColor": "#d35400",
@@ -96,22 +95,88 @@
         "barColor": "#FDDA3E"
       },
       {
-        "name": "jQuery",
-        "precent": "95",
-        "titleColor": "#076AAD",
-        "barColor": "#79CEF4"
-      },
-      {
-        "name": "Angular",
-        "precent": "90",
-        "titleColor": "#B52E31",
-        "barColor": "#E23237"
-      },
-      {
         "name": "Java",
         "precent": "50",
         "titleColor": "#0074BD",
         "barColor": "#EA2A2D"
+      },
+      {
+        "name": "C",
+        "precent": "10",
+        "titleColor": "",
+        "barColor": ""
+      },
+      {
+        "name": "Perl",
+        "precent": "20"
+      },
+      {
+        "name": "Shell Scripts",
+        "precent": "40"
+      },
+      {
+        "name": "AutoHotkey",
+        "precent": "50"
+      }
+    ],
+    "technologies": [
+      "AngularJS",
+      "JQuery",
+      "SASS",
+      "CSS3 Animations",
+      "Lodash \\ Underscore.js",
+      "UI Patterns",
+      "Promises",
+      "Electron",
+      "Web Accessibility",
+      "Web Sockets",
+      "Scoket.IO",
+      "Node.js",
+      "ExpressJS",
+      "MongoDB",
+      "GitHub Integration",
+      "WebHooks",
+      "AJAX",
+      "REST",
+      "ES2016",
+      "OS Certifications",
+      "NSIS",
+      "DMG",
+      "WYSIWYG",
+      "React",
+      "Backbone",
+      "regex",
+      "emoji",
+      "markdown",
+      "highlight.js",
+      "Chrome Extensions",
+      "Gulp",
+      "Bower",
+      "ESLint",
+      "moment.js",
+      "Authentication",
+      "chai",
+      "mocha",
+      "Jasmine"
+    ],
+    "methodologies": [
+      "OOP",
+      "TDD",
+      "Responsive Web Design",
+      "Mobile-First",
+      "Functional Programming",
+      "Scrum \\ Agile"
+    ],
+    "languages": [
+      {
+        "main": true,
+        "name": "Hebrew",
+        "native": ["speech", "reading", "writing"]
+      },
+      {
+        "name": "English",
+        "native": ["reading", "writing"],
+        "good": ["speech"]
       }
     ],
     "jobs": [{
@@ -582,8 +647,7 @@
         }]
       }
     ],
-    "videos": [
-      {
+    "videos": [{
         "name": "Reo - Ometz (opening act for Time Impala @ Live Park Zappa)",
         "image": {
           "alt": "Reo - Ometz",

@@ -37,11 +37,41 @@
   <div class="row section">
     <div class="col s12">
       <div class="content">
-        {{ generalComponents.sectionTitle('Skills', 'material-icons', 'code') }}
+        {{ generalComponents.sectionTitle('Programming', 'material-icons', 'code') }}
         {% for skill in resume.skills %}
         {{ generalComponents.skill(skill.name, skill.precent, skill.titleColor, skill.barColor) }}
         {% endfor %}
       </div>
     </div>
   </div>
+  <div class="row section">
+    <div class="col s12">
+      <div class="content center">
+        {{ generalComponents.sectionTitle('Technologies', 'material-icons', 'build') }}
+        {% for tech in resume.technologies %}
+        {{ generalComponents.tech(tech) }}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="row section">
+    <div class="col s12">
+      <div class="content center">
+        {{ generalComponents.sectionTitle('Methodologies', 'material-icons', 'fitness_center') }}
+        {% for method in resume.methodologies %}
+        {{ generalComponents.tech(method) }}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {# <div class="row section">
+    <div class="col s12">
+      <div class="content center">
+        {{ generalComponents.sectionTitle('Languages', 'material-icons', 'code') }}
+        {% for lang in resume.languages %}
+        {{ generalComponents.language(lang) }}
+        {% endfor %}
+      </div>
+    </div>
+  </div> #}
 </div>

@@ -8,6 +8,8 @@ if ('serviceWorker' in navigator) {
 
 (function() {
   $(function() {
+    var playVisualization = function() {};
+
     var songs = [
       // PANCHO
       {
@@ -302,7 +304,7 @@ if ('serviceWorker' in navigator) {
       };
 
       // MUSIC VISUALIZER. SHOULD CONNECT TO PLAYER
-      //createVisualizer(window, 'nav.nav-extended');
+      // playVisualization = createVisualizer('nav.nav-extended', Amplitude.audio());
 
       // hide blocks in resume to make them appear when they enter the view
       var timelineBlocks = $('.cd-timeline-block');
@@ -350,6 +352,7 @@ if ('serviceWorker' in navigator) {
         if (!fromAmplitude) {
           Amplitude.playNow(song);
           $('.bbplayer').addClass('bb-show');
+          playVisualization()
         }
 
         $this.closest(".card.music").addClass('play');
@@ -375,23 +378,6 @@ if ('serviceWorker' in navigator) {
       allBtns.find('i').text('play_circle_outline');
       $('.card.music .album-play i').text('play_arrow');
       $('.card.music .play-bars').remove();
-    }
-
-    function resizeToMax(element) {
-      element = $(element);
-      myImage = new Image()
-      myImage.src = element.attr('src');
-      if (myImage.width > myImage.height) {
-        element.css({
-          width: '100%',
-          height: 'auto'
-        });
-      } else {
-        element.css({
-          width: 'auto',
-          height: '100%'
-        });
-      }
     }
 
     function hideBlocks(blocks, offset, bars) {
@@ -440,27 +426,35 @@ if ('serviceWorker' in navigator) {
  * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-function createVisualizer(self, elementQuerySelector, playerSelector) {
+function createVisualizer(elementQuerySelector, audioSrc) {
+  var $element;
 
-  var container, scene, camera, renderer, stats, cubes = [],
-    mouse = {
-      x: 0,
-      y: 0
-    },
-    group, material = 0,
-    particles, uniforms, mouseDown = start = play = false,
-    lastTransition = Date.now();
+  var container;
+  var scene;
+  var camera;
+  var renderer;
+  var stats
+  var cubes = [];
+  var group;
+  var material = 0;
+  var particles;
+  var uniforms;
+  var lastTransition = Date.now();
+  var start = play = false;
 
   // Mouse wheel and leap settings
-  var cameraZ = 3000,
-    min = cameraZ - 500,
-    max = min * 3;
+  var cameraZ = 3000;
+  var min = cameraZ - 500;
+  var max = min * 3;
 
   // Audio data
-  var context, buffer, source, stream, analyser, frequency = [],
-    playButton, createObjectURL, codec = ['.ogg', '.mp3'],
-    mimeType = ['audio/ogg', 'audio/mpeg'],
-    URL = '/assets/REO_YZB';
+  var context;
+  var buffer;
+  var source;
+  var stream
+  var analyser
+  var frequency = [];
+  var createObjectURL
 
   // Dat GUI default value
   var showStats = false;
@@ -470,61 +464,16 @@ function createVisualizer(self, elementQuerySelector, playerSelector) {
    */
 
   var colors = {
-
-    lightRed: [
-
-      '#ffffff',
-      '#e50000'
-
-    ],
-
-    lightViolet: [
-
-      '#ffffff',
-      '#ee82ee'
-
-    ],
-
-    lightBlue: [
-
-      '#ffffff',
-      '#00bcff'
-
-    ]
-
-  };
-
-  /*
-   * Settings.
-   */
-
-  var Settings = function() {
-
-    this.showStats = false;
-
-    this.enableStats = function(value) {
-
-      showStats = value;
-
-      showStats ? stats.domElement.style.visibility = 'visible' : stats.domElement.style.visibility = 'hidden';
-
-    };
-
-    this.fullScreen = function() {
-
-      var container, fullscreen;
-
-      container = document.documentElement;
-      fullscreen = (container.webkitRequestFullscreen || container.mozRequestFullScreen || container.msRequestFullscreen || container.requestFullscreen);
-
-      fullscreen.call(document.documentElement);
-
-    };
-
+    lightRed: [ '#ffffff', '#e50000' ],
+    lightViolet: [ '#ffffff', '#ee82ee' ],
+    lightBlue: [ '#ffffff', '#00bcff']
   };
 
   init();
   connectSource();
+
+  //return function to run on click
+  return onClick;
 
   /*
    * Init.
@@ -533,56 +482,49 @@ function createVisualizer(self, elementQuerySelector, playerSelector) {
   function init() {
     // check WebGL browser support
     if (!window.WebGLRenderingContext) {
-
       console.error("Sorry, your browser doesn't support WebGL.");
-
       return;
-
     }
 
     // use audio from existing player
     initAudio();
 
-    var settings = new Settings();
-
     var element = document.querySelector(elementQuerySelector || 'body');
-    var $element = $(element);
+    $element = $(element);
 
-    container = document.createElement('div');
+    createAndAttachContainer(element, $element);
+    createCamera($element);
+    createScene();
+    createGroup();
 
-    container.width = $element.innerWidth();
-    container.height = $element.innerHeight();
+    // IF end
+    // now we have a group of particles we can add to the scene
+    scene.add(group);
 
-    container.style.position = 'absolute';
-    container.style.top = 0;
-    container.style.bottom = 0;
-    container.style.left = 0;
-    container.style.right = 0;
-    container.style.zIndex = -1; // blow everything
-    container.style.overflow = 'hidden';
+    // Init particles and mesh
+    // loadParticles();
+    updateTransitions(0);
+    changeMaterial(~~(Math.random() * 3));
 
-    container.style.background = '-webkit-radial-gradient(#ffcc99, #ff9933)';
-    container.style.background = '-moz-radial-gradient(#ffcc99, #ff9933)';
-    container.style.background = '-ms-radial-gradient(#ffcc99, #ff9933)';
-    container.style.background = '-o-radial-gradient(#ffcc99, #ff9933)';
-    container.style.background = 'radial-gradient(#ffcc99, #ff9933)';
+    createRenderer($element);
 
-    // add element in the right location (inside given element)
-    element.appendChild(container);
+    container.appendChild(renderer.domElement);
 
-    // Setup
-    camera = new THREE.PerspectiveCamera(30, $element.innerWidth() / $element.innerHeight(), 1, 10000);
-    camera.position.z = cameraZ;
+    render();
 
-    scene = new THREE.Scene();
+    window.onresize = onResize;
 
-    // Lights
-    hemisphereLight = new THREE.HemisphereLight(0xffffff, 100);
-    scene.add(hemisphereLight);
+  }
 
-    pointLight = new THREE.PointLight(0xffffff, 3.0);
-    scene.add(pointLight);
+  function createRenderer($element) {
+    renderer = new THREE.WebGLRenderer({
+      antialias: true,
+      alpha: true
+    });
+    renderer.setSize($element.innerWidth(), $element.innerHeight());
+  }
 
+  function createGroup() {
     group = new THREE.Object3D();
 
     // create 80 particles
@@ -658,54 +600,47 @@ function createVisualizer(self, elementQuerySelector, playerSelector) {
       group.add(mesh);
 
     }
-    // IF end
-    // now we have a group of particles we can add to the scene
-    scene.add(group);
+  }
 
-    // Init particles and mesh
-    loadParticles();
-    updateTransitions(0);
-    changeMaterial(~~(Math.random() * 3));
+  function createScene() {
+    scene = new THREE.Scene();
 
-    renderer = new THREE.WebGLRenderer({
-      antialias: true,
-      alpha: true
-    });
-    renderer.setSize($element.innerWidth(), $element.innerHeight());
+    // Lights
+    hemisphereLight = new THREE.HemisphereLight(0xffffff, 100);
+    scene.add(hemisphereLight);
 
-    container.appendChild(renderer.domElement);
+    pointLight = new THREE.PointLight(0xffffff, 3.0);
+    scene.add(pointLight);
+  }
 
-    // Stats
-    stats = new Stats();
+  function createCamera($element) {
+    // Setup
+    camera = new THREE.PerspectiveCamera(30, $element.innerWidth() / $element.innerHeight(), 0.1, 10000);
+    camera.position.z = cameraZ;
+  }
 
-    stats.domElement.style.position = 'absolute';
-    stats.domElement.style.top = '0px';
+  function createAndAttachContainer(element, $element) {
+    container = document.createElement('div');
 
-    container.appendChild(stats.domElement);
+    container.width = $element.innerWidth();
+    container.height = $element.innerHeight();
 
-    // Hide stats
-    // settings.enableStats();
+    container.style.position = 'absolute';
+    container.style.top = 0;
+    container.style.bottom = 0;
+    container.style.left = 0;
+    container.style.right = 0;
+    container.style.zIndex = -1; // blow everything
+    container.style.overflow = 'hidden';
 
-    // Listeners
-    // container.addEventListener('mousedown', onMouseDown, false);
-    // container.addEventListener('touchstart', onTouchStart, false);
-    //
-    // document.addEventListener('drop', onDrop, false);
-    // document.addEventListener('dragover', onDragOver, false);
-    //
-    // document.addEventListener('mousewheel', onMouseWheel, false );
-    // document.addEventListener('DOMMouseScroll', onMouseWheel, false);
+    container.style.background = '-webkit-radial-gradient(#ffcc99, #ff9933)';
+    container.style.background = '-moz-radial-gradient(#ffcc99, #ff9933)';
+    container.style.background = '-ms-radial-gradient(#ffcc99, #ff9933)';
+    container.style.background = '-o-radial-gradient(#ffcc99, #ff9933)';
+    container.style.background = 'radial-gradient(#ffcc99, #ff9933)';
 
-    // playButton = document.querySelector('.play');
-    // playButton = $('.play');
-    // playButton.on('click', onClick);
-    // playButton.addEventListener('click', onClick, false);
-
-    // enableLeap();
-    render();
-
-    window.onresize = onResize;
-
+    // add element in the right location (inside given element)
+    element.appendChild(container);
   }
 
   /*
@@ -714,24 +649,12 @@ function createVisualizer(self, elementQuerySelector, playerSelector) {
 
   function onClick(event) {
 
-    // var triggeredEvent = event !== null ? this : playButton;
-    //
-    // document.querySelector('body').removeChild(triggeredEvent);
-
     $(elementQuerySelector).css({
       'background': 'transparent'
     });
 
-    connectSource();
-
     if (source !== undefined) {
-
       play = true;
-
-      container.style.cursor = 'pointer';
-
-      source.play();
-
     }
 
   }
@@ -742,10 +665,10 @@ function createVisualizer(self, elementQuerySelector, playerSelector) {
 
   function onResize(event) {
 
-    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.aspect = $element.innerWidth() / $element.innerHeight();
     camera.updateProjectionMatrix();
 
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize($element.innerWidth(), $element.innerHeight());
 
   }
 
@@ -767,10 +690,7 @@ function createVisualizer(self, elementQuerySelector, playerSelector) {
 
     context = new(window.AudioContext || window.webkitAudioContext)();
 
-    source = $(playerSelector + ' audio')[0];
-
-
-
+    source = audioSrc;
   }
 
   /*
@@ -791,75 +711,6 @@ function createVisualizer(self, elementQuerySelector, playerSelector) {
     analyser.connect(context.destination);
 
     frequency = new Uint8Array(analyser.frequencyBinCount);
-
-  }
-
-  /*
-   * Load the particles.
-   */
-
-  function loadParticles() {
-
-    // See: https://github.com/mrdoob/three.js/issues/687
-    THREE.ImageUtils.crossOrigin = '';
-
-    // var texture = THREE.ImageUtils.loadTexture('http://francescotrillini.it/assets/particle.png');
-
-    var attributes = {
-
-      size: {
-        type: 'f',
-        value: []
-      }
-
-    };
-
-    uniforms = {
-
-      color: {
-        type: 'c',
-        value: new THREE.Color(0x454545)
-      },
-      // texture: { type: 't', value: texture },
-      bass: {
-        type: 'f',
-        value: 0.0
-      },
-      opacity: {
-        type: 'f',
-        value: 0.0
-      },
-
-    };
-
-    var shaderMaterial = new THREE.ShaderMaterial({
-
-      uniforms: uniforms,
-      attributes: attributes,
-
-      vertexShader: document.getElementById('vertex').textContent,
-      fragmentShader: document.getElementById('fragment').textContent,
-
-      blending: THREE.AdditiveBlending,
-      transparent: true,
-
-    });
-
-    var geometry = new THREE.Geometry();
-    geometry.verticesNeedUpdate = true;
-
-    // Position
-    for (particle = 0, len = 100; particle < len; particle++)
-
-      geometry.vertices.push(new THREE.Vector3(Math.random() * 10000 - 5000, Math.random() * 10000 - 5000, Math.random() * 10000 - 5000));
-
-    // Size
-    for (var index = 0, len = geometry.vertices.length; index < len; index++)
-
-      attributes.size.value[index] = 100 + Math.random() * 100;
-
-    particles = new THREE.PointCloud(geometry, shaderMaterial);
-    scene.add(particles);
 
   }
 
@@ -977,7 +828,7 @@ function createVisualizer(self, elementQuerySelector, playerSelector) {
     if (play && frequency.length > 0) {
 
       // Zoom
-      camera.position.z += (THREE.Math.clamp(cameraZ, min, max) - camera.position.z) * 0.1;
+      camera.position.z += (THREE.Math.clamp(cameraZ, min, max) - camera.position.z) * 1.4;
 
       var cube = cubes.length;
 
@@ -996,13 +847,8 @@ function createVisualizer(self, elementQuerySelector, playerSelector) {
         group.rotation.x += object.scale * 0.00012;
         group.rotation.y += object.scale * 0.00012;
 
-        particles.rotation.copy(group.rotation);
-
-        particles.rotation.x *= 0.4;
-        particles.rotation.y *= 0.4;
-
-        uniforms.bass.value += (object.scale / 2.7 - uniforms.bass.value) * 0.5;
-        uniforms.opacity.value = Math.max(0.0, currentLevel / Math.min(12, currentLevel));
+        // console.log('frequency: ', frequency[object.band]);
+        // console.log('level: ', currentLevel);
 
         // Scale fov
         camera.fov += (75 - object.scale * 3 - camera.fov) * 0.008;
@@ -1015,8 +861,6 @@ function createVisualizer(self, elementQuerySelector, playerSelector) {
     }
 
     camera.lookAt(scene.position);
-
-    stats.update();
 
     renderer.render(scene, camera);
 
