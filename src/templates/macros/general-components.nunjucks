@@ -12,20 +12,35 @@
   </div>
 {% endmacro %}
 
-{% macro picture(properties, class) %}
+{% macro picture(properties, class, isLazy = true) %}
   {% set image = properties.image or properties %}
   {% set default = image.png or image.jpg or image.jpeg or image.svg or image %}
   <picture {% if class %} class="{{ class }}" {% endif %}>
     {% if image.webp %}
-      <source srcset="{{ image.webp }}" type="image/webp">
+      <source {% if isLazy %}data-{% endif %}srcset="{{ image.webp }}" type="image/webp">
     {% endif %}
     {% if image.png %}
-      <source srcset="{{ image.png }}" type="image/png">
+      <source {% if isLazy %}data-{% endif %}srcset="{{ image.png }}" type="image/png">
     {% endif %}
     {% if image.jpg or image.jpeg %}
-      <source srcset="{{ image.jpg or image.jpeg }}" type="image/jpeg">
+      <source {% if isLazy %}data-{% endif %}srcset="{{ image.jpg or image.jpeg }}" type="image/jpeg">
     {% endif %}
-    <img src="{{ default }}" {% if properties.alt %} alt="{{ properties.alt }}" {% endif %} {% if class %} class="{{ class }}" {% endif %}>
+    <noscript>
+      <img src="{{ default }}" {% if properties.alt %} alt="{{ properties.alt }}" {% endif %} {% if class %} class="{{ class }}" {% endif %}/>
+    </noscript>
+    <img
+      {% if isLazy %}src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="{% endif %}
+      {% if isLazy %}data-{% endif %}src="{{ default }}"
+      {% if properties.alt %}
+      alt="{{ properties.alt }}"
+      {% endif %}
+      {% if class %}
+      class="{% if isLazy %}lazyload {% endif %}{{ class }}"
+      {% else %}
+      {% if isLazy %}
+      class="lazyload"
+      {% endif %}
+      {% endif %}>
   </picture>
 {% endmacro %}
 
@@ -55,28 +70,28 @@
     <div class="lang-name">{{ lang.name }}</div>
     <div class="lang-description">
       {% if lang.native %}
-      <div class="lang-lvl">
-        {% if lang.native and lang.main %}
-        <div class="lang-category">native</div>
-        {% elif lang.native %}
-        <div class="lang-category">native level</div>
-        {% endif %}
-        <div class="lang-things">
-          {% for langSkill in  lang.native %}
-          <div>{{ langSkill }}</div>
-          {% endfor %}
+        <div class="lang-lvl">
+          {% if lang.native and lang.main %}
+            <div class="lang-category">native</div>
+          {% elif lang.native %}
+            <div class="lang-category">native level</div>
+          {% endif %}
+          <div class="lang-things">
+            {% for langSkill in lang.native %}
+              <div>{{ langSkill }}</div>
+            {% endfor %}
+          </div>
         </div>
-      </div>
       {% endif %}
       {% if lang.good %}
-      <div class="lang-lvl">
-        <div class="lang-category">good</div>
-        <div class="lang-things">
-          {% for langSkill in  lang.good %}
-          <div>{{ langSkill }}</div>
-          {% endfor %}
+        <div class="lang-lvl">
+          <div class="lang-category">good</div>
+          <div class="lang-things">
+            {% for langSkill in lang.good %}
+              <div>{{ langSkill }}</div>
+            {% endfor %}
+          </div>
         </div>
-      </div>
       {% endif %}
     </div>
   </div>
