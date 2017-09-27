@@ -20,7 +20,7 @@ if ('serviceWorker' in navigator) {
       GitHubActivity.feed({
         username: "Thatkookooguy",
         selector: "#feed",
-        limit: 5 // optional
+        limit: 3 // optional
       });
 
       // hide blocks in resume to make them appear when they enter the view
