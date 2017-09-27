@@ -29,7 +29,7 @@
         border-color: #e08833; }
 
 .kg-stack-row {
-  justify-content: center;
+  margin: 0 14px;
   align-items: center;
   box-sizing: border-box;
   color: #242729;
