@@ -29,7 +29,7 @@
   <div class="intro tg-center">
     {{ generalComponents.picture(avatar, 'circle main-avatar', false) }}
     <h3>{{ name }}</h3>
-    <h6>{{ role }}</h6>
+    <h6><span id="js-rotating">{{ role }}</span></h6>
   </div>
   <div class="nav-content">
       <ul class="tabs tabs-transparent tabs-fixed-width">

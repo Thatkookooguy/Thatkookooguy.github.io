@@ -1,30 +1,74 @@
 <div class="github-card repo-card">
   <div class="repo-header">
     <a class="repo-avatar" href="https://github.com/{{ repo.user }}" target="_blank" rel="noopener">
-      <img
-      src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-      class="lazyload"
-      data-src="https://github.com/{{ repo.user }}.png"
-      alt="{{ repo.user }}">
+      <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazyload" data-src="https://github.com/{{ repo.user }}.png" alt="{{ repo.user }}">
       <noscript>
         <img src="https://github.com/{{ repo.user }}.png" alt="{{ repo.user }}">
       </noscript>
     </a>
-      <a href="https://github.com/{{ repo.user }}/{{ repo.name }}" target="_blank" rel="noopener">
-        {{ repo.name }}
-      </a>
+    <a href="https://github.com/{{ repo.user }}/{{ repo.name }}" target="_blank" rel="noopener">
+      {{ repo.name }}
+    </a>
   </div>
   <div class="repo-content">
-    <p>
+    <p{% if repo.lighthouseReport %}style="margin-bottom: 0;"{% endif %}>
       {{ repo.description | safe }}
     </p>
+    {% if repo.lighthouseReport %}
+    <div>
+      <a href="{{ repo.lighthouseReport }}" target="_blank">Lighthouse report</a>
+      gives this site<br>
+      <div class="kg-gauges">
+        <div class="kg-gauge-wrapper">
+          <div class="c100 p{{ repo.progressive }}">
+            <span>{{ repo.progressive }}%</span>
+            <div class="slice">
+              <div class="bar"></div>
+              <div class="fill"></div>
+            </div>
+          </div>
+          <div>Progressive Web App</div>
+        </div>
+        <div class="kg-gauge-wrapper">
+          <div class="c100 p{{ repo.performance }}">
+            <span>{{ repo.performance }}%</span>
+            <div class="slice">
+              <div class="bar"></div>
+              <div class="fill"></div>
+            </div>
+          </div>
+          <div>Performance</div>
+        </div>
+        <div class="kg-gauge-wrapper">
+          <div class="c100 p{{ repo.accessibility }}">
+            <span>{{ repo.accessibility }}%</span>
+            <div class="slice">
+              <div class="bar"></div>
+              <div class="fill"></div>
+            </div>
+          </div>
+          <div>Accessibility</div>
+        </div>
+        <div class="kg-gauge-wrapper">
+          <div class="c100 p{{ repo.practices }}">
+            <span>{{ repo.practices }}%</span>
+            <div class="slice">
+              <div class="bar"></div>
+              <div class="fill"></div>
+            </div>
+          </div>
+          <div>Best Practices</div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
   </div>
   <div class="status">
-      <a href="https://github.com/{{ repo.user }}/{{ repo.name }}/network" target="_blank" rel="noopener">
-        <strong>{{ repo.forks }}</strong>Forks
-      </a>
-      <a href="https://github.com/{{ repo.user }}/{{ repo.name }}/stargazers" target="_blank" rel="noopener">
-        <strong>{{ repo.stars }}</strong>Stars
-      </a>
+    <a href="https://github.com/{{ repo.user }}/{{ repo.name }}/network" target="_blank" rel="noopener">
+      <strong>{{ repo.forks }}</strong>Forks
+    </a>
+    <a href="https://github.com/{{ repo.user }}/{{ repo.name }}/stargazers" target="_blank" rel="noopener">
+      <strong>{{ repo.stars }}</strong>Stars
+    </a>
   </div>
 </div>

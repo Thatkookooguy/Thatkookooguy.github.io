@@ -1,6 +1,32 @@
 {% import '../macros/general-components.nunjucks' as generalComponents %}
 
-<div class="container">
+<div class="container section">
+  <div class="row">
+    <div class="col s12 m4">
+      <div class="content">
+        {{ generalComponents.sectionTitle('About Me', 'material-icons', 'tag_faces') }}
+        <p>{{ resume.intro | safe }}</p>
+      </div>
+    </div>
+    <div class="col s12 m4">
+      <div class="content center">
+        {{ generalComponents.sectionTitle('Download my CV', 'material-icons', 'insert_drive_file') }}
+        <p>You can download my CV in pdf format if you like.</p>
+        <a href="{{ resume.pdf }}" download class="dark-orange waves-effect waves-dark-orange btn"><i class="material-icons">file_download</i>CV</a>
+      </div>
+    </div>
+    <div class="col s12 m4">
+      <div class="content">
+        {{ generalComponents.sectionTitle('Professional Networks', 'material-icons', 'insert_drive_file') }}
+        <div class="kg-center-row">
+          <a href="https://www.linkedin.com/in/neil-kalman-3bb0b686" rel="noopener" target="_blank" class="waves-effect waves-dark btn kg-linkedin"><i class="btn-icn socicon-linkedin"></i></a>
+          <a href="https://github.com/Thatkookooguy" rel="noopener" target="_blank" class="waves-effect waves-dark btn kg-github"><i class="btn-icn socicon-github"></i></a>
+          <a href="https://stackoverflow.com/story/neilkalman" rel="noopener" target="_blank" class="waves-effect waves-dark btn kg-stackoverflow"><i class="btn-icn socicon-stackoverflow"></i></a>
+        </div>
+        {% include "partials/stackDetails.nunjucks" %}
+      </div>
+    </div>
+  </div>
   <div class="row section">
     <div class="col s12">
       <div class="content">

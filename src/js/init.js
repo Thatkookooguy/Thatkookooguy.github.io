@@ -31,12 +31,27 @@ if ('serviceWorker' in navigator) {
       hideBlocks(timelineBlocks, offset, bars);
 
       if ($('.tab a[href="#resume"]').hasClass('active')) {
-        $(window).on('scroll', function(){
-            (!window.requestAnimationFrame)
-                ? setTimeout(function(){ showBlocks(timelineBlocks, offset, bars); }, 100)
-            : window.requestAnimationFrame(function(){ showBlocks(timelineBlocks, offset, bars); });
+        $(window).on('scroll', function() {
+          (!window.requestAnimationFrame) ?
+          setTimeout(function() {
+            showBlocks(timelineBlocks, offset, bars);
+          }, 100): window.requestAnimationFrame(function() {
+            showBlocks(timelineBlocks, offset, bars);
+          });
         });
       }
+
+      $("#js-rotating").Morphext({
+        // The [in] animation type. Refer to Animate.css for a list of available animations.
+        animation: "fadeInDown",
+        // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
+        separator: "||",
+        // The delay between the changing of each phrase in milliseconds.
+        speed: 5000,
+        complete: function() {
+          // Called after the entrance animation is executed.
+        }
+      });
 
       // material design
       $(".button-collapse").sideNav();
@@ -51,10 +66,13 @@ if ('serviceWorker' in navigator) {
 
           if (tab[0].id === 'resume') {
             //on scolling, show/animate timeline blocks when enter the viewport
-            $(window).on('scroll', function(){
-                (!window.requestAnimationFrame)
-                    ? setTimeout(function(){ showBlocks(timelineBlocks, offset, bars); }, 100)
-                : window.requestAnimationFrame(function(){ showBlocks(timelineBlocks, offset, bars); });
+            $(window).on('scroll', function() {
+              (!window.requestAnimationFrame) ?
+              setTimeout(function() {
+                showBlocks(timelineBlocks, offset, bars);
+              }, 100): window.requestAnimationFrame(function() {
+                showBlocks(timelineBlocks, offset, bars);
+              });
             });
           } else {
             $(window).off('scroll');
@@ -77,16 +95,16 @@ if ('serviceWorker' in navigator) {
     function showBlocks(blocks, offset, bars) {
       var $window = $(window);
 
-      blocks.each(function(){
+      blocks.each(function() {
         var $this = $(this);
 
-          ( $this.offset().top <= $window.scrollTop() + $window.height() && $this.find('.cd-timeline-img').hasClass('is-hidden') ) && $this.find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+        ($this.offset().top <= $window.scrollTop() + $window.height() && $this.find('.cd-timeline-img').hasClass('is-hidden')) && $this.find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
       });
 
       bars.each(function() {
         var $this = $(this);
 
-          ( $this.offset().top <= $window.scrollTop() + $window.height() && $this.hasClass('not-in-view') ) && $this.removeClass('not-in-view');
+        ($this.offset().top <= $window.scrollTop() + $window.height() && $this.hasClass('not-in-view')) && $this.removeClass('not-in-view');
       });
     }
 

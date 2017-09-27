@@ -6,7 +6,7 @@
   "siteImage": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/154887/86_trans.png",
   "siteThemeColor": "#000000",
   "name": "Neil Kalman",
-  "role": "Software Engineer || FrontEnd Developer",
+  "role": "Software Engineer || Front-End Developer || Fullstack Developer || Musician || Saxophone Player || Actor",
   "avatar": {
     "alt": "Neil's avatar",
     "image": {
@@ -15,7 +15,7 @@
     }
   },
   "about": {
-    "intro": "<p>I'm very passionate about software development. In the past 3 years, I made myself a proficient full-stack web developer. I also love to research build systems (like gulp), company development culture (like slack, reviewable, & dashboards), collaboration, integrations, and readable maintainable code.</p><p>I also like to play the saxophone, get involved in the MAKER community, and draw.</p>",
+    "intro": "<p>Hello! I'm <strong>Neil Kalman</strong>. Welcome to my site.</p><p>I'm a <strong>Software Engineer</strong>, working as a Frontend\\Fullstack developer in the passed 3 years.<br>I'm also a performer, playing the <strong>Saxophones</strong> and acting in several <strong>commercials and skits</strong>.</p><p>I also love to research build systems (like gulp), company development culture (like slack, & dashboards), collaboration, integrations, and <strong>readable maintainable code</strong>.</p><p>I also fiddle a little with <strong>DIY projects</strong> and <strong>illustrations</strong>.</p>",
     "projects": [{
         "name": "achievibit",
         "stars": 18,
@@ -49,7 +49,12 @@
         "stars": 0,
         "forks": 0,
         "user": "thatkookooguy",
-        "description": "This online resume.<br><a href=\"thatkookooguy.github.io_2017-09-27_15-11-24.html\" target=\"_blank\">Lighthouse report</a> gives this site<br><strong>100% Progressive Web App</strong><br><strong>70% Performance</strong><br><strong>94% Accessibility</strong><br><strong>92% Best Practices</strong>"
+        "description": "This online resume.",
+        "lighthouseReport": "thatkookooguy.github.io_2017-09-27_15-11-24.html",
+        "progressive": 100,
+        "performance": 70,
+        "accessibility": 94,
+        "practices": 92
       }
     ],
     "contributed": [{
@@ -83,6 +88,8 @@
     ]
   },
   "resume": {
+    "pdf": "assets/cv/neil_kalman_cv.pdf",
+    "intro": "This is my timeline. You can check out my <strong>work experience</strong> and <strong>education</strong> details, and some of the programming languages, technologies, and methodologies I worked with.",
     "skills": [{
         "name": "HTML5",
         "precent": "90",

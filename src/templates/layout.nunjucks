@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="libs/materialize.min.css">
     <link rel="stylesheet" href="libs/octicons.min.css">
     <link rel="stylesheet" href="libs/github-activity-0.1.5.min.css">
+    <link rel="stylesheet" href="libs/animate.css">
+    <link rel="stylesheet" href="libs/morphext.css">
+    <link rel="stylesheet" href="libs/gauge.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- endbuild -->
 </head>
@@ -34,6 +37,7 @@
   <script src="libs/materialize.min.js"></script>
   <script type="text/javascript" src="libs/mustache.min.js"></script>
   <script type="text/javascript" src="libs/github-activity-0.1.5.min.js"></script>
+  <script type="text/javascript" src="libs/morphext.min.js"></script>
   <script src="js/init.js"></script>
   <!-- endbuild -->
   <!-- build:js scripts/middlePaint.js async -->

@@ -3,9 +3,9 @@
 <div class="container section">
   <div class="row">
     <div class="col s12 m7">
-      <div class="content">
+      <div class="content kg-about">
         {{ generalComponents.sectionTitle('About Me', 'material-icons', 'tag_faces') }}
-        <h5>{{ about.intro | safe }}</h5>
+        {{ about.intro | safe }}
       </div>
     </div>
     <div class="col s12 m5">
