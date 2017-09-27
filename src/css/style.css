@@ -1,3 +1,8 @@
+.tg-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
 .lang {
   display: flex; }
   .lang .lang-name {
@@ -59,7 +64,8 @@
     font-size: 11px;
     height: 35px;
     line-height: 35px;
-    color: #ffffff; }
+    color: #ffffff;
+    text-shadow: -1px -1px 4px #969696; }
 
 .precent-10 {
   width: 10%; }
@@ -172,15 +178,21 @@ strong {
   color: #ffab40; }
 
 picture {
+  position: relative;
   line-height: 0;
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center; }
+  picture img {
+    position: absolute;
+    top: 0;
+    left: 0; }
 
 .main-avatar {
-  height: 150px; }
+  height: 150px;
+  width: 150px; }
 
 .chip.band-chip {
   height: 22px;
@@ -205,7 +217,7 @@ picture {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: pink;
+  background-color: transparent;
   overflow: hidden;
   flex-shrink: 0; }
 
@@ -796,6 +808,11 @@ Main components
 
 .cd-timeline-img.amdocs {
   background: #2D2B43; }
+  .cd-timeline-img.amdocs picture {
+    height: 50%;
+    width: 50%; }
+    .cd-timeline-img.amdocs picture .circle {
+      border-radius: 0; }
 
 .cd-timeline-img.redkix {
   background: #88c4e2;
