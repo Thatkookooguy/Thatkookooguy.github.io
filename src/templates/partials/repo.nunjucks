@@ -1,9 +1,16 @@
 <div class="github-card repo-card">
   <div class="repo-header">
-    <a class="repo-avatar" href="https://github.com/{{ repo.user }}" target="_top">
-      <img src="https://github.com/{{ repo.user }}.png" alt="{{ repo.user }}">
+    <a class="repo-avatar" href="https://github.com/{{ repo.user }}" target="_blank" rel="noopener">
+      <img
+      src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+      class="lazyload"
+      data-src="https://github.com/{{ repo.user }}.png"
+      alt="{{ repo.user }}">
+      <noscript>
+        <img src="https://github.com/{{ repo.user }}.png" alt="{{ repo.user }}">
+      </noscript>
     </a>
-      <a href="https://github.com/{{ repo.user }}/{{ repo.name }}" target="_top">
+      <a href="https://github.com/{{ repo.user }}/{{ repo.name }}" target="_blank" rel="noopener">
         {{ repo.name }}
       </a>
   </div>
@@ -13,10 +20,10 @@
     </p>
   </div>
   <div class="status">
-      <a href="https://github.com/{{ repo.user }}/{{ repo.name }}/network" target="_top">
+      <a href="https://github.com/{{ repo.user }}/{{ repo.name }}/network" target="_blank" rel="noopener">
         <strong>{{ repo.forks }}</strong>Forks
       </a>
-      <a href="https://github.com/{{ repo.user }}/{{ repo.name }}/stargazers" target="_top">
+      <a href="https://github.com/{{ repo.user }}/{{ repo.name }}/stargazers" target="_blank" rel="noopener">
         <strong>{{ repo.stars }}</strong>Stars
       </a>
   </div>
