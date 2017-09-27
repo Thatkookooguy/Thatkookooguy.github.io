@@ -16,7 +16,7 @@
   </div>
   <div class="repo-content">
     <p>
-      {{ repo.description }}
+      {{ repo.description | safe }}
     </p>
   </div>
   <div class="status">
