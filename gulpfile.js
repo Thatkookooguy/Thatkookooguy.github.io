@@ -106,6 +106,8 @@ function getAllCachedFiles() {
     '/index.html?homescreen=1',
     '/?homescreen=1',
     '/css/combined.css',
+    '/scripts/afterPaint.js',
+    '/scripts/middlePaint.js',
     '/scripts/combined.js'
   ]);
 }
