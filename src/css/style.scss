@@ -1,3 +1,9 @@
+.tg-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .lang {
   display: flex;
 
@@ -78,6 +84,7 @@
     height: 35px;
     line-height: 35px;
     color: #ffffff;
+    text-shadow: -1px -1px 4px rgba(150, 150, 150, 1);
   }
 }
 
@@ -222,16 +229,24 @@ strong {
 }
 
 picture {
+  position: relative;
   line-height: 0;
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 .main-avatar {
   height: 150px;
+  width: 150px;
 }
 
 .chip.band-chip {
@@ -259,7 +274,7 @@ picture {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: pink;
+  background-color: transparent;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -874,7 +889,6 @@ body {
 Modules - reusable parts of our design
 
 -------------------------------- */
-
 .cd-container {
   /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
   width: 90%;
@@ -893,7 +907,6 @@ Modules - reusable parts of our design
 Main components
 
 -------------------------------- */
-
 #cd-timeline {
   position: relative;
   padding: 2em 0;
@@ -977,6 +990,15 @@ Main components
 
 .cd-timeline-img.amdocs {
   background: #2D2B43;
+
+  picture {
+    height: 50%;
+    width: 50%;
+
+    .circle {
+      border-radius: 0;
+    }
+  }
 }
 
 .cd-timeline-img.redkix {
@@ -1350,7 +1372,6 @@ Main components
   }
 }
 /* MY CSS */
-
 .intro h3 {
   margin-top: 0;
 }
