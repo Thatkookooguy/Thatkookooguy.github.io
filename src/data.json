@@ -1,5 +1,5 @@
 {
-  "version": "v4",
+  "version": "v5",
   "siteName": "Neil Kalman - thatkookooguy",
   "siteUrl": "https://thatkookooguy.github.io",
   "siteDescription": "thatkookooguy@kibibit.io",
@@ -97,27 +97,32 @@
       {
         "name": "Java",
         "precent": "50",
-        "titleColor": "#0074BD",
-        "barColor": "#EA2A2D"
+        "titleColor": "#B52E31",
+        "barColor": "#E23237"
       },
       {
-        "name": "C",
-        "precent": "10",
-        "titleColor": "",
-        "barColor": ""
+        "name": "AutoHotkey",
+        "precent": "50",
+        "barColor": "#41db6a",
+        "titleColor": "#35b256"
+      },
+      {
+        "name": "Shell",
+        "precent": "40",
+        "barColor": "#b38bf9",
+        "titleColor": "#8364ba"
       },
       {
         "name": "Perl",
         "precent": "20"
       },
       {
-        "name": "Shell Scripts",
-        "precent": "40"
-      },
-      {
-        "name": "AutoHotkey",
-        "precent": "50"
+        "name": "C",
+        "precent": "10",
+        "titleColor": "#004482",
+        "barColor": "#659AD2"
       }
+
     ],
     "technologies": [
       "AngularJS",

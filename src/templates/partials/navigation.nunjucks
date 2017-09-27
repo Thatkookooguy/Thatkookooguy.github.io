@@ -26,8 +26,8 @@
           <li><a href="collapsible.html">JavaScript</a></li>
       </ul> #}
   </div>
-  <div class="intro center">
-    {{ generalComponents.picture(avatar, 'circle main-avatar') }}
+  <div class="intro tg-center">
+    {{ generalComponents.picture(avatar, 'circle main-avatar', false) }}
     <h3>{{ name }}</h3>
     <h6>{{ role }}</h6>
   </div>
