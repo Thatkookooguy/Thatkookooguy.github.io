@@ -1,5 +1,5 @@
 {
-  "version": "v6",
+  "version": "v7",
   "siteName": "Neil Kalman - thatkookooguy",
   "siteUrl": "https://thatkookooguy.github.io",
   "siteDescription": "thatkookooguy@kibibit.io",
@@ -49,7 +49,7 @@
         "stars": 0,
         "forks": 0,
         "user": "thatkookooguy",
-        "description": "This online resume. Lighthouse report gives this site 100% Progressive Web App; 63% Performance; 94% Accessibility; 92% Best Practices"
+        "description": "This online resume. Lighthouse report gives this site 100% Progressive Web App; 70% Performance; 94% Accessibility; 92% Best Practices"
       }
     ],
     "contributed": [{
