@@ -472,7 +472,7 @@
             "webp": "assets/images/pancho-pancho.webp"
           }
         },
-        "bandcamp": "",
+        "bandcamp": "https://carmelapplepop.bandcamp.com/album/pancho",
         "songs": [{
             "name": "01. Power Of Weakness",
             "index": 0
@@ -519,7 +519,7 @@
         "artist": "Carmel Apple Pop",
         "name": "Funny​/​Not Funny",
         "cover": "assets/images/carmel-funny.jpg",
-        "bandcamp": "",
+        "bandcamp": "https://carmelapplepop.bandcamp.com/album/funny-not-funny",
         "songs": [{
             "name": "01. Funny",
             "index": 10
@@ -582,7 +582,7 @@
         "artist": "Igor Krutogolov's Karate Band",
         "name": "How To Be A Crocodile",
         "cover": "assets/images/toy-croc.jpg",
-        "bandcamp": "",
+        "bandcamp": "http://www.records.aurismedia.com/album/how-to-be-a-crocodile",
         "songs": [{
             "name": "01. Skeleton Dance",
             "index": 24
@@ -622,20 +622,10 @@
         ]
       },
       {
-        "artist": "Igor Krutogolov's Toy Orchestra",
-        "name": "Roots Over Roots",
-        "cover": "assets/images/toy-roots.jpg",
-        "bandcamp": "",
-        "songs": [{
-          "name": "01. Roots Over Roots",
-          "index": 24
-        }]
-      },
-      {
         "artist": "Aperco",
         "name": "The Battle",
         "cover": "assets/images/aperco-battle.jpg",
-        "bandcamp": "",
+        "bandcamp": "https://aperco1.bandcamp.com/releases",
         "songs": [{
           "name": "03. Another Day To Live",
           "index": 33
@@ -645,7 +635,7 @@
         "artist": "Bilgo & Co",
         "name": "Rewind My Life",
         "cover": "assets/images/bilgo-rewind.jpg",
-        "bandcamp": "",
+        "bandcamp": "https://bilgoco.bandcamp.com/track/rewind-my-life",
         "songs": [{
           "name": "01. Rewind My Life",
           "index": 34
