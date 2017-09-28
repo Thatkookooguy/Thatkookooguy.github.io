@@ -1,3 +1,7 @@
+.kg-scrollbar-fix {
+  margin: 0 20px;
+}
+
 .kg-gauges {
   display: flex;
   justify-content: center;
@@ -25,15 +29,17 @@
 
       &.p100,
       &[class*=" p9"],
-      &[class^="p9"] {
+      &[class^="p9"],
+      &[class*=" p8"],
+      &[class^="p8"] {
         .bar,
         .fill {
           border-color: #5fd400;
         }
       }
 
-      &[class*=" p8"],
-      &[class^="p8"] {
+      &[class*=" p7"],
+      &[class^="p7"] {
         .bar,
         .fill {
           border-color: #e08833;
@@ -470,6 +476,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  padding: 0 20px;
 }
 
 .lang {
@@ -632,11 +640,16 @@
       border: 2px solid #fff;
       border-radius: 50%;
       overflow: hidden;
+      width: 48px;
+      height: 48px;
 
       img {
         display: block;
         width: 48px;
         height: 48px;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
     }
 
@@ -705,10 +718,12 @@ picture {
   align-items: center;
   justify-content: center;
 
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
+  img.noscript {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
   }
 }
 
@@ -1072,14 +1087,14 @@ picture {
 
 .bbplayer.floating {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 6px;
+  right: 6px;
   z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   border: none;
   box-shadow: 0 2px 7px rgba(100, 100, 100, 0.5);
   border-radius: 0;

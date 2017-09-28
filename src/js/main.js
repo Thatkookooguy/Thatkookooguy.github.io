@@ -282,6 +282,10 @@
         'songs': songs
       });
 
+      $('.bbplayer.floating .amplitude-play-pause').click(function() {
+        $('.bbplayer.floating').removeClass('bb-show');
+      });
+
       // on song change, show ui indicator
       window.onSongChange = function() {
         var currSong = Amplitude.getActiveSongMetadata();
