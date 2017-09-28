@@ -26,7 +26,7 @@
       <source {% if isLazy %}data-{% endif %}srcset="{{ image.jpg or image.jpeg }}" type="image/jpeg">
     {% endif %}
     <noscript>
-      <img src="{{ default }}" {% if properties.alt %} alt="{{ properties.alt }}" {% endif %} {% if class %} class="{{ class }}" {% endif %}/>
+      <img src="{{ default }}" {% if properties.alt %} alt="{{ properties.alt }}" {% endif %} {% if class %} class="{{ class }} noscript" {% else %} class="noscript" {% endif %}/>
     </noscript>
     <img
       {% if isLazy %}src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="{% endif %}
