@@ -1,5 +1,5 @@
 .kg-scrollbar-fix {
-  margin: 0 20px; }
+  margin: 0 14px; }
 
 .kg-gauges {
   display: flex;
@@ -398,14 +398,17 @@
 .kg-about {
   color: #212121;
   font-weight: 400;
-  font-size: 1.5rem; }
+  font-size: 1.2rem; }
 
 .kg-center-row {
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: stretch;
+  flex-wrap: wrap; }
   .kg-center-row a.btn {
-    margin: 0 5px; }
+    margin: 5px;
+    flex-grow: 1;
+    flex-shrink: 0; }
 
 .tg-center {
   display: flex;
@@ -560,7 +563,8 @@
       font-weight: 400;
       text-transform: uppercase;
       text-decoration: none;
-      -webkit-font-smoothing: antialiased; }
+      -webkit-font-smoothing: antialiased;
+      word-break: break-word; }
   .github-card .repo-content {
     flex-grow: 1; }
     .github-card .repo-content p {
