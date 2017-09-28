@@ -1,3 +1,6 @@
+.kg-scrollbar-fix {
+  margin: 0 20px; }
+
 .kg-gauges {
   display: flex;
   justify-content: center;
@@ -21,11 +24,13 @@
       .kg-gauges .kg-gauge-wrapper .c100.p100 .bar,
       .kg-gauges .kg-gauge-wrapper .c100.p100 .fill, .kg-gauges .kg-gauge-wrapper .c100[class*=" p9"] .bar,
       .kg-gauges .kg-gauge-wrapper .c100[class*=" p9"] .fill, .kg-gauges .kg-gauge-wrapper .c100[class^="p9"] .bar,
-      .kg-gauges .kg-gauge-wrapper .c100[class^="p9"] .fill {
-        border-color: #5fd400; }
-      .kg-gauges .kg-gauge-wrapper .c100[class*=" p8"] .bar,
+      .kg-gauges .kg-gauge-wrapper .c100[class^="p9"] .fill, .kg-gauges .kg-gauge-wrapper .c100[class*=" p8"] .bar,
       .kg-gauges .kg-gauge-wrapper .c100[class*=" p8"] .fill, .kg-gauges .kg-gauge-wrapper .c100[class^="p8"] .bar,
       .kg-gauges .kg-gauge-wrapper .c100[class^="p8"] .fill {
+        border-color: #5fd400; }
+      .kg-gauges .kg-gauge-wrapper .c100[class*=" p7"] .bar,
+      .kg-gauges .kg-gauge-wrapper .c100[class*=" p7"] .fill, .kg-gauges .kg-gauge-wrapper .c100[class^="p7"] .bar,
+      .kg-gauges .kg-gauge-wrapper .c100[class^="p7"] .fill {
         border-color: #e08833; }
 
 .kg-stack-row {
@@ -405,7 +410,9 @@
 .tg-center {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  text-align: center;
+  padding: 0 20px; }
 
 .lang {
   display: flex; }
@@ -534,11 +541,16 @@
       left: 5px;
       border: 2px solid #fff;
       border-radius: 50%;
-      overflow: hidden; }
+      overflow: hidden;
+      width: 48px;
+      height: 48px; }
       .github-card .repo-header .repo-avatar img {
         display: block;
         width: 48px;
-        height: 48px; }
+        height: 48px;
+        position: absolute;
+        top: 0;
+        left: 0; }
     .github-card .repo-header a {
       line-height: 25px;
       margin: 0;
@@ -589,10 +601,12 @@ picture {
   display: flex;
   align-items: center;
   justify-content: center; }
-  picture img {
-    position: absolute;
-    top: 0;
-    left: 0; }
+  picture img.noscript {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important; }
 
 .main-avatar {
   height: 150px;
@@ -896,14 +910,14 @@ picture {
 
 .bbplayer.floating {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 6px;
+  right: 6px;
   z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   border: none;
   box-shadow: 0 2px 7px rgba(100, 100, 100, 0.5);
   border-radius: 0;
