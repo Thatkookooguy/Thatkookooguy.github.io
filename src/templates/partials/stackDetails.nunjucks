@@ -9,20 +9,7 @@
 			</div>
 		</div>
 		<div id="DIV_8">
-			 <span id="SPAN_9">css</span> <span id="SPAN_10">html</span>
-		</div>
-	</div>
-	<div id="DIV_11">
-		<div id="DIV_12" class="has-tooltip">
-			<div id="DIV_13" class="informative-tooltip display-above">
-				This user is part of the top 20% Stack Overflow answerers in these technologies
-			</div> <span id="SPAN_14">top</span>
-			<div id="DIV_15">
-				20<span id="SPAN_16">%</span>
-			</div>
-		</div>
-		<div id="DIV_17">
-			 <span id="SPAN_18">angularjs</span> <span id="SPAN_19">javascript</span>
+			 <span id="SPAN_9">css</span> <span id="SPAN_9">css3</span> <span id="SPAN_9">angularjs</span> <span id="SPAN_9">angular-material</span> <span id="SPAN_9">html</span> <span id="SPAN_9">javascript</span>
 		</div>
 	</div>
 </div>

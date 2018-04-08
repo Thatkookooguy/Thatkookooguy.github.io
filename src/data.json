@@ -1,5 +1,5 @@
 {
-  "version": "v10",
+  "version": "v11",
   "siteName": "Neil Kalman - thatkookooguy",
   "siteUrl": "https://thatkookooguy.github.io",
   "siteDescription": "thatkookooguy@kibibit.io",
@@ -31,6 +31,13 @@
         "description": "chrome extension to integrate achievibit inside GitHub"
       },
       {
+        "name": "kibibit-cli",
+        "stars": 2,
+        "forks": 1,
+        "user": "kibibit",
+        "description": "a git-flow + GitHub replacement for git and git flow"
+      },
+      {
         "name": "kibibit-code-editor",
         "stars": 8,
         "forks": 1,
@@ -58,12 +65,19 @@
       }
     ],
     "contributed": [{
-        "name": "Autolinker.js",
-        "stars": 847,
-        "forks": 163,
-        "user": "gregjacobs",
-        "description": "Utility to Automatically Link URLs, Email Addresses, Phone Numbers, Twitter handles, and Hashtags in a given block of text/HTML"
-      },
+      "name": "octonode",
+      "stars": 904,
+      "forks": 209,
+      "user": "pksunkara",
+      "description": "Utility to Automatically Link URLs, Email Addresses, Phone Numbers, Twitter handles, and Hashtags in a given block of text/HTML"
+    },
+    {
+      "name": "Autolinker.js",
+      "stars": 847,
+      "forks": 163,
+      "user": "gregjacobs",
+      "description": "Utility to Automatically Link URLs, Email Addresses, Phone Numbers, Twitter handles, and Hashtags in a given block of text/HTML"
+    },
       {
         "name": "ungit",
         "stars": "7.2k",
