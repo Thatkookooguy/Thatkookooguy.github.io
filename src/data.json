@@ -1,5 +1,5 @@
 {
-  "version": "v11",
+  "version": "v12",
   "siteName": "Neil Kalman - thatkookooguy",
   "siteUrl": "https://thatkookooguy.github.io",
   "siteDescription": "thatkookooguy@kibibit.io",
@@ -65,19 +65,19 @@
       }
     ],
     "contributed": [{
-      "name": "octonode",
-      "stars": 904,
-      "forks": 209,
-      "user": "pksunkara",
-      "description": "Utility to Automatically Link URLs, Email Addresses, Phone Numbers, Twitter handles, and Hashtags in a given block of text/HTML"
-    },
-    {
-      "name": "Autolinker.js",
-      "stars": 847,
-      "forks": 163,
-      "user": "gregjacobs",
-      "description": "Utility to Automatically Link URLs, Email Addresses, Phone Numbers, Twitter handles, and Hashtags in a given block of text/HTML"
-    },
+        "name": "octonode",
+        "stars": 904,
+        "forks": 209,
+        "user": "pksunkara",
+        "description": "Utility to Automatically Link URLs, Email Addresses, Phone Numbers, Twitter handles, and Hashtags in a given block of text/HTML"
+      },
+      {
+        "name": "Autolinker.js",
+        "stars": 847,
+        "forks": 163,
+        "user": "gregjacobs",
+        "description": "Utility to Automatically Link URLs, Email Addresses, Phone Numbers, Twitter handles, and Hashtags in a given block of text/HTML"
+      },
       {
         "name": "ungit",
         "stars": "7.2k",
@@ -213,6 +213,20 @@
       }
     ],
     "jobs": [{
+        "logo": {
+          "alt": "VMware",
+          "image": {
+            "png": "/assets/images/vmware.png",
+            "webp": "/assets/images/vmware.webp"
+          }
+        },
+        "name": "VMware",
+        "site": "https://www.vmware.com",
+        "role": "SENIOR SOFTWARE ENGINEER",
+        "description": "Full-Stack Developer at VMware's Cloud Service Provider (CSP) solutions",
+        "dates": "Oct 2017 – Present"
+      },
+      {
         "logo": {
           "alt": "redkix",
           "image": {
