@@ -18,7 +18,7 @@ this.addEventListener('install', function(event) {
         // use the "delete" functionality below and make
         // this a 'v2' //(or whatever you wish to call it.
 
-        caches.open('v11').then(function(cache) {
+        caches.open('v12').then(function(cache) {
             return cache.addAll([
                 //  These are the files we want to cache so // we can access offline! For your project
                 // you'll need to add your own. You can
@@ -232,6 +232,10 @@ this.addEventListener('install', function(event) {
                 
                 '/assets/images/vinyl.webp',
                 
+                '/assets/images/vmware.png',
+                
+                '/assets/images/vmware.webp',
+                
                 '/assets/fonts/octicons/octicons.eot',
                 
                 '/assets/fonts/octicons/octicons.svg',
@@ -329,7 +333,7 @@ this.addEventListener('fetch', function(event) {
     // it's in offline mode, will break and not show the
     // file. Bummer!
 
-        caches.open('v11').then(function(cache) {
+        caches.open('v12').then(function(cache) {
             return cache.match(event.request).then(function(response) {
                 return response || fetch(event.request).then(function(response) {
                     cache.put(event.request, response.clone());
@@ -362,7 +366,7 @@ this.addEventListener('activate', function activator(event) {
         caches.keys().then(function(keys) {
             return Promise.all(keys
                 .filter(function(key) {
-                    return key.indexOf('v11') !== 0;
+                    return key.indexOf('v12') !== 0;
                 })
                 .map(function(key) {
                     console.log("[SW]: old cache found. deleting...");
