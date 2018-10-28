@@ -1,5 +1,5 @@
 {
-  "version": "v12",
+  "version": "v13",
   "siteName": "Neil Kalman - thatkookooguy",
   "siteUrl": "https://thatkookooguy.github.io",
   "siteDescription": "thatkookooguy@kibibit.io",
@@ -18,14 +18,28 @@
     "intro": "<p>Hello! I'm <strong>Neil Kalman</strong>. Welcome to my site.</p><p>I'm a <strong>Software Engineer</strong>, working as a Frontend\\Fullstack developer in the passed 3 years.<br>I'm also a performer, playing the <strong>Saxophones</strong> and acting in several <strong>commercials and skits</strong>.</p><p>I also love to research build systems (like gulp), company development culture (like slack, & dashboards), collaboration, integrations, and <strong>readable maintainable code</strong>.</p><p>I also fiddle a little with <strong>DIY projects</strong> and <strong>illustrations</strong>.</p>",
     "projects": [{
         "name": "achievibit",
-        "stars": 18,
-        "forks": 5,
+        "stars": 47,
+        "forks": 7,
         "user": "kibibit",
         "description": "Github Gamification - Achievements system as a GitHub WebHook."
       },
       {
+        "name": "cli-lit",
+        "stars": 1,
+        "forks": 0,
+        "user": "kibibit",
+        "description": "generate a lit CLI tool from a typescript class https://www.npmjs.com/package/@kibibit/cli-lit"
+      },
+      {
+        "name": "kb-terminal-onboarding",
+        "stars": 1,
+        "forks": 1,
+        "user": "kibibit",
+        "description": "jQuery plugin to create a simple CLI onboarding demo on your website"
+      },
+      {
         "name": "achievibit-chrome-extension",
-        "stars": 0,
+        "stars": 1,
         "forks": 0,
         "user": "kibibit",
         "description": "chrome extension to integrate achievibit inside GitHub"
@@ -70,6 +84,13 @@
         "forks": 209,
         "user": "pksunkara",
         "description": "Utility to Automatically Link URLs, Email Addresses, Phone Numbers, Twitter handles, and Hashtags in a given block of text/HTML"
+      },
+      {
+        "name": "bulmaswatch",
+        "stars": 784,
+        "forks": 87,
+        "user": "jenil",
+        "description": "Themes for Bulma https://jenil.github.io/bulmaswatch"
       },
       {
         "name": "Autolinker.js",
