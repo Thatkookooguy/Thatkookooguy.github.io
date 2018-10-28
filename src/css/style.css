@@ -248,7 +248,7 @@
     transform-origin: 31.3438px 11.7917px;
     caret-color: #39739d;
     background: #e1ecf4 none repeat scroll 0 0/auto padding-box border-box;
-    border: 1px solid transparent;
+    border: 1px solid rgba(0, 0, 0, 0);
     font: normal normal normal normal 12px / 12px Arial, "Helvetica Neue", Helvetica, sans-serif;
     margin: 2px 2px 2px 0;
     outline: #39739d none 0;
@@ -273,7 +273,7 @@
     transform-origin: 32.3438px 11.7917px;
     caret-color: #39739d;
     background: #e1ecf4 none repeat scroll 0 0/auto padding-box border-box;
-    border: 1px solid transparent;
+    border: 1px solid rgba(0, 0, 0, 0);
     font: normal normal normal normal 12px / 12px Arial, "Helvetica Neue", Helvetica, sans-serif;
     margin: 2px 2px 2px 0;
     outline: #39739d none 0;
