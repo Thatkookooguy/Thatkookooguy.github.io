@@ -481,14 +481,16 @@
       border-radius: 50%;
       overflow: hidden;
       width: 48px;
-      height: 48px; }
+      height: 48px;
+      z-index: 2; }
       .github-card .repo-header .repo-avatar img {
         display: block;
         width: 48px;
         height: 48px;
         position: absolute;
         top: 0;
-        left: 0; }
+        left: 0;
+        z-index: 1; }
     .github-card .repo-header a {
       line-height: 25px;
       margin: 0;
